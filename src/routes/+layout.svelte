@@ -1,8 +1,14 @@
 <!-- +layout.svelte -->
-<header>Hi, I'm a header</header>
+<script>
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import '$lib/styles/house.css';
+</script>
+
+<Header />
 
 <main>
 	<slot />
 </main>
 
-<footer>Hello, I'm the footer.</footer>
+<Footer />
