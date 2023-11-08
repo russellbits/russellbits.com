@@ -1,3 +1,7 @@
+<script>
+	import '$lib/styles/entypo.css';
+</script>
+
 <!-- Header.svelte -->
 <header>
 	<a href="/">Home</a>
@@ -13,14 +17,24 @@
 			<li>
 				<a href="/lab">Lab</a>
 			</li>
+			<li>
+				<a href="http://pinterest.com/belovedleader"><i class="glyph-pinterest glyph-white" /></a>
+			</li>
+			<li><a href="http://github.com/russellbits"><i class="glyph-github glyph-white" /></a></li>
+			<li>
+				<a href="http://instagram.com/belovedleader"><i class="glyph-instagram glyph-white" /></a>
+			</li>
 		</ul>
 	</nav>
 </header>
 
 <style>
 	header {
-		padding: 1rem;
-		color: rgb(255, 255, 255);
+		font-family: 'Raleway', sans-serif;
+		font-style: black;
+		font-weight: 900;
+		padding: 0.3rem;
+		color: white;
 		background: rgba(0, 0, 0, 0.5);
 		display: flex;
 		flex-wrap: wrap;

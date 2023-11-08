@@ -1,10 +1,42 @@
 /* house.css */
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Raleway/raleway-regular.woff2') format('woff2'),
+		url('/fonts/Raleway/raleway-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: bold;
+	font-weight: 700;
+	src: url('/fonts/Raleway/raleway-bold.woff2') format('woff2'),
+		url('/fonts/Raleway/raleway-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: black;
+	font-weight: 900;
+	src: url('/fonts/Raleway/raleway-black.woff2') format('woff2'),
+		url('/fonts/Raleway/raleway-black.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Entypo';
+	src: url('/fonts/Entypo/entypo.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
 	margin: 0;
 	background: linear-gradient(161deg, rgba(46, 51, 75, 1) 0%, rgba(89, 113, 226, 1) 66%);
 	background-color: #181c32;
 	color: #333;
 	font-family: sans-serif;
+	height: 100vh;
 }
 
 #logo {
