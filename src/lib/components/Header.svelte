@@ -3,9 +3,13 @@
 </script>
 
 <!-- Header.svelte -->
-<header>
-	<a href="/">Home</a>
+<div id="logo">
+	<a href="/">
+		<img src="/images/russellbits-logo.png" width="500" height="500" alt="Russellbits Logo" />
+	</a>
+</div>
 
+<header>
 	<nav>
 		<ul>
 			<li>

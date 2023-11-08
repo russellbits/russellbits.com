@@ -1,7 +1,3 @@
-<div id="logo">
-	<img src="/images/russellbits-logo.png" width="500" height="500" alt="Russellbits Logo" />
-</div>
-
 <h1>Hello. I am Russell Warner,</h1>
 
 <form>
