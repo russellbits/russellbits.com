@@ -34,6 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@entypo-icons/core": "^1.0.1",
 		"@picocss/pico": "^1.5.10"
 	}
 }
