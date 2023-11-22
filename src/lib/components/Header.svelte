@@ -42,7 +42,7 @@
 		background: rgba(0, 0, 0, 0.5);
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 
 	ul {
