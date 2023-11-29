@@ -38,11 +38,16 @@
 		font-style: black;
 		font-weight: 900;
 		padding: 0.3rem;
+		padding-bottom: 0em;
 		color: white;
 		background: rgba(0, 0, 0, 0.5);
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
+	}
+
+	nav > ul > li {
+		border-bottom: 4px solid white;
 	}
 
 	ul {
