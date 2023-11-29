@@ -32,7 +32,7 @@
 	</nav>
 </header>
 
-<style>
+<style lang="scss">
 	header {
 		font-family: 'Raleway', sans-serif;
 		font-style: black;

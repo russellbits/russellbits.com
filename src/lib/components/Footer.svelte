@@ -3,7 +3,7 @@
 	2023.
 </footer>
 
-<style>
+<style lang="scss">
 	footer {
 		position: absolute;
 		bottom: 0;
