@@ -1,11 +1,30 @@
+---
+# This is markdown frontmatter
+---
+
+<script>
+import Experiment from '$lib/components/Experiment.svelte'
+</script>
+
 # The Laboratory
 
-I put experiments with javascript here.
+This is where I keep experimental code:
+
+```js
+// JavaScript goes here,
+// And will be syntax-highlighted!
+```
+
+And Lab components can be added inside the Markdown:
+
+<Experiment />
 
 ## Uses
 
 **Here's some stuff I use**
 
 - SvelteKit
+- mdsvex
+- sass
 - VS Code
 - Emojis 😎
