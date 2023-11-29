@@ -13,3 +13,9 @@
 </main>
 
 <Footer />
+
+<style lang="scss">
+	main {
+		margin-left: 20em;
+	}
+</style>
