@@ -16,6 +16,8 @@
 
 <style lang="scss">
 	main {
-		margin-left: 20em;
+		position: absolute;
+		right: 2em;
+		width: 90vw;
 	}
 </style>
