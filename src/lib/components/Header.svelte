@@ -197,7 +197,7 @@
 		color: #fff;
 		text-decoration: none;
 		display: flex;
-		height: 45px;
+
 		align-items: center;
 		padding: 0 10px;
 	}
@@ -217,7 +217,12 @@
 		}
 	}
 
-	nav > ul > li {
+	nav > .inner > ul > li {
+		border-bottom: 4px solid rgba(1, 1, 1, 0);
+		border-color: transparent;
+	}
+
+	nav > .inner > ul > li:hover {
 		border-bottom: 4px solid white;
 	}
 

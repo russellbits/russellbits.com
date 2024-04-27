@@ -1,5 +1,12 @@
 <h1>Hello. I am Russell Warner,</h1>
 
+<img
+	src="/images/projects/seqminaut-project-display.png"
+	width="1200"
+	height="1697"
+	alt="Project Seqseco on iphone"
+/>
+
 <form>
 	<!-- Grid -->
 	<div class="grid">
@@ -14,7 +21,6 @@
 			<input type="text" id="lastname" name="lastname" placeholder="Last name" required />
 		</label>
 	</div>
-
 	<!-- Markup example 2: input is after label -->
 	<label for="email">Email address</label>
 	<input type="email" id="email" name="email" placeholder="Email address" required />
