@@ -16,8 +16,9 @@
 
 <style lang="scss">
 	main {
-		position: absolute;
-		right: 2em;
-		width: 90vw;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		border: 1px solid red;
 	}
 </style>

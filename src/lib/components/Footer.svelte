@@ -5,10 +5,14 @@
 
 <style lang="scss">
 	footer {
-		position: absolute;
-		bottom: 0;
 		color: white;
 		padding: 1em;
 		text-align: center;
+	}
+	a:link,
+	a:visited,
+	a:active {
+		text-decoration: underline;
+		color: rgb(219, 157, 255);
 	}
 </style>
