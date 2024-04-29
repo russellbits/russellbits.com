@@ -51,9 +51,17 @@
 					</li>
 				{/each}
 				<li>
-					<a href="http://pinterest.com/belovedleader"><i class="glyph-pinterest glyph-white" /></a>
+					<a href="contact"><i class="glyph-mail glyph-white" /></a>
 				</li>
 				<li><a href="http://github.com/russellbits"><i class="glyph-github glyph-white" /></a></li>
+				<li>
+					<a href="http://linkedin.com/in/russellbits"><i class="glyph-linkedin glyph-white" /></a>
+				</li>
+				<li>
+					<a href="https://codepen.io/russellbits"
+						><img src="images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
+					>
+				</li>
 				<li>
 					<a href="http://instagram.com/belovedleader"><i class="glyph-instagram glyph-white" /></a>
 				</li>
