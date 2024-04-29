@@ -47,23 +47,35 @@
 			<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
 				{#each navItems as item}
 					<li>
-						<a href={item.href}>{item.label}</a>
+						<a class="menuitem" href={item.href}>{item.label}</a>
 					</li>
 				{/each}
 				<li>
-					<a href="contact"><i class="glyph-mail glyph-white" /></a>
-				</li>
-				<li><a href="http://github.com/russellbits"><i class="glyph-github glyph-white" /></a></li>
-				<li>
-					<a href="http://linkedin.com/in/russellbits"><i class="glyph-linkedin glyph-white" /></a>
+					<a href="contact"><i class="icon glyph-mail glyph-white" /></a>
 				</li>
 				<li>
-					<a href="https://codepen.io/russellbits"
-						><img src="images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
+					<a href="http://github.com/russellbits"><i class="icon glyph-github glyph-white" /></a>
+				</li>
+				<li>
+					<a href="http://linkedin.com/in/russellbits"
+						><i class="icon glyph-linkedin glyph-white" /></a
 					>
 				</li>
 				<li>
-					<a href="http://instagram.com/belovedleader"><i class="glyph-instagram glyph-white" /></a>
+					<a href="https://codepen.io/russellbits"
+						><img
+							class="icon"
+							src="images/icon-codepen.svg"
+							width="25"
+							height="25"
+							alt="Codepen logo"
+						/></a
+					>
+				</li>
+				<li>
+					<a href="http://instagram.com/belovedleader"
+						><i class="icon glyph-instagram glyph-white" /></a
+					>
 				</li>
 			</ul>
 		</div>
@@ -97,6 +109,21 @@
 			top: -120px;
 			left: -160px;
 		}
+	}
+
+	.menuitem {
+		font-weight: bold;
+	}
+
+	.icon {
+		display: block;
+		position: relative;
+		top: 8px;
+	}
+	.glyph-github,
+	.glyph-linkedin,
+	.glyph-instagram {
+		top: 6px;
 	}
 
 	.inner {
