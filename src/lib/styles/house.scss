@@ -30,6 +30,10 @@
 	font-style: normal;
 }
 
+* {
+	font-size: 18px;
+}
+
 body {
 	margin: 0;
 	background: linear-gradient(161deg, rgba(46, 51, 75, 1) 0%, rgba(89, 113, 226, 1) 66%);
@@ -49,4 +53,29 @@ article {
 	color: white;
 	background-color: none;
 	border: none;
+}
+
+h1,
+h2,
+p {
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 3.6em;
+}
+h1 > img {
+	margin-top: -18px;
+	margin-right: 14px;
+}
+h2 {
+	font-size: 2em;
+	line-height: 1em;
+}
+p {
+	font-family: 'Georgia', serif;
+	font-size: 1em;
+	line-height: 1.8em;
 }
