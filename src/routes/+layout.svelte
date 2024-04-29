@@ -18,7 +18,8 @@
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 16em 10em;
+		padding: 0;
 		border: 1px solid red;
 	}
 </style>
