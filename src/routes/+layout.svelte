@@ -17,9 +17,10 @@
 <style lang="scss">
 	main {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 16em 10em;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 10px;
+		grid-template-rows: 20em 20em;
+		margin: 60px 10em 0 10em;
 		padding: 0;
-		border: 1px solid red;
 	}
 </style>
