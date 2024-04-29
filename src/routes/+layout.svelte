@@ -22,5 +22,6 @@
 		grid-template-rows: 20em 20em;
 		margin: 60px 10em 0 10em;
 		padding: 0;
+		background-color: rgba(255, 0, 0, 0.4);
 	}
 </style>

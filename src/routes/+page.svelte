@@ -2,19 +2,19 @@
 	import Tag from '$lib/components/Tag.svelte';
 </script>
 
-<div class="col-left" />
-<div class="col-right">
+<div class="column wide-left" />
+<div class="column wide-right">
 	<h1 class="intro">
 		<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Hello.
 	</h1>
 	<h2>I am Russell Warner.</h2>
 	<p>
 		I am a user interface architect. With my knowledge in aesthetics, psychology and software
-		development, I take a holistic approach to any user interface.
+		development, I take a holistic approach to any user interface. <!--You can read about interface architecture philsophy here.-->
 	</p>
 </div>
 
-<div class="col-left">
+<div class="column wide-left">
 	<h1>
 		<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Seqseco
 	</h1>
@@ -27,7 +27,7 @@
 	</div>
 </div>
 
-<div class="col-right">
+<div class="column wide-right">
 	<img
 		src="/images/projects/seqseco-project-display.png"
 		width="1200"
@@ -37,13 +37,14 @@
 </div>
 
 <style lang="scss">
-	.col-left {
+	.column {
 		background-color: rgba(255, 0, 0, 0.2);
+	}
+	.wide-left {
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
-	.col-right {
-		background-color: rgba(255, 0, 0, 0.2);
+	.wide-right {
 		grid-column-start: 3;
 		grid-column-end: 5;
 	}
