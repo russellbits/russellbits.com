@@ -8,20 +8,9 @@
 
 <Header />
 
-<main>
-	<slot />
-</main>
+<slot />
 
 <Footer />
 
 <style lang="scss">
-	main {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-column-gap: 10px;
-		grid-template-rows: 20em 20em;
-		margin: 60px 10em 0 10em;
-		padding: 0;
-		background-color: rgba(255, 0, 0, 0.4);
-	}
 </style>
