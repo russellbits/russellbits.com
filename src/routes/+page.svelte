@@ -11,7 +11,8 @@
 		<h2>I am Russell Warner.</h2>
 		<p>
 			I am a user interface architect. With my knowledge in aesthetics, psychology and software
-			development, I take a holistic approach to any user interface. <!--You can read about interface architecture philsophy here.-->
+			development, I take a holistic approach to any user interface. My goal with every user
+			interface is to employ transparency, decision reduction, and joy.<!--You can read about interface architecture philsophy here.-->
 		</p>
 	</div>
 
@@ -46,10 +47,8 @@
 		grid-template-rows: 20em 40em 40em;
 		margin: 60px 10em 0 10em;
 		padding: 0;
-		background-color: rgba(255, 0, 0, 0.4);
 	}
 	.column {
-		background-color: rgba(255, 0, 0, 0.2);
 	}
 	.wide-left {
 		grid-column-start: 1;
@@ -59,8 +58,22 @@
 		grid-column-start: 3;
 		grid-column-end: 5;
 	}
-	.intro {
+
+	@media screen and (max-width: 740px) {
+		main {
+			width: 90vw;
+			display: flex;
+			flex-direction: column;
+			margin: 90px 0 0 0;
+		}
+		.column {
+		}
+		.wide-left {
+		}
+		.wide-right {
+		}
 	}
+
 	.taglist {
 		margin-top: 10px;
 	}
