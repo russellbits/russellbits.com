@@ -5,6 +5,8 @@
 
 <style lang="scss">
 	footer {
+		position: relative;
+		bottom: 0px;
 		color: white;
 		padding: 1em;
 		text-align: center;
