@@ -6,12 +6,14 @@
 	export let desc;
 </script>
 
-<div>
+<div id="zero">
 	<figure><img src={blog_image} height="440" alt={title} /></figure>
 	<h2>{title}</h2>
 	<p>{desc}</p>
 	<div class="taglist">
-		<Tag name="temporary" />
+		<Tag name="Supabase" />
+		<Tag name="HTML 5" />
+		<Tag name="Javascript" />
 	</div>
 </div>
 
@@ -27,5 +29,8 @@
 	}
 	.taglist {
 		margin-top: 10px;
+	}
+	#zero {
+		border: 1px solid purple;
 	}
 </style>

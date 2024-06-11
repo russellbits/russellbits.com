@@ -10,7 +10,7 @@
 		</h1>
 	</div>
 
-	<div class="column" />
+	<!--<div class="column" />-->
 
 	<div class="column sidebar">
 		<ul>
