@@ -8,12 +8,12 @@
 	span.tag {
 		color: white;
 		text-align: center;
-		font: 18px 'Raleway', sans-serif;
+		font: 15px 'Raleway', sans-serif;
 		text-transform: uppercase;
 		font-weight: bold;
 		background: #b339f9;
 		width: auto;
-		padding: 10px;
+		padding: 8px;
 		margin: 4px;
 		border: 1px solid #3b4781;
 	}
