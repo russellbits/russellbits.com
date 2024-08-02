@@ -48,6 +48,9 @@
 		margin: 60px 10em 0 10em;
 		padding: 0;
 	}
+	h1 {
+		text-align: left;
+	}
 	.column {
 	}
 	.wide-left {

@@ -1,6 +1,7 @@
 <!-- projects/+page.svelte -->
 <script>
-	import Blog from '$lib/components/Blog.svelte';
+	import BlogPost from '$lib/components/BlogPost.svelte';
+	import BlogSidebar from '$lib/components/BlogSidebar.svelte';
 </script>
 
 <main>
@@ -11,20 +12,21 @@
 	</div>
 
 	<!--<div class="column" />-->
-
 	<div class="column sidebar">
-		<ul>
-			<li>Article 1</li>
-			<li>Article 2</li>
-			<li>Article 3</li>
-		</ul>
+		<BlogSidebar />
 	</div>
 
 	<div class="column content">
-		<Blog
+		<BlogPost
 			title="The Problem with Free Social Media"
 			desc="How can we continue to pretend that it is free?"
 			blog_image="images/blog-1.png"
+		/>
+
+		<BlogPost
+			title="Transform Elements with CSS"
+			desc="Some interesting effects you can accomplish with just CSS3."
+			blog_image="images/blog-2.png"
 		/>
 	</div>
 </main>
@@ -38,6 +40,9 @@
 		margin: 60px 10em 0 10em;
 		padding: 0;
 		/* background-color: rgba(255, 0, 0, 0.4); */
+	}
+	h1 {
+		text-align: right;
 	}
 	.title {
 		grid-column-start: 1;
