@@ -1,5 +1,6 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
+	import Button from '$lib/components/Button.svelte';
 </script>
 
 <main>
@@ -29,7 +30,13 @@
 			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Seqseco
 		</h1>
 		<h2>A Product Design Story</h2>
-		<p>Some text about the project.</p>
+		<p>
+			Ask the A.I. version of me anything you would like know about me. That can seem like a lot so,
+			you can also just ask for a suggestion, and the A.I. version of me will provide some
+			suggestions.
+			<Button label="Read More" />
+		</p>
+
 		<div class="taglist">
 			<Tag name="Svelte" /><Tag name="HTML5" /><Tag name="CSS3" /><Tag name="Nextjs" /><Tag
 				name="Supabase"
