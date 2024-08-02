@@ -3,7 +3,17 @@
 </script>
 
 <main>
-	<div class="column wide-left" />
+	<div class="column wide-left">
+		<figure class="front-page-image">
+			<img
+				src="/images/projects/seqseco-project-display.png"
+				width="1200"
+				height="1697"
+				alt="Project Seqseco on iphone"
+			/>
+		</figure>
+	</div>
+
 	<div class="column wide-right">
 		<h1 class="intro">
 			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Hello.
@@ -14,9 +24,7 @@
 			development, I take a holistic approach to any user interface. My goal with every user
 			interface is to employ transparency, decision reduction, and joy.<!--You can read about interface architecture philsophy here.-->
 		</p>
-	</div>
 
-	<div class="column wide-left">
 		<h1>
 			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Seqseco
 		</h1>
@@ -27,15 +35,6 @@
 				name="Supabase"
 			/>
 		</div>
-	</div>
-
-	<div class="column wide-right">
-		<img
-			src="/images/projects/seqseco-project-display.png"
-			width="1200"
-			height="1697"
-			alt="Project Seqseco on iphone"
-		/>
 	</div>
 </main>
 
@@ -52,6 +51,7 @@
 		text-align: left;
 	}
 	.column {
+		border: 1px solid rgba(70, 40, 70, 1);
 	}
 	.wide-left {
 		grid-column-start: 1;
@@ -60,6 +60,9 @@
 	.wide-right {
 		grid-column-start: 3;
 		grid-column-end: 5;
+	}
+	.front-page-image {
+		transform: scale(0.6);
 	}
 
 	@media screen and (max-width: 740px) {
