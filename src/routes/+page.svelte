@@ -37,7 +37,7 @@
 				Ask the A.I. version of me anything you would like know about me. That can seem like a lot
 				so, you can also just ask for a suggestion, and the A.I. version of me will provide some
 				suggestions.
-				<Button label="Read More" />
+				<Button label="Read More" url="/projects/seqseco" />
 			</p>
 
 			<div class="taglist">

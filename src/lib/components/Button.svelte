@@ -1,8 +1,9 @@
 <script>
 	export let label;
+	export let url;
 </script>
 
-<span class="button">{label}</span>
+<span class="button"><a href={url}>{label}</a></span>
 
 <style>
 	span.button {
@@ -19,6 +20,16 @@
 		margin: 1em 0 1em 0;
 		border: 1px solid rgba(30, 44, 115, 1);
 		border-radius: 30px;
+	}
+	a:link,
+	a:visited,
+	a:active {
+		display: inline;
+		font: 15px 'Raleway', sans-serif;
+		color: white;
+	}
+	a:hover {
+		text-decoration: none;
 	}
 	/* span.readmore:first-child {
 		margin-left: 0;
