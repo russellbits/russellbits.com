@@ -12,3 +12,10 @@
 
 	<slot />
 </article>
+
+<style lang="scss">
+	article {
+		background-color: none;
+		border: 1px solid purple;
+	}
+</style>
