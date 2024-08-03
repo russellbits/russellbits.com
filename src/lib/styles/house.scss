@@ -58,8 +58,14 @@ p {
 	margin: 0;
 }
 
+h1,
+h2 {
+	font-family: 'Raleway', sans-serif;
+}
+
 h1 {
-	font-size: 3.6em;
+	font-size: 3em;
+	font-weight: 600;
 }
 h1 > img {
 	margin-top: -18px;
@@ -67,11 +73,13 @@ h1 > img {
 }
 h2 {
 	font-size: 2em;
+	font-weight: 400;
 	line-height: 1.7em;
 }
 p {
 	font-family: 'Georgia', serif;
 	font-size: 1em;
+	font-weight: 100;
 	line-height: 1.8em;
 }
 ul {
