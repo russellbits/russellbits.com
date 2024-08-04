@@ -1,7 +1,6 @@
 ---
 title: Seqseco
 date: '2020-19-18'
-layout: false
 ---
 
 <script>

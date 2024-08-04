@@ -17,5 +17,8 @@
 	article {
 		background-color: none;
 		border: 1px solid purple;
+		width: 70vw;
+		margin: 0 auto;
+		--card-background-color: none;
 	}
 </style>
