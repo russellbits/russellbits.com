@@ -16,7 +16,7 @@
 	const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
 
 	// Media match query handler
-	const mediaQueryHandler = (e) => {
+	const mediaQueryHandler = (/** @type {{ matches: any; }} */ e) => {
 		// Reset mobile state
 		if (!e.matches) {
 			showMobileMenu = false;
@@ -27,7 +27,7 @@
 	onMount(() => {
 		const mediaListener = window.matchMedia('(max-width: 767px)');
 
-		mediaListener.addListener(mediaQueryHandler);
+		mediaListener.addEventListener('change', mediaQueryHandler);
 	});
 </script>
 
@@ -41,7 +41,13 @@
 <header>
 	<nav>
 		<div class="inner">
-			<div on:click={handleMobileIconClick} class={`mobile-icon${showMobileMenu ? ' active' : ''}`}>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<div
+				on:click={handleMobileIconClick}
+				class={`mobile-icon${showMobileMenu ? ' active' : ''}`}
+				role="link"
+				tabindex="0"
+			>
 				<div class="middle-line" />
 			</div>
 			<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
@@ -65,7 +71,7 @@
 					<a href="https://codepen.io/russellbits"
 						><img
 							class="icon"
-							src="images/icon-codepen.svg"
+							src="/images/icon-codepen.svg"
 							width="25"
 							height="25"
 							alt="Codepen logo"
