@@ -1,5 +1,6 @@
-<!-- projects/+page.svelte -->
+<!-- src/routes/blog/+page.svelte -->
 <script>
+	export let data;
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	import BlogSidebar from '$lib/components/BlogSidebar.svelte';
 </script>
@@ -17,17 +18,14 @@
 	</div>
 
 	<div class="column content">
-		<BlogPost
-			title="The Problem with Free Social Media"
-			desc="How can we continue to pretend that it is free?"
-			blog_image="images/blog-1.png"
-		/>
-
-		<BlogPost
-			title="Transform Elements with CSS"
-			desc="Some interesting effects you can accomplish with just CSS3."
-			blog_image="images/blog-2.png"
-		/>
+		{#each data.posts as post}
+			<BlogPost
+				title={post.meta.title}
+				summary={post.meta.summary}
+				blogImage={post.meta.blogImage}
+				publicationDate={post.meta.publicationDate}
+			/>
+		{/each}
 	</div>
 </main>
 

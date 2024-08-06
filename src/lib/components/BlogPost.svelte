@@ -1,16 +1,18 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
 
-	export let title = 'Blog Title';
-	export let blog_image = 'images/';
-	export let desc;
+	export let title = 'Untitled';
+	export let blogImage = 'No image available.';
+	export let summary = 'No summary available.';
+	export let publicationDate;
 </script>
 
 <div class="post">
-	<figure><img src={blog_image} alt={title} /></figure>
+	<figure><img src={blogImage} alt={title} /></figure>
 	<div class="content">
 		<h2>{title}</h2>
-		<p>{desc}</p>
+		<p class="publicationDate">{publicationDate}</p>
+		<p>{summary}</p>
 		<div class="taglist">
 			<Tag name="Supabase" />
 			<Tag name="HTML 5" />
@@ -34,6 +36,9 @@
 	}
 	.post p {
 		margin: 0;
+	}
+	.post p.publicationDate {
+		text-transform: uppercase;
 	}
 	.post figure {
 		margin: 0 1em 0 0;

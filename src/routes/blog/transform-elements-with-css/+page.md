@@ -1,6 +1,8 @@
 ---
 title: Transform HTML Elemets with CSS
-date: '2023-11-29'
+publicationDate: '2023-11-29'
+blogImage: '/images/blog-2.png'
+summary: 'A third blog post you say!?'
 ---
 
 Hello, I am _Post Two._
