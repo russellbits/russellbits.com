@@ -9,4 +9,4 @@ experimentImage: 'https://placehold.co/200x200'
 
 ## A content preview with a revealed excerpt.
 
-Pull in Codepen here.
+:warning: Pull in Codepen here.

@@ -27,7 +27,7 @@ export const fetchMarkdownExperiments = async () => {
 		iterableExperiments.map(async ([path, resolver]) => {
 			// @ts-ignore
 			const { metadata } = await resolver();
-			const experimentPath = path.slice(11, -3);
+			const experimentPath = path.slice(11, -8);
 
 			return {
 				meta: metadata,

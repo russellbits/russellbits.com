@@ -13,11 +13,12 @@
 
 	<div class="column content">
 		{#each data.experiments as experiment}
+			<code>{experiment.path}</code>
 			<Experiment
 				title={experiment.meta.title}
 				summary={experiment.meta.summary}
 				experimentImage={experiment.meta.experimentImage}
-				link={experiment.meta.path}
+				link={experiment.path}
 			/>
 		{/each}
 	</div>

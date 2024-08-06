@@ -10,6 +10,7 @@
 	{experimentImage}
 	<p>{summary}</p>
 	<a href={link}>Open Experiment</a>
+	<code>{link}</code>
 </div>
 
 <style lang="scss">
