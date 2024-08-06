@@ -7,7 +7,7 @@
 	<div class="column wide-left">
 		<figure class="front-page-image">
 			<img
-				src="/images/projects/seqseco-project-display.png"
+				src="/images/projects/seqseco/seqseco-project-display.png"
 				width="1200"
 				height="1697"
 				alt="Project Seqseco on iphone"
