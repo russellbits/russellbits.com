@@ -19,6 +19,26 @@ export const fetchMarkdownPosts = async () => {
 	return allPosts;
 };
 
+export const fetchMarkdownExperiments = async () => {
+	const allExperimentFiles = import.meta.glob('/src/routes/lab/*/*.md');
+	const iterableExperiments = Object.entries(allExperimentFiles);
+
+	const allExperiments = await Promise.all(
+		iterableExperiments.map(async ([path, resolver]) => {
+			// @ts-ignore
+			const { metadata } = await resolver();
+			const experimentPath = path.slice(11, -3);
+
+			return {
+				meta: metadata,
+				path: experimentPath
+			};
+		})
+	);
+
+	return allExperiments;
+};
+
 export const fetchMarkdownProjects = async () => {
 	const allProjectFiles = import.meta.glob(`/src/routes/projects/\*_/_.md`);
 	const iterableProjectFiles = Object.entries(allProjectFiles);
