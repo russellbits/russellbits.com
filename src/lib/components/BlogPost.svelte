@@ -1,18 +1,21 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	export let title = 'Untitled';
 	export let blogImage = 'No image available.';
 	export let summary = 'No summary available.';
 	export let publicationDate;
+	export let link = '#';
 </script>
 
 <div class="post">
 	<figure><img src={blogImage} alt={title} /></figure>
 	<div class="content">
-		<h2>{title}</h2>
+		<h2><a href={link}>{title}</a></h2>
 		<p class="publicationDate">{publicationDate}</p>
 		<p>{summary}</p>
+		<Button label="read more" url={link} />
 		<div class="taglist">
 			<Tag name="Supabase" />
 			<Tag name="HTML 5" />

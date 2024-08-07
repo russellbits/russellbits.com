@@ -24,6 +24,7 @@
 				summary={post.meta.summary}
 				blogImage={post.meta.blogImage}
 				publicationDate={post.meta.publicationDate}
+				link={post.path}
 			/>
 		{/each}
 	</div>

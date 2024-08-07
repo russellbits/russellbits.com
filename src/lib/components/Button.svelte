@@ -13,7 +13,7 @@
 		font: 15px 'Raleway', sans-serif;
 		text-transform: uppercase;
 		font-weight: bold;
-		background: rgba(78, 98, 198, 1);
+		background: rgba(28, 42, 113, 1);
 		width: 120px;
 		height: 40px;
 		padding: 10px;
