@@ -59,7 +59,7 @@
 		grid-column-start: 2;
 		grid-column-end: 5;
 	}
-	.taglist {
+	/* .taglist {
 		margin-top: 10px;
-	}
+	} */
 </style>

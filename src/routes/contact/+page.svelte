@@ -1,4 +1,8 @@
 <!-- contact/+page.svelte -->
+<script>
+	export const prerender = true;
+</script>
+
 <h1>Contact</h1>
 
 <p>reach out and say Hi.</p>

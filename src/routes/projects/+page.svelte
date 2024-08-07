@@ -72,8 +72,8 @@
 		grid-column-end: 5;
 		text-align: center;
 	}
-	.column {
-		/* background-color: rgba(255, 0, 0, 0.2); */
+	/* .column {
+		background-color: rgba(255, 0, 0, 0.2);
 	}
 	.wide-left {
 		grid-column-start: 1;
@@ -85,5 +85,5 @@
 	}
 	.taglist {
 		margin-top: 10px;
-	}
+	} */
 </style>

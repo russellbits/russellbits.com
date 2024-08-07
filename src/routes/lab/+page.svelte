@@ -42,18 +42,14 @@
 		grid-column-end: 5;
 		text-align: center;
 	}
-	.column {
-		/* background-color: rgba(255, 0, 0, 0.2); */
-	}
-	.sidebar {
-		grid-column-start: 1;
-		grid-column-end: 2;
-	}
+	/*.column {
+		 background-color: rgba(255, 0, 0, 0.2); 
+	}*/
 	.content {
 		grid-column-start: 2;
 		grid-column-end: 5;
 	}
-	.taglist {
+	/* .taglist {
 		margin-top: 10px;
-	}
+	} */
 </style>

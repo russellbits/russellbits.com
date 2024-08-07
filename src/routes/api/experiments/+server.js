@@ -1,4 +1,5 @@
 // src/routes/api/lab/+server.js
+export const prerender = true;
 import { fetchMarkdownExperiments } from '$lib/utils';
 import { json } from '@sveltejs/kit';
 

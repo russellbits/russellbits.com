@@ -1,4 +1,5 @@
 // src/routes/api/posts/+server.js
+export const prerender = true;
 import { fetchMarkdownPosts } from '$lib/utils';
 import { json } from '@sveltejs/kit';
 
