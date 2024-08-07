@@ -37,6 +37,10 @@
 		line-height: 1em;
 		margin: 0;
 	}
+	.post h2 > a:link {
+		color: white;
+		font-size: 1em;
+	}
 	.post p {
 		margin: 0;
 	}

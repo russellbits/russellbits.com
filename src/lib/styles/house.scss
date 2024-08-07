@@ -1,9 +1,13 @@
 /* house.css */
+
+@import url('./markdown.css');
+
 @font-face {
 	font-family: 'Raleway';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/Raleway/raleway-regular.woff2') format('woff2'),
+	src:
+		url('/fonts/Raleway/raleway-regular.woff2') format('woff2'),
 		url('/fonts/Raleway/raleway-regular.woff') format('woff');
 }
 
@@ -11,7 +15,8 @@
 	font-family: 'Raleway';
 	font-style: bold;
 	font-weight: 700;
-	src: url('/fonts/Raleway/raleway-bold.woff2') format('woff2'),
+	src:
+		url('/fonts/Raleway/raleway-bold.woff2') format('woff2'),
 		url('/fonts/Raleway/raleway-bold.woff') format('woff');
 }
 
@@ -19,7 +24,8 @@
 	font-family: 'Raleway';
 	font-style: black;
 	font-weight: 900;
-	src: url('/fonts/Raleway/raleway-black.woff2') format('woff2'),
+	src:
+		url('/fonts/Raleway/raleway-black.woff2') format('woff2'),
 		url('/fonts/Raleway/raleway-black.woff') format('woff');
 }
 
@@ -32,7 +38,7 @@
 
 /* MDSVEX VARIABLE */
 :root {
-	--card-background-color: blue;
+	--card-background-color: none;
 }
 
 * {
