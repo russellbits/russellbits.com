@@ -70,7 +70,7 @@
 					</li>
 				{/each}
 				<li>
-					<a href="contact"><i class="icon glyph-mail glyph-white" /></a>
+					<a href="/contact"><i class="icon glyph-mail glyph-white" /></a>
 				</li>
 				<li>
 					<a href="http://github.com/russellbits"><i class="icon glyph-github glyph-white" /></a>

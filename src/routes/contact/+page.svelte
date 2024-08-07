@@ -1,6 +1,5 @@
 <!-- contact/+page.svelte -->
 <script>
-	export const prerender = true;
 </script>
 
 <h1>Contact</h1>
