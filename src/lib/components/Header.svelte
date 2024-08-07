@@ -128,7 +128,7 @@
 	}
 
 	@media (max-width: 900px) {
-		#logo {
+		.logo {
 			transform: scale(0.5);
 			top: -120px;
 			left: -160px;
