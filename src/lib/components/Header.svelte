@@ -1,6 +1,10 @@
 <script>
 	import '$lib/styles/entypo.css';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+
+	// You can use the $page store to access the current path and other information
+	$: currentPath = $page.url.pathname;
 
 	// Show mobile icon and display menu
 	let showMobileMenu = false;
@@ -32,11 +36,19 @@
 </script>
 
 <!-- Header.svelte -->
-<div id="logo">
-	<a href="/">
-		<img src="/images/russellbits-logo.png" width="500" height="500" alt="Russellbits Logo" />
-	</a>
-</div>
+{#if currentPath !== '/'}
+	<div class="logo">
+		<a href="/">
+			<img src="/images/russellbits-logo-md.png" width="300" height="300" alt="Russellbits Logo" />
+		</a>
+	</div>
+{:else}
+	<div class="logo lg">
+		<a href="/">
+			<img src="/images/russellbits-logo-lg.png" width="500" height="500" alt="Russellbits Logo" />
+		</a>
+	</div>
+{/if}
 
 <header>
 	<nav>
@@ -51,6 +63,7 @@
 				<div class="middle-line" />
 			</div>
 			<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
+				<li>{currentPath}</li>
 				{#each navItems as item}
 					<li>
 						<a class="menuitem" href={item.href}>{item.label}</a>
@@ -102,11 +115,16 @@
 		justify-content: flex-end;
 	}
 
-	#logo {
+	.logo {
 		position: fixed;
+		top: 20px;
+		left: -50px;
+		z-index: 4000;
+	}
+
+	.logo.lg {
 		top: 0px;
 		left: -100px;
-		z-index: 4000;
 	}
 
 	@media (max-width: 900px) {
