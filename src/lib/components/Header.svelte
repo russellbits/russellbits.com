@@ -11,9 +11,9 @@
 
 	// List of navigation items
 	const navItems = [
-		{ label: 'Blog', href: 'blog' },
-		{ label: 'Projects', href: 'projects' },
-		{ label: 'Lab', href: 'lab' }
+		{ label: 'Blog', href: '/blog' },
+		{ label: 'Projects', href: '/projects' },
+		{ label: 'Lab', href: '/lab' }
 	];
 
 	// Mobile menu click event handler
@@ -63,7 +63,7 @@
 				<div class="middle-line" />
 			</div>
 			<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
-				<li>{currentPath}</li>
+				<!-- Debugging: <li>{currentPath}</li> -->
 				{#each navItems as item}
 					<li>
 						<a class="menuitem" href={item.href}>{item.label}</a>
