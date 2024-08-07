@@ -31,7 +31,7 @@
 		display: flex;
 		flex-direction: row; /* or column */
 		align-items: flex-start;
-		border: 1px solid purple;
+		/* border: 1px solid purple; */
 	}
 	.post h2 {
 		line-height: 1em;
