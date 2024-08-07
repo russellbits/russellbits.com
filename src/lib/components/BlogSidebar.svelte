@@ -2,13 +2,15 @@
 	// List code here
 </script>
 
+<!--
+This needs to be Tags
 <h2>Popular Posts</h2>
 
 <ul>
 	<li>The Problem With Free Social Media</li>
 	<li>Raskins Non-skeumorphic Temperature Converter</li>
 	<li>Revenge of the Blink Tool</li>
-</ul>
+</ul> -->
 
 <style lang="scss">
 	ul {

@@ -5,10 +5,17 @@
 	export let date;
 </script>
 
-<article>
-	<h1>{title}</h1>
-
-	<p>Published: {date}</p>
+<article class="markdown">
+	{title} - {date}
 
 	<slot />
 </article>
+
+<style>
+	article {
+		width: 60vw;
+		margin: 0 auto;
+		--card-background-color: none;
+		--card-box-shadow: none;
+	}
+</style>
