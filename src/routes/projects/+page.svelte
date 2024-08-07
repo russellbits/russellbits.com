@@ -1,5 +1,6 @@
 <!-- projects/+page.svelte -->
 <script>
+	export let data;
 	import Project from '$lib/components/Project.svelte';
 </script>
 
@@ -10,7 +11,20 @@
 		</h1>
 	</div>
 
-	<div class="column wide-left">
+	<div class="column content">
+		{#each data.projects as project}
+			<code>{project.path}</code>
+			<Project
+				title={project.meta.title}
+				summary={project.meta.summary}
+				publicationDate={project.meta.date}
+				projectImage={project.meta.projectImage}
+				link={project.path}
+			/>
+		{/each}
+	</div>
+
+	<!-- <div class="column wide-left">
 		<Project
 			title="Seqseco"
 			project_image="images/projects/seqseco-project-display-sm.png"
@@ -40,7 +54,7 @@
 			project_image="images/projects/hiex-project-display.png"
 			desc="This interactive map was designed alongside the Good Maps API with custom icons, shaded activation areas and custom icons for different hotels."
 		/>
-	</div>
+	</div> -->
 </main>
 
 <style>

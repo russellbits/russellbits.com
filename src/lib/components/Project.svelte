@@ -1,18 +1,23 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	export let title = 'Project Title';
-	export let project_image = 'images/';
-	export let desc;
+	export let publicationDate = 'No date available';
+	export let projectImage = 'https://placehold.co/500x250';
+	export let summary;
+	export let link = '#';
 </script>
 
 <div>
-	<figure><img src={project_image} height="480" alt={title} /></figure>
+	<figure><img src={projectImage} height="480" alt={title} /></figure>
 	<h2>{title}</h2>
-	<p>{desc}</p>
+	<p>{summary}</p>
+	<Button url={link} label="see more" />
 	<div class="taglist">
 		<Tag name="temporary" />
 	</div>
+	<p>Published on: {publicationDate}</p>
 </div>
 
 <!--

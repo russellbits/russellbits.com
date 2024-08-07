@@ -1,0 +1,29 @@
+[
+	{
+		"meta": {
+			"title": "Holiday Inn Express Interactive Map",
+			"date": "2020-19-18",
+			"summary": "This is a map project.",
+			"projectImage": "https://placehold.co/500x250"
+		},
+		"path": "/projects/hiex-interactive-map/"
+	},
+	{
+		"meta": {
+			"title": "Phylos Customer Dashboard",
+			"date": "2018-08-11",
+			"summary": "This is a dashboard project.",
+			"projectImage": "https://placehold.co/500x250"
+		},
+		"path": "/projects/phylos-customer-dashboard/"
+	},
+	{
+		"meta": {
+			"title": "Seqseco",
+			"date": "2024-01-01",
+			"summary": "This is a web app.",
+			"projectImage": "https://placehold.co/500x250"
+		},
+		"path": "/projects/seqseco/"
+	}
+]
