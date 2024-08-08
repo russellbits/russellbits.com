@@ -1,7 +1,7 @@
 ---
 title: Raskin's Non-skeumorphic Digital Design
 publicationDate: '2024-04-30'
-blogImage: '/images/blog-humane-interface.jpg'
+blogImage: '/images/blog/blog-humane-interface.jpg'
 summary: 'Jef Raskin discussed the need to simplify the number of actions that a user must take with this very simple example of a temperature converter.'
 ---
 

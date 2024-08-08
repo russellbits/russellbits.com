@@ -13,6 +13,10 @@
 </figure>
 
 <style>
+	figure {
+		width: 778px;
+		margin: 0 auto;
+	}
 	figure.normal {
 		border: none;
 	}
@@ -20,7 +24,7 @@
 		float: right;
 	}
 	figure:nth-child(even) {
-		max-width: 400px;
+		/* max-width: 400px; */
 		margin: 0 1em 1em 0;
 	}
 	/* figure:nth-child(odd) {
@@ -34,5 +38,6 @@
 		font-family: 'Raleway', sans-serif;
 		font-size: 0.8em;
 		line-height: 1em;
+		text-align: center;
 	}
 </style>

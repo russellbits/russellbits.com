@@ -1,7 +1,7 @@
 ---
 title: Revenge of the Blink Tag
 publicationDate: '2023-11-29'
-blogImage: '/images/blog-1.png'
+blogImage: '/images/blog/blog-1.png'
 summary: 'This is also a blog post!'
 ---
 

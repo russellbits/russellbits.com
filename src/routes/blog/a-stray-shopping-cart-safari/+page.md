@@ -1,9 +1,14 @@
 ---
 title: A Stray Shopping Cart Safari
 publicationDate: '2024-04-30'
-blogImage: '/images/blog-humane-interface.jpg'
+blogImage: '/images/blog/sample-false-strays.jpg'
 summary: 'I love works of art that engage (or encourage) the audience to participate.'
 ---
+
+<script>
+    const path = '/blog/a-stray-shopping-cart-safari/';
+    import Figure from '$lib/components/Figure.svelte';
+</script>
 
 # A Stray Shopping Cart Safari
 
@@ -11,13 +16,13 @@ Now and then, for creative purposes, I need to stray a little ways away from the
 
 And what happens to these artifacts of economy in nature? To answer that question, it is best to turn to "The Stray Shopping Carts of Eastern North America" by Julian Montague.
 
-[book image]
+<Figure url="/images/blog/book-cover.jpg" widthx="778" altname="Book Cover" caption="The Guide's Cover" figClass="normal"/>
 
 This beautiful tome is either the result of a sincere artist or a wry comedian; I'm honestly not sure which. Upon receiving this as a Christmas gift from my sister, I was immediately reminded of books like "How to Sharpen Pencils: A Practical & Theoretical Treatise on the Artisanal Craft of Pencil Sharpening for Writers, Artists, Contractors, Flange Turners, Anglesmiths, & Civil Servants" - whew! - by David Rees. When I first randomly encountered this book at Powell's Bookstore, I was angry and pulled it off the shelf and rifled through it with fury. This artisanal crap had gone too far! Then, I found the chapter on how to break into a friend's place and sharpen their pencils and the word "SATIRE" blinked on and off in my vision. Mr. Rees is willing to wink at the audience to let us know what's up. Mr. Montague, on the other hand, doesn't flinch. Reading the Afterword, one find that this is serious social commentary. No offense to him, I can't help but read it as dry wit and I find it hilarious.
 
 The book is gorgeous.
 
-[book interior images]
+<Figure url="/images/blog/book-interior-1.jpg" widthx="778" altname="Book Cover" caption="The Guide's Cover" figClass="normal"/>
 
 I adore the fact that it presents a sincere identification system. This accomplishes two things. One, it presents an opportunity for the author to show a lot of photos of shopping carts that are not just a random collection. The overlay of logic helps to give reason and order to the collection. Like a Linnaean taxonomy system, any one can present a pile of animal photographs, but placing them in relation to one another makes it an investigation. Two, (and I think this may be an unintended result) it makes for a great safari guide!
 
