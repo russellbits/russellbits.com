@@ -5,9 +5,13 @@
 	export let date;
 </script>
 
-<article class="markdown">
-	{title} - {date}
+<svelte:head>
+	<title>Russellbits - {title}</title>
+	<meta property="og:title" content={title} />
+	<meta name="date" content={date} />
+</svelte:head>
 
+<article class="markdown">
 	<slot />
 </article>
 

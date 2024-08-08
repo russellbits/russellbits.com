@@ -2,6 +2,11 @@
 <script>
 </script>
 
+<svelte:head>
+	<title>Russellbits - Contact</title>
+	<meta property="og:title" content="Contact" />
+</svelte:head>
+
 <h1>Contact</h1>
 
 <p>reach out and say Hi.</p>

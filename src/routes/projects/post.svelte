@@ -5,11 +5,13 @@
 	export let date;
 </script>
 
+<svelte:head>
+	<title>Russellbits - {title}</title>
+	<meta property="og:title" content={title} />
+	<meta name="date" content={date} />
+</svelte:head>
+
 <article>
-	<h1>{title}</h1>
-
-	<p>Published: {date}</p>
-
 	<slot />
 </article>
 
