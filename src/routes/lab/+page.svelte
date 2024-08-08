@@ -11,17 +11,16 @@
 		</h1>
 	</div>
 
-	<div class="column content">
-		{#each data.experiments as experiment}
-			<code>{experiment.path}</code>
+	{#each data.experiments as experiment}
+		<div class="experiments">
 			<Experiment
 				title={experiment.meta.title}
 				summary={experiment.meta.summary}
 				experimentImage={experiment.meta.experimentImage}
 				link={experiment.path}
 			/>
-		{/each}
-	</div>
+		</div>
+	{/each}
 </main>
 
 <style>
@@ -29,10 +28,9 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 1em;
-		grid-template-rows: 8em 40em 40em;
+		/* grid-template-rows: 8em 40em 40em; */
 		margin: 60px 10em 0 10em;
 		padding: 0;
-		/* background-color: rgba(255, 0, 0, 0.4); */
 	}
 	h1 {
 		text-align: right;
@@ -40,14 +38,14 @@
 	.title {
 		grid-column-start: 1;
 		grid-column-end: 5;
-		text-align: center;
+		text-align: right;
+		margin: 0 3em 2em 0;
 	}
 	/*.column {
 		 background-color: rgba(255, 0, 0, 0.2); 
 	}*/
-	.content {
-		grid-column-start: 2;
-		grid-column-end: 5;
+	.experiments {
+		max-width: 200px;
 	}
 	/* .taglist {
 		margin-top: 10px;

@@ -10,11 +10,13 @@
 		display: block;
 		color: white;
 		text-align: center;
-		font: 15px 'Raleway', sans-serif;
+		font:
+			15px 'Raleway',
+			sans-serif;
 		text-transform: uppercase;
-		font-weight: bold;
+		font-weight: 700;
 		background: rgba(28, 42, 113, 1);
-		width: 120px;
+		width: auto;
 		height: 40px;
 		padding: 10px;
 		margin: 1em 0 1em 0;
@@ -25,7 +27,9 @@
 	a:visited,
 	a:active {
 		display: inline;
-		font: 15px 'Raleway', sans-serif;
+		font:
+			15px 'Raleway',
+			sans-serif;
 		color: white;
 	}
 	a:hover {
