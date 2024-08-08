@@ -2,7 +2,7 @@
 title: Keypress Description
 date: '2023-02-10'
 summary: 'Examining what keypress events produce'
-experimentImage: 'https://placehold.co/250x250'
+experimentImage: 'https://placehold.co/200x200'
 ---
 
 <!-- Experiments will go here -->

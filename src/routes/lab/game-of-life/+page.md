@@ -2,7 +2,7 @@
 title: Game of Life
 date: '2021-09-22'
 summary: 'Cellular Automata'
-experimentImage: 'https://placehold.co/250x250'
+experimentImage: 'https://placehold.co/200x200'
 ---
 
 <!-- Experiments will go here -->
