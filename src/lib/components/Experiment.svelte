@@ -1,6 +1,6 @@
 <script>
 	export let title = 'Untitled';
-	export let experimentImage = 'https://placehold.co/200x200';
+	export let experimentImage = 'https://placehold.co/250x250';
 	export let summary = 'No summary available.';
 	export let link = '#';
 </script>

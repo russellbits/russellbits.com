@@ -1,7 +1,7 @@
 ---
 title: Transform HTML Elements with CSS
 publicationDate: '2023-11-29'
-blogImage: '/images/blog-2.png'
+blogImage: '/images/blog/blog-2.png'
 summary: 'A third blog post you say!?'
 ---
 
