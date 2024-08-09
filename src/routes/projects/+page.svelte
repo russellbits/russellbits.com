@@ -35,6 +35,7 @@
 		/* background-color: rgba(255, 0, 0, 0.4); */
 	}
 	.title {
+		text-align: center;
 	}
 	/* .column {
 		background-color: rgba(255, 0, 0, 0.2);
