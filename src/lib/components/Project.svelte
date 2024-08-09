@@ -13,10 +13,10 @@
 	<figure><img src={projectImage} height="480" alt={title} /></figure>
 	<h2>{title}</h2>
 	<p>{summary}</p>
-	<Button url={link} label="see more" />
-	<div class="taglist">
+	<Button url={link} label="see more" style="small" />
+	<!-- <div class="taglist">
 		<Tag name="temporary" />
-	</div>
+	</div> -->
 	<p>Published on: {publicationDate}</p>
 </div>
 
@@ -42,13 +42,14 @@ Creates a project card for the site
 
 <style>
 	img {
-		max-width: 100%;
+		width: auto;
 		max-height: 480px;
 	}
 	figure {
 		margin: 0 auto;
-		border: 1px solid purple;
 		text-align: center;
+		height: 480px;
+		max-height: 480px;
 	}
 	.taglist {
 		margin-top: 10px;

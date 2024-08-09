@@ -1,10 +1,19 @@
 [
 	{
 		"meta": {
+			"title": "Seqseco",
+			"date": "2024-01-01",
+			"summary": "This is a web app.",
+			"projectImage": "/images/projects/seqseco-project-display-2.png"
+		},
+		"path": "/projects/seqseco/"
+	},
+	{
+		"meta": {
 			"title": "Holiday Inn Express Interactive Map",
 			"date": "2020-19-18",
 			"summary": "This is a map project.",
-			"projectImage": "https://placehold.co/500x250"
+			"projectImage": "/images/projects/hiex-project-display.png"
 		},
 		"path": "/projects/hiex-interactive-map/"
 	},
@@ -13,17 +22,17 @@
 			"title": "Phylos Customer Dashboard",
 			"date": "2018-08-11",
 			"summary": "This is a dashboard project.",
-			"projectImage": "https://placehold.co/500x250"
+			"projectImage": "/images/projects/phylos-project-display.png"
 		},
 		"path": "/projects/phylos-customer-dashboard/"
 	},
 	{
 		"meta": {
-			"title": "Seqseco",
+			"title": "Z Gear",
 			"date": "2024-01-01",
 			"summary": "This is a web app.",
-			"projectImage": "https://placehold.co/500x250"
+			"projectImage": "/images/projects/zgear-project-display.png"
 		},
-		"path": "/projects/seqseco/"
+		"path": "/projects/zgear/"
 	}
 ]
