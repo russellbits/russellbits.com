@@ -1,9 +1,10 @@
 <script>
 	export let label;
 	export let url;
+	export let style;
 </script>
 
-<span class="button"><a href={url}>{label}</a></span>
+<span class="button {style}"><a href={url}>{label}</a></span>
 
 <style>
 	span.button {
@@ -23,6 +24,14 @@
 		border: 1px solid rgba(30, 44, 115, 1);
 		border-radius: 30px;
 	}
+	span.button.fill {
+		border: 1px solid purple;
+	}
+
+	span.button.small {
+		width: 130px;
+	}
+
 	a:link,
 	a:visited,
 	a:active {

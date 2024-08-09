@@ -15,7 +15,7 @@
 		<h2><a href={link}>{title}</a></h2>
 		<p class="publicationDate">{publicationDate}</p>
 		<p>{summary}</p>
-		<Button label="read more" url={link} />
+		<Button label="read more" url={link} style="small" />
 		<div class="taglist">
 			<Tag name="Supabase" />
 			<Tag name="HTML 5" />
