@@ -14,8 +14,9 @@
 
 <style>
 	figure {
-		width: 778px;
+		max-width: 778px;
 		margin: 0 auto;
+		margin-bottom: 1em;
 	}
 	figure.normal {
 		border: none;
@@ -23,10 +24,10 @@
 	figure.floater {
 		float: right;
 	}
-	figure:nth-child(even) {
-		/* max-width: 400px; */
+	/* figure:nth-child(even) {
+		max-width: 400px;
 		margin: 0 1em 1em 0;
-	}
+	} */
 	/* figure:nth-child(odd) {
 		float: right;
 		max-width: 400px;

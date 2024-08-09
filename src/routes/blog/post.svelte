@@ -16,7 +16,7 @@
 </article>
 
 <style>
-	article {
+	article.markdown {
 		width: 60vw;
 		margin: 0 auto;
 		--card-background-color: none;

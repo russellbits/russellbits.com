@@ -11,3 +11,14 @@ article.markdown p {
 	margin: 0 0 0.6em 0;
 	text-indent: 2em;
 }
+
+article.markdown a,
+a:link,
+a:hover,
+a:visited {
+	color: rgb(219, 157, 255);
+}
+
+article.markdown a:hover {
+	text-decoration: underline;
+}
