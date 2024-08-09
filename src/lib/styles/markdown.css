@@ -1,9 +1,29 @@
 article.markdown {
 	line-height: 1.5em;
+	max-width: 778px;
+}
+
+article.markdown h1,
+h2,
+h3,
+h4,
+h5 {
+	color: white;
 }
 
 article.markdown h1 {
-	line-height: 2.5em;
+	line-height: 1.2em;
+	margin: 1em 0 1em 0;
+}
+
+article.markdown h2 {
+	line-height: 1.2em;
+	margin: 3em 0 1em 0;
+}
+
+article.markdown h3 {
+	line-height: 1em;
+	margin: 1.5em 0 0.5em 0;
 }
 
 article.markdown p {
