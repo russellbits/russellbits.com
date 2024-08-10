@@ -35,7 +35,6 @@
 		/* background-color: rgba(255, 0, 0, 0.4); */
 	}
 	.title {
-		text-align: center;
 	}
 	/* .column {
 		background-color: rgba(255, 0, 0, 0.2);
@@ -51,4 +50,16 @@
 	.taglist {
 		margin-top: 10px;
 	} */
+	/* Portrait */
+	@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+		main {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-column-gap: 0;
+			grid-template-rows: 40em;
+			margin: 60px 0 0 0;
+			padding: 0;
+			/* background-color: rgba(255, 0, 0, 0.4); */
+		}
+	}
 </style>

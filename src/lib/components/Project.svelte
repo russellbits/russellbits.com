@@ -1,6 +1,7 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import Figure from '$lib/components/Figure.svelte';
 
 	export let title = 'Project Title';
 	export let publicationDate = 'No date available';
@@ -10,7 +11,7 @@
 </script>
 
 <div>
-	<figure><img src={projectImage} height="480" alt={title} /></figure>
+	<Figure url={projectImage} widthx="414px" altname={title} caption={title} figClass="normal" />
 	<h2>{title}</h2>
 	<p>{summary}</p>
 	<Button url={link} label="see more" style="small" />
@@ -41,15 +42,8 @@ Creates a project card for the site
 -->
 
 <style>
-	img {
-		width: auto;
-		max-height: 480px;
-	}
-	figure {
-		margin: 0 auto;
-		text-align: center;
-		height: 480px;
-		max-height: 480px;
+	h2 {
+		line-height: 1em;
 	}
 	.taglist {
 		margin-top: 10px;
