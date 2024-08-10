@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Russellbits - {title}</title>
+	<title>Russellbits Blog | {title}</title>
 	<meta property="og:title" content={title} />
 	<meta name="date" content={date} />
 </svelte:head>

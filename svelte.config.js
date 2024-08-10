@@ -19,8 +19,8 @@ const config = {
 			extensions: ['.md'],
 			layout: {
 				blog: 'src/routes/blog/post.svelte',
-				lab: 'src/routes/lab/post.svelte',
-				projects: 'src/routes/projects/post.svelte'
+				lab: 'src/routes/lab/experiment.svelte',
+				projects: 'src/routes/projects/project.svelte'
 			}
 		})
 	]
