@@ -261,7 +261,30 @@
 		padding: 0 10px;
 	}
 
-	@media only screen and (min-width: 767px) {
+	/* mobile */
+	@media only screen and (max-width: 480px) {
+		header {
+			font-family: 'Raleway', sans-serif;
+			font-style: black;
+			font-weight: 900;
+			padding: 0.3rem;
+			padding-bottom: 0em;
+			margin-top: 3em;
+			color: white;
+			background: rgba(0, 0, 0, 0.5);
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			border: 1px solid green;
+		}
+
+		.logo {
+			position: fixed;
+			top: -100px;
+			left: -100px;
+			z-index: 4000;
+		}
+
 		.mobile-icon {
 			display: none;
 		}

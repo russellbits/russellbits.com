@@ -7,7 +7,7 @@
 	<div class="column wide-left">
 		<figure class="front-page-image">
 			<img
-				src="/images/projects/seqseco/seqseco-project-display.png"
+				src="/images/projects/seqseco-project-display.png"
 				width="1200"
 				height="1697"
 				alt="Project Seqseco on iphone"
@@ -37,7 +37,7 @@
 				Ask the A.I. version of me anything you would like know about me. That can seem like a lot
 				so, you can also just ask for a suggestion, and the A.I. version of me will provide some
 				suggestions.
-				<Button label="Read More" url="/projects/seqseco" />
+				<Button label="Read More" url="/projects/seqseco" style="small" />
 			</p>
 
 			<div class="taglist">
@@ -79,12 +79,13 @@
 		transform: scale(0.9);
 	}
 
-	@media screen and (max-width: 740px) {
+	@media screen and (max-width: 480px) {
 		main {
 			width: 90vw;
 			display: flex;
 			flex-direction: column;
 			margin: 90px 0 0 0;
+			background-color: bisque;
 		}
 		.column {
 		}
