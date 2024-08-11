@@ -7,7 +7,7 @@
 	$: currentPath = $page.url.pathname;
 
 	// Show mobile icon and display menu
-	let showMobileMenu = false;
+	//let showMobileMenu = false;
 
 	// List of navigation items
 	const navItems = [
@@ -17,25 +17,25 @@
 	];
 
 	// Mobile menu click event handler
-	const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
+	//const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
 
 	// Media match query handler
-	const mediaQueryHandler = (/** @type {{ matches: any; }} */ e) => {
-		// Reset mobile state
-		if (!e.matches) {
-			showMobileMenu = false;
-		}
-	};
+	// const mediaQueryHandler = (/** @type {{ matches: any; }} */ e) => {
+	// 	// Reset mobile state
+	// 	if (!e.matches) {
+	// 		showMobileMenu = false;
+	// 	}
+	// };
 
 	// Attach media query listener on mount hook
-	onMount(() => {
-		const mediaListener = window.matchMedia('(max-width: 767px)');
+	// onMount(() => {
+	// 	const mediaListener = window.matchMedia('(max-width: 480px)');
 
-		mediaListener.addEventListener('change', mediaQueryHandler);
-	});
+	// 	mediaListener.addEventListener('change', mediaQueryHandler);
+	// });
 </script>
 
-<!-- Header.svelte -->
+<!-- Logo -->
 {#if currentPath !== '/'}
 	<div class="logo">
 		<a href="/">
@@ -50,23 +50,31 @@
 	</div>
 {/if}
 
+<!-- Header.svelte -->
 <header>
 	<nav>
 		<div class="inner">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div
+			<!-- <div
 				on:click={handleMobileIconClick}
 				class={`mobile-icon${showMobileMenu ? ' active' : ''}`}
 				role="link"
 				tabindex="0"
-			>
-				<div class="middle-line" />
-			</div>
-			<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
+			> -->
+			<div class="middle-line" />
+
+			<!-- <ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}> -->
+			<ul class="navbar-list">
 				<!-- Debugging: <li>{currentPath}</li> -->
 				{#each navItems as item}
 					<li>
-						<a class="menuitem" href={item.href}>{item.label}</a>
+						<a
+							data-sveltekit-prefetch
+							class:active={item.href !== '/'
+								? currentPath.match(item.href)
+								: item.href === currentPath}
+							href={item.href}>{item.label}</a
+						>
 					</li>
 				{/each}
 				<li>
@@ -103,138 +111,29 @@
 
 <style lang="scss">
 	header {
-		font-family: 'Raleway', sans-serif;
-		font-style: black;
-		font-weight: 900;
-		padding: 0.3rem;
-		padding-bottom: 0em;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100vw;
+		padding: 0.8em 0 0 0;
 		color: white;
 		background: rgba(0, 0, 0, 0.5);
+	}
+
+	nav {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-	}
-
-	.logo {
-		position: fixed;
-		top: 20px;
-		left: -50px;
-		z-index: 4000;
-	}
-
-	.logo.lg {
-		top: 0px;
-		left: -100px;
-	}
-
-	@media (max-width: 900px) {
-		.logo {
-			transform: scale(0.5);
-			top: -120px;
-			left: -160px;
-		}
-	}
-
-	.menuitem {
-		font-weight: bold;
-	}
-
-	.icon {
-		display: block;
-		position: relative;
-		top: 8px;
-	}
-	.glyph-github,
-	.glyph-linkedin,
-	.glyph-instagram {
-		top: 6px;
-	}
-
-	.inner {
-		max-width: 980px;
-		padding-left: 20px;
-		padding-right: 20px;
-		margin: auto;
-		box-sizing: border-box;
-		display: flex;
-		align-items: center;
-		height: 100%;
-	}
-
-	.mobile-icon {
-		width: 25px;
-		height: 14px;
-		position: relative;
-		cursor: pointer;
-	}
-
-	.mobile-icon:after,
-	.mobile-icon:before,
-	.middle-line {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		background-color: #fff;
-		transition: all 0.4s;
-		transform-origin: center;
-	}
-
-	.mobile-icon:before,
-	.middle-line {
-		top: 0;
-	}
-
-	.mobile-icon:after,
-	.middle-line {
-		bottom: 0;
-	}
-
-	.mobile-icon:before {
-		width: 66%;
-	}
-
-	.mobile-icon:after {
-		width: 33%;
-	}
-
-	.middle-line {
-		margin: auto;
-	}
-
-	.mobile-icon:hover:before,
-	.mobile-icon:hover:after,
-	.mobile-icon.active:before,
-	.mobile-icon.active:after,
-	.mobile-icon.active .middle-line {
-		width: 100%;
-	}
-
-	.mobile-icon.active:before,
-	.mobile-icon.active:after {
-		top: 50%;
-		transform: rotate(-45deg);
-	}
-
-	.mobile-icon.active .middle-line {
-		transform: rotate(45deg);
+		justify-content: right;
+		font-family: 'Raleway', sans-serif;
+		font-style: bold;
+		font-weight: 700;
+		margin: 0 4em 0 0;
 	}
 
 	.navbar-list {
-		display: none;
 		width: 100%;
 		justify-content: space-between;
 		margin: 0;
 		padding: 0 40px;
-	}
-
-	.navbar-list.mobile {
-		background-color: rgba(0, 0, 0, 0.8);
-		position: fixed;
-		display: block;
-		height: calc(100% - 45px);
-		bottom: 0;
-		left: 0;
 	}
 
 	.navbar-list li {
@@ -242,65 +141,27 @@
 		position: relative;
 	}
 
-	.navbar-list li:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background-color: #424245;
-	}
+	// .navbar-list li:before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 1px;
+	// 	background-color: #424245;
+	// }
 
 	.navbar-list a {
 		color: #fff;
 		text-decoration: none;
 		display: flex;
-
 		align-items: center;
 		padding: 0 10px;
 	}
 
-	/* mobile */
-	@media only screen and (max-width: 480px) {
-		header {
-			font-family: 'Raleway', sans-serif;
-			font-style: black;
-			font-weight: 900;
-			padding: 0.3rem;
-			padding-bottom: 0em;
-			margin-top: 3em;
-			color: white;
-			background: rgba(0, 0, 0, 0.5);
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: flex-end;
-			border: 1px solid green;
-		}
-
-		.logo {
-			position: fixed;
-			top: -100px;
-			left: -100px;
-			z-index: 4000;
-		}
-
-		.mobile-icon {
-			display: none;
-		}
-
-		.navbar-list {
-			display: flex;
-			padding: 0;
-		}
-
-		.navbar-list a {
-			display: inline-flex;
-		}
-	}
-
 	nav > .inner > ul > li {
-		border-bottom: 4px solid rgba(1, 1, 1, 0);
+		padding-bottom: 20px;
+		border-bottom: 4px solid rgba(0, 0, 0, 0);
 		border-color: transparent;
 	}
 
@@ -319,4 +180,144 @@
 		text-decoration: none;
 		color: inherit;
 	}
+
+	// @media (max-width: 480px) {
+	// 	.logo {
+	// 		transform: scale(0.5);
+	// 		position: relative;
+	// 		border: 1px solid purple;
+	// 	}
+	// }
+
+	// .menuitem {
+	// 	font-weight: bold;
+	// }
+
+	// .icon {
+	// 	display: block;
+	// 	position: relative;
+	// 	top: 8px;
+	// }
+	// .glyph-github,
+	// .glyph-linkedin,
+	// .glyph-instagram {
+	// 	top: 6px;
+	// }
+
+	// .inner {
+	// 	max-width: 980px;
+	// 	padding-left: 20px;
+	// 	padding-right: 20px;
+	// 	margin: auto;
+	// 	box-sizing: border-box;
+	// 	display: flex;
+	// 	align-items: center;
+	// 	height: 100%;
+	// }
+
+	// .mobile-icon {
+	// 	width: 25px;
+	// 	height: 14px;
+	// 	position: relative;
+	// 	cursor: pointer;
+	// }
+
+	// .mobile-icon:after,
+	// .mobile-icon:before,
+	// .middle-line {
+	// 	content: '';
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 2px;
+	// 	background-color: #fff;
+	// 	transition: all 0.4s;
+	// 	transform-origin: center;
+	// }
+
+	// .mobile-icon:before,
+	// .middle-line {
+	// 	top: 0;
+	// }
+
+	// .mobile-icon:after,
+	// .middle-line {
+	// 	bottom: 0;
+	// }
+
+	// .mobile-icon:before {
+	// 	width: 66%;
+	// }
+
+	// .mobile-icon:after {
+	// 	width: 33%;
+	// }
+
+	// .middle-line {
+	// 	margin: auto;
+	// }
+
+	// .mobile-icon:hover:before,
+	// .mobile-icon:hover:after,
+	// .mobile-icon.active:before,
+	// .mobile-icon.active:after,
+	// .mobile-icon.active .middle-line {
+	// 	width: 100%;
+	// }
+
+	// .mobile-icon.active:before,
+	// .mobile-icon.active:after {
+	// 	top: 50%;
+	// 	transform: rotate(-45deg);
+	// }
+
+	// .mobile-icon.active .middle-line {
+	// 	transform: rotate(45deg);
+	// }
+
+	// .navbar-list.mobile {
+	// 	background-color: rgba(0, 0, 0, 0.8);
+	// 	position: fixed;
+	// 	display: block;
+	// 	height: calc(100% - 45px);
+	// 	bottom: 0;
+	// 	left: 0;
+	// }
+
+	// /* mobile */
+	// @media only screen and (max-width: 480px) {
+	// 	// header {
+	// 	// 	font-family: 'Raleway', sans-serif;
+	// 	// 	font-style: black;
+	// 	// 	font-weight: 900;
+	// 	// 	padding: 0.3rem;
+	// 	// 	padding-bottom: 0em;
+	// 	// 	margin-top: 3em;
+	// 	// 	color: white;
+	// 	// 	background: rgba(0, 0, 0, 0.5);
+	// 	// 	display: flex;
+	// 	// 	flex-wrap: wrap;
+	// 	// 	justify-content: flex-end;
+	// 	// 	border: 1px solid green;
+	// 	// }
+
+	// 	.logo {
+	// 		position: fixed;
+	// 		top: -100px;
+	// 		left: -100px;
+	// 		z-index: 4000;
+	// 	}
+
+	// 	.mobile-icon {
+	// 		display: none;
+	// 	}
+
+	// 	.navbar-list {
+	// 		display: flex;
+	// 		padding: 0;
+	// 	}
+
+	// 	.navbar-list a {
+	// 		display: inline-flex;
+	// 	}
+	// }
 </style>
