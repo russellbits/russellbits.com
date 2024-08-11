@@ -10,6 +10,8 @@ summary: 'I love works of art that engage (or encourage) the audience to partici
     import Figure from '$lib/components/Figure.svelte';
 </script>
 
+<Figure url="/images/blog/sample-false-strays.jpg" widthx="778" altname="Photo of grocery carts in parking lot" caption="The curious study of stray shopping carts." figClass="title"/>
+
 # A Stray Shopping Cart Safari
 
 Now and then, for creative purposes, I need to stray a little ways away from the stated theme of Banapana: "Our Minds on Media." I also find that some of the subjects I write about, like advertising, and putting microchips in our brains gives me agita. I need a break if I'm going to keep consistently writing. And I'm not entirely sure that Marshall McLuhan would not argue that shopping carts are a medium. He made the argument that the wheel was a technological extension of the foot and therefore a medium. Does this not make the shopping cart an extension then of the foot and back. If human history had taken some different development track in which we never developed a consumer culture - a really difficult hypothetical for me to imagine - would the shopping cart even exist? It's an artifact of us, but also our economy.

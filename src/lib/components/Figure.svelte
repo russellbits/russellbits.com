@@ -24,6 +24,10 @@
 	figure.floater {
 		float: right;
 	}
+	figure.title {
+		margin: 0;
+		padding: 0;
+	}
 	/* figure:nth-child(even) {
 		max-width: 400px;
 		margin: 0 1em 1em 0;

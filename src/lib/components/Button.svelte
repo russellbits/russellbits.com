@@ -18,7 +18,7 @@
 		font-weight: 700;
 		background: rgba(28, 42, 113, 1);
 		width: auto;
-		height: 40px;
+
 		padding: 10px;
 		margin: 1em 0 1em 0;
 		border: 1px solid rgba(30, 44, 115, 1);

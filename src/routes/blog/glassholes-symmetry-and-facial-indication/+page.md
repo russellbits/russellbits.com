@@ -10,7 +10,7 @@ summary: 'Considerations about how humans recognize and process faces and focus,
     import Figure from '$lib/components/Figure.svelte';
 </script>
 
-<Figure url="/images/blog/glassholes-symmetry-and-facial-indication-cover.webp" widthx="778" altname="Article cover" caption="They look totally normal." figClass="normal"/>
+<Figure url="/images/blog/glassholes-symmetry-and-facial-indication-cover.webp" widthx="778" altname="Article cover" caption="They look totally normal." figClass="title"/>
 
 # Glassholes, Symmetry, and Facial Indication
 
