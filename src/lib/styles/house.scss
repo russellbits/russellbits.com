@@ -56,16 +56,10 @@ body {
 
 /* tablet */
 @media only screen and (max-width: 768px) {
-	body {
-		background-color: chartreuse;
-	}
 }
 
 /* mobile */
 @media only screen and (max-width: 480px) {
-	body {
-		background-color: aquamarine;
-	}
 }
 
 article {
@@ -127,4 +121,14 @@ ul {
 .logo.lg {
 	top: 0px;
 	left: -100px;
+}
+
+@media only screen and (max-width: 768px) {
+	.logo {
+		position: fixed;
+		top: 25px;
+		left: -80px;
+		z-index: 0;
+		transform: scale(0.8);
+	}
 }
