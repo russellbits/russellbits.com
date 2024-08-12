@@ -1,77 +1,99 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import Figure from '$lib/components/Figure.svelte';
 </script>
 
 <main>
-	<div class="column wide-left">
-		<figure class="front-page-image">
-			<img
-				src="/images/projects/seqseco-project-display.png"
-				width="1200"
-				height="1697"
-				alt="Project Seqseco on iphone"
-			/>
-		</figure>
+	<div class="intro">
+		<div class="title">
+			<div><img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" /></div>
+			<div><h1>Hello.</h1></div>
+		</div>
+		<h2>I am Russell Warner.</h2>
+		<p>
+			I am a user interface architect. With my knowledge in aesthetics, psychology and software
+			development, I take a holistic approach to any user interface. My goal with every user
+			interface is to employ transparency, decision reduction, and joy.<!--You can read about interface architecture philsophy here.-->
+		</p>
 	</div>
 
-	<div class="column wide-right">
-		<div class="intro">
-			<h1>
-				<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Hello.
-			</h1>
-			<h2>I am Russell Warner.</h2>
-			<p>
-				I am a user interface architect. With my knowledge in aesthetics, psychology and software
-				development, I take a holistic approach to any user interface. My goal with every user
-				interface is to employ transparency, decision reduction, and joy.<!--You can read about interface architecture philsophy here.-->
-			</p>
+	<div class="featured-project-image">
+		<Figure
+			url="/images/projects/seqseco-project-display.png"
+			widthx="500"
+			altname="iphone displaying the seqseco web app."
+			caption="Seqseco is a sequenced timer web app."
+			figClass="normal"
+		/>
+	</div>
+
+	<div class="featured-project-desc">
+		<div class="title">
+			<div><img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" /></div>
+			<div><h1>Seqseco</h1></div>
 		</div>
 
-		<div>
-			<h1>
-				<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Seqseco
-			</h1>
-			<h2>A Product Design Story</h2>
-			<p>
-				Ask the A.I. version of me anything you would like know about me. That can seem like a lot
-				so, you can also just ask for a suggestion, and the A.I. version of me will provide some
-				suggestions.
-				<Button label="Read More" url="/projects/seqseco" style="small" />
-			</p>
+		<h2>A Product Design Story</h2>
+		<p>
+			Ask the A.I. version of me anything you would like know about me. That can seem like a lot so,
+			you can also just ask for a suggestion, and the A.I. version of me will provide some
+			suggestions.
+			<Button label="Read More" url="/projects/seqseco" style="small" />
+		</p>
 
-			<div class="taglist">
-				<Tag name="Svelte" /><Tag name="HTML5" /><Tag name="CSS3" /><Tag name="Nextjs" /><Tag
-					name="Supabase"
-				/>
-			</div>
-		</div>
+		<!-- <div class="taglist">
+			<Tag name="Svelte" /><Tag name="HTML5" /><Tag name="CSS3" /><Tag name="Nextjs" /><Tag
+				name="Supabase"
+			/>
+		</div> -->
 	</div>
 </main>
 
 <style lang="scss">
 	main {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 14em);
 		grid-column-gap: 1em;
-		grid-template-rows: 20em 40em 40em;
-		margin: 60px 10em 0 10em;
+		// grid-template-rows: 40em 40em;
+		margin: 10em 10em 0 10em;
 		padding: 0;
 	}
 	.intro {
+		grid-column-start: 3;
+		grid-column-end: 5;
 		margin: 0 0 2.5em 0;
+		border: 1px solid aqua;
+	}
+	.featured-project-image {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		margin: 0 0 2.5em 0;
+		border: 1px solid aqua;
+	}
+	.featured-project-desc {
+		grid-column-start: 3;
+		grid-column-end: 5;
+		margin: 0 0 2.5em 0;
+		border: 1px solid aqua;
+	}
+	.title {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: left;
+		align-items: flex-start;
+		gap: 0.8em;
+		border: 1px solid purple;
 	}
 	h1 {
 		text-align: left;
 	}
-	.column {
-		/* border: 1px solid rgba(70, 40, 70, 1); */
-	}
-	.wide-left {
+	.wide-col-left {
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
-	.wide-right {
+	.wide-col-right {
 		grid-column-start: 3;
 		grid-column-end: 5;
 	}

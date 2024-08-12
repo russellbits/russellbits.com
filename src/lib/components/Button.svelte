@@ -11,19 +11,15 @@
 		display: block;
 		color: white;
 		text-align: center;
-		font:
-			15px 'Raleway',
-			sans-serif;
 		text-transform: uppercase;
-		font-weight: 700;
 		background: rgba(28, 42, 113, 1);
 		width: auto;
-
 		padding: 10px;
 		margin: 1em 0 1em 0;
 		border: 1px solid rgba(30, 44, 115, 1);
 		border-radius: 30px;
 	}
+
 	span.button.fill {
 		border: 1px solid purple;
 	}
@@ -39,6 +35,7 @@
 		font:
 			15px 'Raleway',
 			sans-serif;
+		font-weight: 700;
 		color: white;
 	}
 	a:hover {
