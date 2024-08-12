@@ -5,17 +5,17 @@
 	import BlogSidebar from '$lib/components/BlogSidebar.svelte';
 </script>
 
-<main>
-	<div class="column title">
-		<h1 class="intro">
-			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Blog
-		</h1>
-	</div>
+<div class="title">
+	<h1 class="intro">
+		<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Blog
+	</h1>
+</div>
 
+<main>
 	<!--<div class="column" />-->
-	<div class="column sidebar">
+	<!-- <div class="column sidebar">
 		<BlogSidebar />
-	</div>
+	</div> -->
 
 	<div class="column content">
 		{#each data.posts as post}
@@ -40,26 +40,41 @@
 		padding: 0;
 		/* background-color: rgba(255, 0, 0, 0.4); */
 	}
-	h1 {
+
+	.title {
+		position: relative;
+		top: 4em;
+		right: 10vw;
+		padding: 2em;
+		margin: 2em;
+	}
+	.title h1 {
 		text-align: right;
 	}
-	.title {
-		grid-column-start: 1;
-		grid-column-end: 5;
-		text-align: center;
-	}
-	.column {
-		/* background-color: rgba(255, 0, 0, 0.2); */
-	}
-	.sidebar {
+	/*.column {
+		 background-color: rgba(255, 0, 0, 0.2);
+	}*/
+
+	/* .sidebar {
 		grid-column-start: 1;
 		grid-column-end: 2;
-	}
+	} */
 	.content {
 		grid-column-start: 2;
 		grid-column-end: 5;
 	}
 	/* .taglist {
 		margin-top: 10px;
+	} */
+	@media only screen and (max-width: 768px) {
+		main {
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: 8em 40em 40em;
+		}
+	}
+
+	/* .sidebar {
+		grid-column-start: 1;
+		grid-column-end: 1;
 	} */
 </style>

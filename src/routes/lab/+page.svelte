@@ -4,13 +4,13 @@
 	import Experiment from '$lib/components/Experiment.svelte';
 </script>
 
-<main>
-	<div class="column title">
-		<h1 class="intro">
-			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Lab
-		</h1>
-	</div>
+<div class="title">
+	<h1 class="intro">
+		<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Lab
+	</h1>
+</div>
 
+<main>
 	{#each data.experiments as experiment}
 		<div class="experiments">
 			<Experiment
@@ -32,15 +32,18 @@
 		margin: 60px 10em 0 10em;
 		padding: 0;
 	}
-	h1 {
-		text-align: right;
-	}
+
 	.title {
-		grid-column-start: 1;
-		grid-column-end: 5;
-		text-align: right;
-		margin: 0 3em 2em 0;
+		position: relative;
+		top: 4em;
+		right: 10vw;
+		padding: 2em;
+		margin: 2em;
 	}
+	.title h1 {
+		text-align: right;
+	}
+
 	/*.column {
 		 background-color: rgba(255, 0, 0, 0.2); 
 	}*/

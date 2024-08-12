@@ -35,6 +35,14 @@
 		/* background-color: rgba(255, 0, 0, 0.4); */
 	}
 	.title {
+		position: relative;
+		top: 4em;
+		right: 10vw;
+		padding: 2em;
+		margin: 2em;
+	}
+	.title h1 {
+		text-align: right;
 	}
 	/* .column {
 		background-color: rgba(255, 0, 0, 0.2);
@@ -51,15 +59,10 @@
 		margin-top: 10px;
 	} */
 	/* Portrait */
-	@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	@media only screen and (max-width: 768px) {
 		main {
-			display: grid;
 			grid-template-columns: repeat(1, 1fr);
-			grid-column-gap: 0;
-			grid-template-rows: 40em;
-			margin: 60px 0 0 0;
-			padding: 0;
-			/* background-color: rgba(255, 0, 0, 0.4); */
+			grid-template-rows: 8em 40em 40em;
 		}
 	}
 </style>

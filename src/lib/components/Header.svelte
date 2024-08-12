@@ -195,7 +195,7 @@
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 
-	ul.mobile-menu > ul {
+	ul.mobile-menu {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -205,6 +205,7 @@
 	ul.mobile-menu > li {
 		//flex-grow: 1;
 		text-align: center;
+		width: 100%;
 		padding: 10px;
 		margin: 0;
 		border-bottom: 1px solid white;

@@ -16,11 +16,11 @@
 		<p class="publicationDate">{publicationDate}</p>
 		<p>{summary}</p>
 		<Button label="read more" url={link} style="small" />
-		<div class="taglist">
+		<!-- <div class="taglist">
 			<Tag name="Supabase" />
 			<Tag name="HTML 5" />
 			<Tag name="Javascript" />
-		</div>
+		</div> -->
 	</div>
 </div>
 
@@ -62,7 +62,17 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	.taglist {
+	/* .taglist {
 		margin-top: 10px;
+	} */
+	@media only screen and (max-width: 768px) {
+		.post {
+			flex-direction: row;
+		}
+		img {
+			width: 50%;
+			height: 50%;
+			object-fit: cover;
+		}
 	}
 </style>
