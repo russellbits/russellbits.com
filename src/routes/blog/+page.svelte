@@ -2,22 +2,20 @@
 <script>
 	export let data;
 	import BlogPost from '$lib/components/BlogPost.svelte';
-	import BlogSidebar from '$lib/components/BlogSidebar.svelte';
+	// import BlogSidebar from '$lib/components/BlogSidebar.svelte';
+	import Title from '$lib/components/Title.svelte';
 </script>
-
-<div class="title">
-	<h1 class="intro">
-		<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Blog
-	</h1>
-</div>
 
 <main>
 	<!--<div class="column" />-->
 	<!-- <div class="column sidebar">
 		<BlogSidebar />
 	</div> -->
+	<div class="title">
+		<Title title="Blog" color="mauve" align="right" />
+	</div>
 
-	<div class="column content">
+	<div class="content">
 		{#each data.posts as post}
 			<BlogPost
 				title={post.meta.title}
@@ -36,29 +34,19 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 1em;
 		grid-template-rows: 8em 40em 40em;
-		margin: 3em 10em 0 10em;
+		margin: 6em 10em 0 10em;
 		padding: 0;
 		/* background-color: rgba(255, 0, 0, 0.4); */
 	}
-
-	.title {
-		position: relative;
-		top: 4em;
-		right: 10vw;
-		padding: 2em;
-		margin: 2em;
-	}
-	.title h1 {
-		text-align: right;
-	}
-	/*.column {
-		 background-color: rgba(255, 0, 0, 0.2);
-	}*/
 
 	/* .sidebar {
 		grid-column-start: 1;
 		grid-column-end: 2;
 	} */
+	.title {
+		grid-column-start: 2;
+		grid-column-end: 5;
+	}
 	.content {
 		grid-column-start: 2;
 		grid-column-end: 5;
@@ -66,10 +54,12 @@
 	/* .taglist {
 		margin-top: 10px;
 	} */
-	@media only screen and (max-width: 768px) {
+	@media screen and (max-width: 768px) {
 		main {
-			grid-template-columns: repeat(1, 1fr);
-			grid-template-rows: 8em 40em 40em;
+			display: flex;
+			flex-direction: column;
+			margin: 10em 0.5em 0 0.5em;
+			border: aqua;
 		}
 	}
 
