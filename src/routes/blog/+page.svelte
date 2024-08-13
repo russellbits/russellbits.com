@@ -34,30 +34,25 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 1em;
 		grid-template-rows: 8em 40em 40em;
-		margin: 6em 10em 0 10em;
+		margin: 3em 10em 0 10em;
 		padding: 0;
 		/* background-color: rgba(255, 0, 0, 0.4); */
 	}
-
+	.title {
+		grid-column-start: 2;
+		grid-column-end: 5;
+	}
 	/* .sidebar {
 		grid-column-start: 1;
 		grid-column-end: 2;
 	} */
-
-	.title {
-		margin: 4em 0 0 0;
-		grid-column-start: 2;
-		grid-column-end: 5;
-	}
 	.content {
 		grid-column-start: 1;
 		grid-column-end: 5;
 	}
-
 	/* .taglist {
 		margin-top: 10px;
 	} */
-
 	@media screen and (max-width: 768px) {
 		main {
 			display: flex;

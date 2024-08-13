@@ -2,25 +2,26 @@
 <script>
 	export let data;
 	import Experiment from '$lib/components/Experiment.svelte';
+	import Title from '$lib/components/Title.svelte';
 </script>
 
-<div class="title">
-	<h1 class="intro">
-		<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" />Lab
-	</h1>
-</div>
-
 <main>
-	{#each data.experiments as experiment}
-		<div class="experiments">
-			<Experiment
-				title={experiment.meta.title}
-				summary={experiment.meta.summary}
-				experimentImage={experiment.meta.experimentImage}
-				link={experiment.path}
-			/>
-		</div>
-	{/each}
+	<div class="title">
+		<Title title="Lab" color="mauve" align="left" />
+	</div>
+
+	<div class="content">
+		{#each data.experiments as experiment}
+			<div class="experiments">
+				<Experiment
+					title={experiment.meta.title}
+					summary={experiment.meta.summary}
+					experimentImage={experiment.meta.experimentImage}
+					link={experiment.path}
+				/>
+			</div>
+		{/each}
+	</div>
 </main>
 
 <style>
@@ -34,14 +35,9 @@
 	}
 
 	.title {
-		position: relative;
-		top: 4em;
-		right: 10vw;
-		padding: 2em;
-		margin: 2em;
-	}
-	.title h1 {
-		text-align: right;
+		margin: 4em 0 0 0;
+		grid-column-start: 2;
+		grid-column-end: 5;
 	}
 
 	/*.column {
@@ -53,4 +49,12 @@
 	/* .taglist {
 		margin-top: 10px;
 	} */
+	@media only screen and (max-width: 768px) {
+		main {
+			display: flex;
+			flex-direction: column;
+			margin: 10em 0.5em 0 0.5em;
+			border: aqua;
+		}
+	}
 </style>

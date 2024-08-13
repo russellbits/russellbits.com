@@ -33,10 +33,10 @@ Creates a section title with cube graphic
 ```
 
 ### Slot props
-- `imgUrl` - The url for the location of the project image
-- `altname` - alt attribute for the <img> tag
-- `caption` - A text description of the image.
-- `figClass` - normal | floater | title
+- `title` - The url for the location of the project image
+- `color` - alt attribute for the <img> tag
+- `align` - A text description of the image.
+
 -->
 
 <style>
