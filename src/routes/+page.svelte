@@ -2,14 +2,12 @@
 	import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import Figure from '$lib/components/Figure.svelte';
+	import Title from '$lib/components/Title.svelte';
 </script>
 
 <main>
-	<div class="intro">
-		<div class="title">
-			<div><img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" /></div>
-			<div><h1>Hello.</h1></div>
-		</div>
+	<div class="wide-col-right">
+		<Title title="Hello." color="mauve" />
 		<h2>I am Russell Warner.</h2>
 		<p>
 			I am a user interface architect. With my knowledge in aesthetics, psychology and software
@@ -18,7 +16,7 @@
 		</p>
 	</div>
 
-	<div class="featured-project-image">
+	<div class="wide-col-left">
 		<Figure
 			url="/images/projects/seqseco-project-display.png"
 			altname="iphone displaying the seqseco web app."
@@ -27,11 +25,8 @@
 		/>
 	</div>
 
-	<div class="featured-project-desc">
-		<div class="title">
-			<div><img src="/images/cube-mauve-large.png" width="65" height="65" alt="Mauve Cube" /></div>
-			<div><h1>Seqseco</h1></div>
-		</div>
+	<div class="wide-col-right">
+		<Title title="Seqseco" color="blue" />
 
 		<h2>A Product Design Story</h2>
 		<p>
@@ -54,73 +49,38 @@
 		display: grid;
 		grid-template-columns: repeat(4, 14em);
 		grid-column-gap: 1em;
-		// grid-template-rows: 40em 40em;
 		margin: 10em 10em 0 10em;
 		padding: 0;
 	}
-	.intro {
-		grid-column-start: 3;
-		grid-column-end: 5;
-		margin: 0 0 2.5em 0;
-		border: 1px solid aqua;
-	}
-	.featured-project-image {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		margin: 0 0 2.5em 0;
-		border: 1px solid aqua;
-	}
-	.featured-project-desc {
-		grid-column-start: 3;
-		grid-column-end: 5;
-		margin: 0 0 2.5em 0;
-		border: 1px solid aqua;
-	}
-	.title {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: left;
-		align-items: flex-start;
-		gap: 0.8em;
-		border: 1px solid purple;
-	}
-	h1 {
-		text-align: left;
-	}
+
 	.wide-col-left {
 		grid-column-start: 1;
 		grid-column-end: 3;
+		margin: 0 0 2.5em 0;
+		border: 1px solid aqua;
 	}
 	.wide-col-right {
 		grid-column-start: 3;
 		grid-column-end: 5;
-	}
-	.front-page-image {
-		transform: scale(0.9);
+		margin: 0 0 2.5em 0;
+		border: 1px solid aqua;
 	}
 
 	@media screen and (max-width: 768px) {
 		main {
-			width: 90vw;
 			display: flex;
 			flex-direction: column;
-			margin: 10em 0 0 0;
+			margin: 10em 0.5em 0 0.5em;
 			border: aqua;
 		}
-		.intro {
+		.wide-col-right {
 			width: 100%;
-			margin: 0 0 2.5em 0;
+			margin: 0 0 0 0;
 			border: 1px solid lawngreen;
 		}
-		.featured-project-image {
+		.wide-col-left {
 			width: 100%;
-			margin: 0 0 2.5em 0;
-			border: 1px solid lawngreen;
-		}
-		.featured-project-desc {
-			width: 100%;
-			margin: 0 0 2.5em 0;
+			margin: 0 0 0 0;
 			border: 1px solid lawngreen;
 		}
 	}
