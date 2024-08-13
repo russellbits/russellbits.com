@@ -1,6 +1,7 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import Figure from '$lib/components/Figure.svelte';
 
 	export let title = 'Untitled';
 	export let blogImage = 'No image available.';
@@ -10,7 +11,7 @@
 </script>
 
 <div class="post">
-	<figure><img src={blogImage} alt={title} /></figure>
+	<Figure imgUrl={blogImage} altname={title} caption="none" figClass="preview" />
 	<div class="content">
 		<h2><a href={link}>{title}</a></h2>
 		<p class="publicationDate">{publicationDate}</p>
@@ -23,6 +24,30 @@
 		</div> -->
 	</div>
 </div>
+
+<!--
+@component
+## BlogPost
+Lays out a blog post summary for the blog index page
+
+@example
+```svelte
+<BlogPost
+				title={post.meta.title}
+				summary={post.meta.summary}
+				blogImage={post.meta.blogImage}
+				publicationDate={post.meta.publicationDate}
+				link={post.path}
+			/>
+```
+
+### Slot props
+- `title` - Title of the post
+- `summary` - Summary of the post
+- `blogImage` - An image that accompanies the post summary
+- `publicationDate` - date of publication (from frontmatter of blog markdown)
+- `link` - the path to the full blog post
+-->
 
 <style>
 	.post {
@@ -47,32 +72,12 @@
 	.post p.publicationDate {
 		text-transform: uppercase;
 	}
-	.post figure {
-		margin: 0 1em 0 0;
-		width: 280px;
-		height: 280px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-		flex-shrink: 0;
-	}
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 	/* .taglist {
 		margin-top: 10px;
 	} */
 	@media only screen and (max-width: 768px) {
 		.post {
-			flex-direction: row;
-		}
-		img {
-			width: 50%;
-			height: 50%;
-			object-fit: cover;
+			flex-direction: column;
 		}
 	}
 </style>

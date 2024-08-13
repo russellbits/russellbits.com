@@ -11,7 +11,7 @@
 </script>
 
 <div>
-	<Figure url={projectImage} widthx="414px" altname={title} caption={title} figClass="normal" />
+	<Figure imgUrl={projectImage} altname={title} caption={title} figClass="normal" />
 	<h2>{title}</h2>
 	<p>{summary}</p>
 	<Button url={link} label="see more" style="small" />
