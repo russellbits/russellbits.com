@@ -65,6 +65,17 @@ Creates a liquid image with a caption
 		object-fit: cover;
 	}
 
+	figure.project {
+		max-height: 250px;
+		background-color: rgba(0, 0, 0, 0.2);
+		border-radius: 35px;
+		padding: 0.8em 0;
+	}
+	figure.project img {
+		max-height: 250px;
+		object-fit: contain;
+	}
+
 	figure.floater {
 		float: right;
 	}
@@ -103,6 +114,13 @@ Creates a liquid image with a caption
 			margin: 0 0 0.8em 0;
 			border: 1px solid aquamarine;
 		}
+		figure.project {
+			max-height: 200px;
+		}
+		figure.project img {
+			max-height: 200px;
+			object-fit: contain;
+		}
 	}
 
 	@media only screen and (max-width: 480px) {
@@ -118,6 +136,13 @@ Creates a liquid image with a caption
 			max-height: 150px;
 			margin: 0 0 0.8em 0;
 			border: 1px solid aquamarine;
+		}
+		figure.project {
+			max-height: 150px;
+		}
+		figure.project img {
+			max-height: 150px;
+			object-fit: contain;
 		}
 	}
 </style>

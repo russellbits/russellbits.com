@@ -11,8 +11,9 @@
 </script>
 
 <div>
-	<Figure imgUrl={projectImage} altname={title} caption={title} figClass="normal" />
 	<h2>{title}</h2>
+	<Figure imgUrl={projectImage} altname={title} caption={title} figClass="project" />
+
 	<p>{summary}</p>
 	<Button url={link} label="see more" style="small" />
 	<!-- <div class="taglist">
@@ -43,6 +44,8 @@ Creates a project card for the site
 
 <style>
 	h2 {
+		font-weight: 700;
+		margin-top: 18px;
 		line-height: 1em;
 	}
 	.taglist {

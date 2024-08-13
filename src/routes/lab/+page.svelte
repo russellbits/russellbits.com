@@ -10,7 +10,7 @@
 		<Title title="Lab" color="mauve" align="left" />
 	</div>
 
-	<div class="content">
+	<div>
 		{#each data.experiments as experiment}
 			<div class="experiments">
 				<Experiment
