@@ -10,6 +10,8 @@ summary: "You have the right to free speech. Shouldn't you have the right to fre
     import Figure from '$lib/components/Figure.svelte';
 </script>
 
+<Figure imgUrl="/images/blog/cognitive-liberty-cover.jpg" altname="Article cover" caption="We need rights for our thinking." figClass="title"/>
+
 # Notes on Cognitive Liberty
 
 My academic background includes study of the subjects of neurology and artificial intelligence. However, I have kept those fields in two different compartments in my head until now. The reason for the shift in my thinking is that these two subjects are now inextricably intertwined. I came to this conclusion thanks to a podcast called "[Ologies](https://www.alieward.com/ologies)." In particular, episode 336 titled "[Neurotechnology (AI + BRAIN TECH) with Dr. Nita Farahany](https://www.alieward.com/ologies/neurotechnology)."

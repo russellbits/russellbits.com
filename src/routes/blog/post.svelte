@@ -16,8 +16,5 @@
 </article>
 
 <style>
-	article.markdown {
-		width: 60vw;
-		margin: 0 auto;
-	}
+	/* See markdown css in lib/styles */
 </style>

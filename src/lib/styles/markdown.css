@@ -1,6 +1,8 @@
 article.markdown {
 	line-height: 1.5em;
+	width: 60vw;
 	max-width: 778px;
+	margin: 0 auto;
 }
 
 article.markdown h1,
@@ -13,7 +15,7 @@ h5 {
 
 article.markdown h1 {
 	line-height: 1.2em;
-	margin: 2em 0 1em 0;
+	margin: 1em 0 1em 0;
 }
 
 article.markdown h2 {
@@ -41,4 +43,16 @@ a:visited {
 
 article.markdown a:hover {
 	text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+	article.markdown {
+		width: 90vw;
+		margin: 3em auto;
+	}
+	article.markdown h1 {
+		font-size: 2em;
+		line-height: 1.2em;
+		margin: 0.8em 0 0.8em 0;
+	}
 }

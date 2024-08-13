@@ -43,8 +43,8 @@ Creates a liquid image with a caption
 		margin-bottom: 1em;
 	}
 	figure img {
-		max-width: 100%;
-		max-height: 100%;
+		width: 100%;
+		height: 100%;
 	}
 
 	figure.normal {
@@ -57,9 +57,12 @@ Creates a liquid image with a caption
 		max-width: 250px;
 		height: 250px;
 		max-height: 250px;
-		object-fit: fill;
 		margin: 0 1em 0 0;
 		border: 1px solid aquamarine;
+	}
+
+	figure.preview img {
+		object-fit: cover;
 	}
 
 	figure.floater {
@@ -92,6 +95,14 @@ Creates a liquid image with a caption
 			padding: 0;
 			margin: 0;
 		}
+		figure.preview {
+			width: 200px;
+			max-width: 200px;
+			height: 200px;
+			max-height: 200px;
+			margin: 0 0 0.8em 0;
+			border: 1px solid aquamarine;
+		}
 	}
 
 	@media only screen and (max-width: 480px) {
@@ -99,6 +110,14 @@ Creates a liquid image with a caption
 			max-width: 480px;
 			padding: 0;
 			margin: 0;
+		}
+		figure.preview {
+			width: 150px;
+			max-width: 150px;
+			height: 150px;
+			max-height: 150px;
+			margin: 0 0 0.8em 0;
+			border: 1px solid aquamarine;
 		}
 	}
 </style>

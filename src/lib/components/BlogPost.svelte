@@ -11,7 +11,9 @@
 </script>
 
 <div class="post">
-	<Figure imgUrl={blogImage} altname={title} caption="none" figClass="preview" />
+	<div class="preview-image">
+		<Figure imgUrl={blogImage} altname={title} caption="none" figClass="preview" />
+	</div>
 	<div class="content">
 		<h2><a href={link}>{title}</a></h2>
 		<p class="publicationDate">{publicationDate}</p>
@@ -57,6 +59,13 @@ Lays out a blog post summary for the blog index page
 		flex-direction: row; /* or column */
 		align-items: flex-start;
 		/* border: 1px solid purple; */
+	}
+	.content {
+		flex-shrink: 2;
+	}
+	.preview-image {
+		width: 250px;
+		margin: 0 0.8em 0 0;
 	}
 	.post h2 {
 		line-height: 1em;

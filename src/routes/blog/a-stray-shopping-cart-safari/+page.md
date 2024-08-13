@@ -10,7 +10,7 @@ summary: 'I love works of art that engage (or encourage) the audience to partici
     import Figure from '$lib/components/Figure.svelte';
 </script>
 
-<Figure url="/images/blog/sample-false-strays.jpg" widthx="778" altname="Photo of grocery carts in parking lot" caption="The curious study of stray shopping carts." figClass="title"/>
+<Figure imgUrl="/images/blog/sample-false-strays.jpg" altname="Photo of grocery carts in parking lot" caption="The curious study of stray shopping carts." figClass="title"/>
 
 # A Stray Shopping Cart Safari
 

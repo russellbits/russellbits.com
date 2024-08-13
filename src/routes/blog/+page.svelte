@@ -43,17 +43,21 @@
 		grid-column-start: 1;
 		grid-column-end: 2;
 	} */
+
 	.title {
+		margin: 4em 0 0 0;
 		grid-column-start: 2;
 		grid-column-end: 5;
 	}
 	.content {
-		grid-column-start: 2;
+		grid-column-start: 1;
 		grid-column-end: 5;
 	}
+
 	/* .taglist {
 		margin-top: 10px;
 	} */
+
 	@media screen and (max-width: 768px) {
 		main {
 			display: flex;

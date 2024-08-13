@@ -1,7 +1,7 @@
 ---
 title: Glassholes, Symmetry, and Facial Indication
 publicationDate: '2023-12-12'
-blogImage: '/images/blog/glassholes-symmetry-and-facial-indication-cover.webp'
+blogImage: '/images/blog/glassholes-symmetry-and-facial-indication-cover.jpg'
 summary: 'Considerations about how humans recognize and process faces and focus, present a hurdle for Google Glass in its current form.'
 ---
 
@@ -10,7 +10,7 @@ summary: 'Considerations about how humans recognize and process faces and focus,
     import Figure from '$lib/components/Figure.svelte';
 </script>
 
-<Figure url="/images/blog/glassholes-symmetry-and-facial-indication-cover.webp" widthx="778" altname="Article cover" caption="They look totally normal." figClass="title"/>
+<Figure imgUrl="/images/blog/glassholes-symmetry-and-facial-indication-cover.jpg" altname="Article cover" caption="They look totally normal." figClass="title"/>
 
 # Glassholes, Symmetry, and Facial Indication
 
