@@ -2,14 +2,10 @@
 	// @ts-nocheck
 
 	import '$lib/styles/entypo.css';
-	// import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	// Use the $page store to access the current path
 	$: currentPath = $page.url.pathname;
-
 	$: isVisible = false;
-
 	$: isHamburgerOpen = true;
 
 	// List of navigation items
@@ -148,7 +144,7 @@
 		display: flex;
 		flex-direction: row;
 		list-style-type: none;
-		gap: 1rem;
+		gap: 1em;
 		margin: 0;
 		padding: 0;
 	}
@@ -237,7 +233,7 @@
 	}
 
 	#mobile-menu-control {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		align-items: flex-end; /* Aligns the bars to the right */
 		margin: 0;
@@ -269,6 +265,20 @@
 		transform: rotate(45deg) translate(-8px, -8px);
 	}
 
+	@media only screen and (max-width: 1020px) {
+		nav.menu > ul {
+			gap: 0.5em;
+		}
+		nav.menu > ul > li {
+			margin: 0 0 0 0;
+			padding: 0;
+		}
+		nav.menu > ul > li:last-child {
+			margin: 0 1em 0 0;
+			padding: 0;
+		}
+	}
+
 	@media only screen and (max-width: 768px) {
 		nav.menu {
 			display: none;
@@ -280,5 +290,8 @@
 	}
 
 	@media only screen and (max-width: 480px) {
+		#mobile-menu-control {
+			display: flex;
+		}
 	}
 </style>
