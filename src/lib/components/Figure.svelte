@@ -1,6 +1,6 @@
 <script>
 	export let url;
-	export let widthx;
+	// export let widthx;
 	// export let heighty;
 	export let altname;
 	export let caption;
@@ -8,7 +8,7 @@
 </script>
 
 <figure class={figClass}>
-	<img src={url} width={widthx} alt={altname} />
+	<img src={url} alt={altname} />
 	<figcaption>{caption}</figcaption>
 </figure>
 
@@ -18,7 +18,13 @@
 		margin: 0 auto;
 		margin-bottom: 1em;
 	}
+	figure img {
+		width: 100%;
+		height: 100%;
+	}
+
 	figure.normal {
+		width: 100%;
 		border: none;
 	}
 	figure.floater {
@@ -44,5 +50,20 @@
 		font-size: 0.8em;
 		line-height: 1em;
 		text-align: center;
+	}
+	@media screen and (max-width: 768px) {
+		figure {
+			max-width: 738px;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	@media only screen and (max-width: 480px) {
+		figure {
+			max-width: 480px;
+			padding: 0;
+			margin: 0;
+		}
 	}
 </style>

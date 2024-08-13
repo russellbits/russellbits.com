@@ -10,7 +10,7 @@
 	<img src={experimentImage} alt={title} />
 	<h4>{title}</h4>
 	<p>{summary}</p>
-	<Button url={link} label="Open Experiment" />
+	<Button url={link} label="Open Experiment" style="small" />
 </div>
 
 <style lang="scss">

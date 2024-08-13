@@ -21,7 +21,6 @@
 	<div class="featured-project-image">
 		<Figure
 			url="/images/projects/seqseco-project-display.png"
-			widthx="500"
 			altname="iphone displaying the seqseco web app."
 			caption="Seqseco is a sequenced timer web app."
 			figClass="normal"
@@ -101,22 +100,31 @@
 		transform: scale(0.9);
 	}
 
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 768px) {
 		main {
 			width: 90vw;
 			display: flex;
 			flex-direction: column;
-			margin: 90px 0 0 0;
-			background-color: bisque;
+			margin: 10em 0 0 0;
+			border: aqua;
 		}
-		.column {
+		.intro {
+			width: 100%;
+			margin: 0 0 2.5em 0;
+			border: 1px solid lawngreen;
 		}
-		.wide-left {
+		.featured-project-image {
+			width: 100%;
+			margin: 0 0 2.5em 0;
+			border: 1px solid lawngreen;
 		}
-		.wide-right {
+		.featured-project-desc {
+			width: 100%;
+			margin: 0 0 2.5em 0;
+			border: 1px solid lawngreen;
 		}
 	}
 
-	.taglist {
+	@media only screen and (max-width: 480px) {
 	}
 </style>

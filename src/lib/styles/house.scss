@@ -56,10 +56,16 @@ body {
 
 /* tablet */
 @media only screen and (max-width: 768px) {
+	body {
+		overflow: hidden;
+	}
 }
 
 /* mobile */
 @media only screen and (max-width: 480px) {
+	body {
+		overflow: hidden;
+	}
 }
 
 article {
@@ -130,5 +136,22 @@ ul {
 		left: -80px;
 		z-index: 0;
 		transform: scale(0.8);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.logo {
+		position: fixed;
+		top: 10px;
+		left: -90px;
+		z-index: 0;
+		transform: scale(0.7);
+	}
+	.logo.lg {
+		position: fixed;
+		top: -70px;
+		left: -180px;
+		z-index: 0;
+		transform: scale(0.5);
 	}
 }

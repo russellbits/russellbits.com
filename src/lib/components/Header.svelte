@@ -82,7 +82,7 @@
 	<!-- Begin mobile menu -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div id="hamburger-icon" on:click={toggleMobileMenu}>
+	<div id="mobile-menu-control" on:click={toggleMobileMenu}>
 		<div class:open={!isHamburgerOpen} class="bar1"></div>
 		<div class:open={!isHamburgerOpen} class="bar2"></div>
 		<div class:open={!isHamburgerOpen} class="bar3"></div>
@@ -203,7 +203,6 @@
 	}
 
 	ul.mobile-menu > li {
-		//flex-grow: 1;
 		text-align: center;
 		width: 100%;
 		padding: 10px;
@@ -232,30 +231,33 @@
 	}
 
 	ul.mobile-menu.hidden {
-		// display: none;
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(-100%); /* Move it off-screen */
 	}
 
-	#hamburger-icon {
-		display: none;
+	#mobile-menu-control {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end; /* Aligns the bars to the right */
 		margin: 0;
 		padding: 10px;
 		cursor: pointer;
+		border: 1px solid lawngreen;
 	}
 
-	#hamburger-icon div {
+	#mobile-menu-control div {
+		display: block;
 		width: 35px;
 		height: 3px;
 		background-color: white;
-		margin: 6px 0;
+		margin: 4px 0;
 		transition: 0.4s;
 	}
 
 	.bar1.open {
-		-webkit-transform: rotate(-45deg) translate(-6px, 6px);
-		transform: rotate(-45deg) translate(-6px, 6px);
+		-webkit-transform: rotate(-45deg) translate(-8px, 8px);
+		transform: rotate(-45deg) translate(-8px, 8px);
 	}
 
 	.bar2.open {
@@ -263,8 +265,8 @@
 	}
 
 	.bar3.open {
-		-webkit-transform: rotate(45deg) translate(-6px, -8px);
-		transform: rotate(45deg) translate(-6px, -8px);
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -272,8 +274,11 @@
 			display: none;
 		}
 
-		#hamburger-icon {
-			display: block;
+		#mobile-menu-control {
+			display: flex;
 		}
+	}
+
+	@media only screen and (max-width: 480px) {
 	}
 </style>
