@@ -19,16 +19,16 @@ export const fetchMarkdownPosts = async () => {
 		})
 	);
 
-	// @ts-ignore
-	function reformatDate(dateStr) {
-		const dateObj = new Date(dateStr);
-		const options = { year: 'numeric', month: 'long', day: 'numeric' };
-		// @ts-ignore
-		return dateObj.toLocaleDateString('en-US', options);
-	}
-
 	return allPosts;
 };
+
+// @ts-ignore
+export function reformatDate(dateStr) {
+	const dateObj = new Date(dateStr);
+	const options = { year: 'numeric', month: 'long', day: 'numeric' };
+	// @ts-ignore
+	return dateObj.toLocaleDateString('en-US', options);
+}
 
 export const fetchMarkdownExperiments = async () => {
 	const allExperimentFiles = import.meta.glob('/src/routes/lab/*/*.md');

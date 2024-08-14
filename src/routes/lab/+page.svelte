@@ -26,20 +26,21 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 10px;
-		margin: 60px 10em 0 10em;
+		margin: 8em 10em 0 10em;
 		padding: 0;
 	}
 
 	.title {
-		margin: 4em 0 0 0;
-		grid-column-start: 2;
+		margin: 0;
+		grid-column-start: 1;
 		grid-column-end: 5;
 	}
 
 	.experiment {
+		flex-grow: 1;
 		text-align: left;
 		padding: 12px;
-		margin: 1em 1em 0 0;
+		margin: 1em 0 0 0;
 		width: 200px;
 	}
 
@@ -56,7 +57,6 @@
 			flex-direction: column;
 			align-items: center;
 			margin: 0;
-			border: 1px solid aqua;
 		}
 		.title {
 			align-self: flex-end;

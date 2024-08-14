@@ -46,7 +46,6 @@ Creates a section title with cube graphic
 		flex-wrap: nowrap;
 		align-items: center;
 		gap: 0.8em;
-		border: 1px solid purple;
 	}
 
 	.title.left {
