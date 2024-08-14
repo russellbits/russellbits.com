@@ -79,7 +79,7 @@ Lays out a blog post summary for the blog index page
 		margin: 0;
 	}
 	.post p.publicationDate {
-		text-transform: uppercase;
+		text-transform: none;
 	}
 	/* .taglist {
 		margin-top: 10px;

@@ -8,6 +8,9 @@ export const fetchMarkdownPosts = async () => {
 			// @ts-ignore
 			const { metadata } = await resolver();
 			const postPath = path.slice(11, -8);
+			// @ts-ignore
+			// console.log(metadata);
+			//let metadata.publicationDate = reformatDate(metadata.publicationDate);
 
 			return {
 				meta: metadata,
@@ -15,6 +18,14 @@ export const fetchMarkdownPosts = async () => {
 			};
 		})
 	);
+
+	// @ts-ignore
+	function reformatDate(dateStr) {
+		const dateObj = new Date(dateStr);
+		const options = { year: 'numeric', month: 'long', day: 'numeric' };
+		// @ts-ignore
+		return dateObj.toLocaleDateString('en-US', options);
+	}
 
 	return allPosts;
 };
