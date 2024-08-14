@@ -8,9 +8,9 @@ export const fetchMarkdownPosts = async () => {
 			// @ts-ignore
 			const { metadata } = await resolver();
 			const postPath = path.slice(11, -8);
+			// Format the dates into human readable string.
 			// @ts-ignore
-			// console.log(metadata);
-			//let metadata.publicationDate = reformatDate(metadata.publicationDate);
+			metadata.publicationDate = reformatDate(metadata.publicationDate);
 
 			return {
 				meta: metadata,
