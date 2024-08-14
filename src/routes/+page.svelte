@@ -57,13 +57,11 @@
 		grid-column-start: 1;
 		grid-column-end: 3;
 		margin: 0 0 2.5em 0;
-		border: 1px solid aqua;
 	}
 	.wide-col-right {
 		grid-column-start: 3;
 		grid-column-end: 5;
 		margin: 0 0 2.5em 0;
-		border: 1px solid aqua;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -76,12 +74,10 @@
 		.wide-col-right {
 			width: 100%;
 			margin: 0 0 0 0;
-			border: 1px solid lawngreen;
 		}
 		.wide-col-left {
 			width: 100%;
 			margin: 0 0 0 0;
-			border: 1px solid lawngreen;
 		}
 	}
 

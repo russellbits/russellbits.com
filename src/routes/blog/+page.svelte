@@ -34,7 +34,7 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 1em;
 		grid-template-rows: 8em 40em 40em;
-		margin: 3em 10em 0 10em;
+		margin: 8em 10em 0 10em;
 		padding: 0;
 	}
 	.title {

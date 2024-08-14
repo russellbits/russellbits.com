@@ -239,7 +239,6 @@
 		margin: 0;
 		padding: 10px;
 		cursor: pointer;
-		border: 1px solid lawngreen;
 	}
 
 	#mobile-menu-control div {

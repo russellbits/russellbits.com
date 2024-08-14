@@ -56,9 +56,8 @@ Lays out a blog post summary for the blog index page
 		margin: 0 0 2em 0;
 		padding: 0;
 		display: flex;
-		flex-direction: row; /* or column */
+		flex-direction: row;
 		align-items: flex-start;
-		/* border: 1px solid purple; */
 	}
 	.content {
 		flex-shrink: 2;

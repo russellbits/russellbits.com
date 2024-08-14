@@ -1,7 +1,5 @@
 <script>
 	export let imgUrl;
-	// export let widthx;
-	// export let heighty;
 	export let altname;
 	export let caption = 'none';
 	export let figClass;
@@ -59,7 +57,6 @@ Creates a liquid image with a caption
 		height: 250px;
 		max-height: 250px;
 		margin: 0 1em 0 0;
-		border: 1px solid aquamarine;
 	}
 
 	figure.preview img {
@@ -97,16 +94,6 @@ Creates a liquid image with a caption
 		margin: 0;
 		padding: 0;
 	}
-	/* figure:nth-child(even) {
-		max-width: 400px;
-		margin: 0 1em 1em 0;
-	} */
-	/* figure:nth-child(odd) {
-		float: right;
-		max-width: 400px;
-		margin: 0 0 1em 1em;
-		border: 1px solid red;
-	} */
 	figcaption {
 		color: white;
 		font-family: 'Raleway', sans-serif;
@@ -126,7 +113,6 @@ Creates a liquid image with a caption
 			height: 200px;
 			max-height: 200px;
 			margin: 0 0 0.8em 0;
-			border: 1px solid aquamarine;
 		}
 		figure.project {
 			max-height: 200px;
@@ -149,7 +135,6 @@ Creates a liquid image with a caption
 			height: 150px;
 			max-height: 150px;
 			margin: 0 0 0.8em 0;
-			border: 1px solid aquamarine;
 		}
 		figure.project {
 			max-height: 150px;
