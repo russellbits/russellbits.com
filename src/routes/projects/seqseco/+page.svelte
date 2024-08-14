@@ -17,16 +17,14 @@
 	</p>
 
 	<Figure
-		url="/images/projects/seqseco/seqseco-design-step-1.jpg"
-		widthx="778px"
+		imgUrl="/images/projects/seqseco/seqseco-design-step-1.jpg"
 		altname="Designing the UI on paper"
 		caption="Sketching on paper allows for the rapid iteration of ideas."
 		figClass="normal"
 	/>
 
 	<Figure
-		url="/images/projects/seqseco/seqseco-design-step-2.jpg"
-		widthx="778px"
+		imgUrl="/images/projects/seqseco/seqseco-design-step-2.jpg"
 		altname="Paper Mock-ups"
 		caption="With some solid ideas, it can be useful to create a paper mock-up."
 		figClass="normal"
@@ -44,8 +42,7 @@
 	</p>
 
 	<Figure
-		url="/images/projects/seqseco/seqseco-design-step-3.jpg"
-		widthx="778px"
+		imgUrl="/images/projects/seqseco/seqseco-design-step-3.jpg"
 		altname="Design Drafts"
 		caption="Iterations in the design phase should move toward good UI practices and aim for clarity."
 		figClass="normal"
@@ -58,8 +55,7 @@
 	</p>
 
 	<Figure
-		url="/images/projects/seqseco/seqseco-design-step-4.jpg"
-		widthx="778px"
+		imgUrl="/images/projects/seqseco/seqseco-design-step-4.jpg"
 		altname="UI Protoype"
 		caption="There are many ways to prototype, but by laying out any potential screens, this can easily identify repeating elements (components) and translate into a design system."
 		figClass="normal"
@@ -70,12 +66,15 @@
 
 <style>
 	article {
-		width: 70vw;
-		margin: 0 auto;
+		width: 778px;
+		margin: 10em auto 0 auto;
 		background-color: none;
 		/* Need to find where these variables exist */
 		--card-background-color: none;
 		--card-box-shadow: none;
+	}
+	article p {
+		text-indent: 2em;
 	}
 	section {
 		display: flex;

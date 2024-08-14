@@ -7,7 +7,7 @@
 
 <main>
 	<div class="wide-col-right">
-		<Title title="Hello." color="mauve" />
+		<Title title="Hello." color="mauve" align="home" />
 		<h2>I am Russell Warner.</h2>
 		<p>
 			I am a user interface architect. With my knowledge in aesthetics, psychology and software
@@ -26,13 +26,14 @@
 	</div>
 
 	<div class="wide-col-right">
-		<Title title="Seqseco" color="blue" />
+		<Title title="Project: Seqseco" color="blue" />
 
 		<h2>A Product Design Story</h2>
 		<p>
-			Ask the A.I. version of me anything you would like know about me. That can seem like a lot so,
-			you can also just ask for a suggestion, and the A.I. version of me will provide some
-			suggestions.
+			While creating a new workout for myself, I realized it would be useful to have a timer that
+			could, in turn, set off another timer—sequenced timers. I realized this might useful for other
+			activities, too, like cooking or the pomadoro technique. After finding nothing online and not
+			being impressed with the apps on the app store, I set out to make my own.
 			<Button label="Read More" url="/projects/seqseco" style="small" />
 		</p>
 

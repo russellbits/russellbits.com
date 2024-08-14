@@ -148,11 +148,12 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
-	.logo {
-		position: fixed;
-		top: 25px;
+	.logo,
+	.logo.lg {
+		position: absolute;
+		top: -30px;
 		left: -80px;
-		z-index: 0;
+		z-index: 100;
 		transform: scale(0.8);
 	}
 	h1 {
@@ -168,17 +169,17 @@ ul {
 
 @media only screen and (max-width: 480px) {
 	.logo {
-		position: fixed;
-		top: 10px;
-		left: -90px;
-		z-index: 0;
+		position: absolute;
+		top: -50px;
+		left: -80px;
+		z-index: 100;
 		transform: scale(0.7);
 	}
 	.logo.lg {
-		position: fixed;
-		top: -70px;
+		position: absolute;
+		top: -130px;
 		left: -180px;
-		z-index: 0;
+		z-index: 100;
 		transform: scale(0.5);
 	}
 	h1 {

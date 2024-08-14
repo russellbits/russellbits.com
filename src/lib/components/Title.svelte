@@ -56,9 +56,19 @@ Creates a section title with cube graphic
 		justify-content: right;
 	}
 
+	.title.home {
+		justify-content: left;
+	}
+
 	@media screen and (max-width: 768px) {
+		.title.home {
+			justify-content: right;
+		}
 	}
 
 	@media only screen and (max-width: 480px) {
+		.title.home {
+			justify-content: right;
+		}
 	}
 </style>

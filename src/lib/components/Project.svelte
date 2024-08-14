@@ -14,11 +14,11 @@
 	<Figure imgUrl={projectImage} altname={title} caption="none" figClass="project" />
 	<h2>{title}</h2>
 	<p>{summary}</p>
+	<p class="date">Published: {publicationDate}</p>
 	<Button url={link} label="see more" style="small" />
 	<!-- <div class="taglist">
 		<Tag name="temporary" />
 	</div> -->
-	<p>Published on: {publicationDate}</p>
 </div>
 
 <!--
@@ -46,6 +46,9 @@ Creates a project card for the site
 		font-weight: 700;
 		margin-top: 18px;
 		line-height: 1em;
+	}
+	p.date {
+		font-size: 0.7em;
 	}
 	/* .taglist {
 		margin-top: 10px;
