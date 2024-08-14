@@ -42,6 +42,7 @@ Creates a liquid image with a caption
 		margin: 0 auto;
 		margin-bottom: 1em;
 	}
+
 	figure img {
 		width: 100%;
 		height: 100%;
@@ -71,14 +72,27 @@ Creates a liquid image with a caption
 		border-radius: 35px;
 		padding: 0.8em 0;
 	}
+
 	figure.project img {
 		max-height: 250px;
+		object-fit: contain;
+	}
+
+	figure.experiment {
+		max-height: 200px;
+		padding: 0;
+		margin: 0;
+	}
+
+	figure.experiment img {
+		max-height: 200px;
 		object-fit: contain;
 	}
 
 	figure.floater {
 		float: right;
 	}
+
 	figure.title {
 		margin: 0;
 		padding: 0;

@@ -7,29 +7,25 @@
 
 <main>
 	<div class="title">
-		<Title title="Lab" color="mauve" align="left" />
+		<Title title="Lab" color="mauve" align="right" />
 	</div>
 
-	<div>
-		{#each data.experiments as experiment}
-			<div class="experiments">
-				<Experiment
-					title={experiment.meta.title}
-					summary={experiment.meta.summary}
-					experimentImage={experiment.meta.experimentImage}
-					link={experiment.path}
-				/>
-			</div>
-		{/each}
-	</div>
+	{#each data.experiments as experiment}
+		{@const title = experiment.meta.title}
+		{@const summary = experiment.meta.summary}
+		{@const image = experiment.meta.experimentImage}
+		{@const path = experiment.meta.path}
+		<div class="experiment">
+			<Experiment {title} {summary} experimentImage={image} link={path} />
+		</div>
+	{/each}
 </main>
 
 <style>
 	main {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-column-gap: 1em;
-		/* grid-template-rows: 8em 40em 40em; */
+		grid-column-gap: 10px;
 		margin: 60px 10em 0 10em;
 		padding: 0;
 	}
@@ -40,21 +36,34 @@
 		grid-column-end: 5;
 	}
 
-	/*.column {
-		 background-color: rgba(255, 0, 0, 0.2); 
-	}*/
-	.experiments {
-		max-width: 200px;
+	.experiment {
+		text-align: left;
+		padding: 12px;
+		margin: 1em 1em 0 0;
+		width: 200px;
 	}
+
 	/* .taglist {
 		margin-top: 10px;
 	} */
+
+	/* @media only screen and (max-width: 1040px) {
+	} */
+
 	@media only screen and (max-width: 768px) {
 		main {
 			display: flex;
 			flex-direction: column;
-			margin: 10em 0.5em 0 0.5em;
-			border: aqua;
+			align-items: center;
+			margin: 0;
+			border: 1px solid aqua;
+		}
+		.title {
+			align-self: flex-end;
+			margin: 4em 2em 0 0;
+		}
+		.experiment {
+			max-width: 200px;
 		}
 	}
 </style>

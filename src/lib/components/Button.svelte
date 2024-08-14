@@ -24,6 +24,14 @@
 		border: 1px solid purple;
 	}
 
+	span.button.medium {
+		width: 160px;
+	}
+
+	span.button.medium.center {
+		margin: 1em auto;
+	}
+
 	span.button.small {
 		width: 130px;
 	}
