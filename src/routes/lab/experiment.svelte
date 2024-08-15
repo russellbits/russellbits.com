@@ -18,10 +18,7 @@
 <style lang="scss">
 	article {
 		background-color: none;
-		width: 70vw;
+		width: 90vw;
 		margin: 0 auto;
-		--card-background-color: none;
-		--card-border: none;
-		--card-box-shadow: none;
 	}
 </style>

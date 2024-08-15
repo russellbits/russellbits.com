@@ -148,13 +148,19 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
-	.logo,
-	.logo.lg {
+	.logo {
 		position: absolute;
 		top: -30px;
 		left: -80px;
 		z-index: 100;
 		transform: scale(0.8);
+	}
+	.logo.lg {
+		position: absolute;
+		top: -95px;
+		left: -160px;
+		z-index: 100;
+		transform: scale(0.6);
 	}
 	h1 {
 		font-size: 2.5em;

@@ -46,6 +46,13 @@ Creates a section title with cube graphic
 		flex-wrap: nowrap;
 		align-items: center;
 		gap: 0.8em;
+		width: 80vw;
+		padding: 0;
+		margin: 5em auto 0 auto;
+	}
+
+	.title h1 {
+		text-transform: capitalize;
 	}
 
 	.title.left {
