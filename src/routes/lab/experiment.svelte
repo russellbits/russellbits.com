@@ -11,12 +11,7 @@
 	<meta name="date" content={date} />
 </svelte:head>
 
-<article>
-	Lab name:
-	<!-- <h1>{title}</h1>
-
-	<p>Published: {date}</p> -->
-
+<article class="markdown">
 	<slot />
 </article>
 

@@ -41,8 +41,7 @@ export const fetchMarkdownExperiments = async () => {
 			const experimentPath = path.slice(11, -8);
 
 			return {
-				meta: metadata,
-				path: experimentPath
+				meta: metadata
 			};
 		})
 	);
