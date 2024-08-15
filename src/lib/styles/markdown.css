@@ -1,7 +1,7 @@
 article.markdown {
 	line-height: 1.5em;
-	width: 60vw;
-	max-width: 778px;
+	width: 90vw;
+	max-width: 978px;
 	margin: 0 auto;
 }
 
@@ -47,12 +47,17 @@ article.markdown a:hover {
 
 @media only screen and (max-width: 768px) {
 	article.markdown {
-		width: 90vw;
-		margin: 3em auto;
+		width: 80vw;
 	}
 	article.markdown h1 {
 		font-size: 2em;
 		line-height: 1.2em;
 		margin: 0.8em 0 0.8em 0;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	article.markdown {
+		width: 90vw;
 	}
 }

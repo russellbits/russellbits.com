@@ -64,6 +64,7 @@ Creates a liquid image with a caption
 	}
 
 	figure.project {
+		height: 250px;
 		max-height: 250px;
 		background-color: rgba(0, 0, 0, 0.2);
 		border-radius: 35px;
@@ -72,7 +73,7 @@ Creates a liquid image with a caption
 
 	figure.project img {
 		max-height: 250px;
-		object-fit: contain;
+		object-fit: scale-down;
 	}
 
 	figure.experiment {
@@ -91,8 +92,12 @@ Creates a liquid image with a caption
 	}
 
 	figure.title {
+		width: 90%;
+		max-width: none;
 		margin: 0;
 		padding: 0;
+	}
+	figure.title img {
 	}
 	figcaption {
 		color: white;
@@ -119,7 +124,7 @@ Creates a liquid image with a caption
 		}
 		figure.project img {
 			max-height: 200px;
-			object-fit: contain;
+			object-fit: scale-down;
 		}
 	}
 
@@ -141,7 +146,7 @@ Creates a liquid image with a caption
 		}
 		figure.project img {
 			max-height: 150px;
-			object-fit: contain;
+			object-fit: scale-down;
 		}
 	}
 </style>

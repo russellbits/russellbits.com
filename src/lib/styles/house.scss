@@ -76,6 +76,9 @@ body {
 		overflow: scroll;
 		overflow-x: hidden;
 	}
+	body {
+		width: 90vw;
+	}
 	::-webkit-scrollbar {
 		width: 0; /* Remove scrollbar space */
 		background: transparent; /* Optional: just make scrollbar invisible */
@@ -84,12 +87,6 @@ body {
 	::-webkit-scrollbar-thumb {
 		background: #ff0000;
 	}
-}
-
-article {
-	color: white;
-	background-color: none;
-	border: none;
 }
 
 h1,

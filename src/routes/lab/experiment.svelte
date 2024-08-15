@@ -11,14 +11,12 @@
 	<meta name="date" content={date} />
 </svelte:head>
 
-<article class="markdown">
+<article class="markdown" style="width:100vw;">
 	<slot />
 </article>
 
 <style lang="scss">
 	article {
-		background-color: none;
-		width: 90vw;
-		margin: 0 auto;
+		border: 4px solid aquamarine;
 	}
 </style>

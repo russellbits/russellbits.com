@@ -56,12 +56,6 @@
 	}
 
 	@media screen and (max-width: 768px) {
-		main {
-			display: flex;
-			flex-direction: column;
-			width: 80vw;
-			margin: 10em auto 0 auto;
-		}
 		.wide-col-right {
 			width: 100%;
 			margin: 0 0 0 0;
@@ -73,9 +67,5 @@
 	}
 
 	@media only screen and (max-width: 480px) {
-		main {
-			width: 95vw;
-			margin: 5em auto 0 auto;
-		}
 	}
 </style>
