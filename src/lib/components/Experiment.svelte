@@ -14,7 +14,7 @@
 		caption="none"
 		figClass="experiment"
 	/>
-	<h3>{title}</h3>
+	<h3><a href={link}>{title}</a></h3>
 	<p>{summary}</p>
 	<Button url={link} label="Open Experiment" style="medium center" />
 </div>
@@ -27,14 +27,16 @@
 		justify-content: space-between;
 	}
 
-	h3 {
+	h3 > a {
+		color: white;
 		font-family: 'Raleway', sans-serif;
 		font-weight: 100;
 		font-size: 1.6em;
 		text-align: center;
 		line-height: 1.3em;
-		margin: 0.4em 0 0.4em 0;
+		margin: 0.2em 0 0.2em 0;
 	}
+
 	p {
 		line-height: 1.4em;
 	}

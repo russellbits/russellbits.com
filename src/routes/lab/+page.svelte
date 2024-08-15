@@ -3,6 +3,7 @@
 	export let data;
 	import Experiment from '$lib/components/Experiment.svelte';
 	import Title from '$lib/components/Title.svelte';
+	console.log(data);
 </script>
 
 <main>
@@ -14,8 +15,9 @@
 		{@const title = experiment.meta.title}
 		{@const summary = experiment.meta.summary}
 		{@const image = experiment.meta.experimentImage}
-		{@const path = experiment.meta.path}
+		{@const path = experiment.path}
 		<div class="experiment">
+			<!-- prettier-ignore -->
 			<Experiment {title} {summary} experimentImage={image} link={path} />
 		</div>
 	{/each}
