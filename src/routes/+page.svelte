@@ -27,7 +27,7 @@
 <div class="wide-col-right">
 	<Title title="Project: Seqseco" color="blue" />
 
-	<h2>A Product Design Story</h2>
+	<h2><a href="/projects/seqseco">A Product Design Story</a></h2>
 	<p>
 		While creating a new workout for myself, I realized it would be useful to have a timer that
 		could, in turn, set off another timer—sequenced timers. I realized this might useful for other
@@ -46,13 +46,16 @@
 <style lang="scss">
 	.wide-col-left {
 		grid-column-start: 1;
-		grid-column-end: 3;
-		margin: 0 0 2.5em 0;
+		grid-column-end: 2;
 	}
 	.wide-col-right {
-		grid-column-start: 3;
-		grid-column-end: 5;
-		margin: 0 0 2.5em 0;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+	h2 > a:link,
+	h2 > a:visited {
+		color: white;
+		font-size: 1em;
 	}
 
 	@media screen and (max-width: 768px) {

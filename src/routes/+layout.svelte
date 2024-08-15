@@ -6,10 +6,7 @@
 	import Title from '$lib/components/Title.svelte';
 	import '$lib/styles/house.scss';
 	export let data;
-	$: layoutClass = data.currentRoute.slice(1);
-	if (layoutClass === '') {
-		layoutClass = 'home';
-	}
+	$: layoutClass = data.currentRoute.slice(1) !== '' ? data.currentRoute.slice(1) : 'home';
 </script>
 
 <Header />
@@ -35,18 +32,18 @@
 		text-align: right;
 		color: white;
 		background-color: black;
-		width: 100px;
-		height: 40px;
+		width: 60px;
+		height: 20px;
 	}
 	main {
 		display: grid;
 		width: 80vw;
+		max-width: 80vw;
 		margin: 2em auto 0 auto;
 	}
 	main.home {
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 40vw 40vw;
 		gap: 1em;
-		background-color: rgb(192, 209, 135);
 	}
 	main.projects {
 		grid-template-columns: 50% 50%;
