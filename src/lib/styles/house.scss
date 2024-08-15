@@ -170,17 +170,17 @@ ul {
 @media only screen and (max-width: 480px) {
 	.logo {
 		position: absolute;
-		top: -50px;
-		left: -80px;
+		top: -75px;
+		left: -105px;
 		z-index: 100;
-		transform: scale(0.7);
+		transform: scale(0.5);
 	}
 	.logo.lg {
 		position: absolute;
-		top: -130px;
-		left: -180px;
+		top: -175px;
+		left: -205px;
 		z-index: 100;
-		transform: scale(0.5);
+		transform: scale(0.3);
 	}
 	h1 {
 		font-size: 2em;
