@@ -59,7 +59,6 @@
 			display: flex;
 			flex-direction: column;
 			margin: 10em 0.5em 0 0.5em;
-			border: aqua;
 		}
 	}
 </style>
