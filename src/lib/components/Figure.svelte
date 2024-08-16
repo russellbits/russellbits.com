@@ -50,6 +50,12 @@ Creates a liquid image with a caption
 		width: 100%;
 		border: none;
 	}
+	figure.inline {
+		width: 100%;
+		max-width: none;
+		border: none;
+		margin: 1em 0;
+	}
 
 	figure.preview {
 		width: 250px;
@@ -97,13 +103,11 @@ Creates a liquid image with a caption
 		margin: 1.6em 0 0 0;
 		padding: 0;
 	}
-	figure.title img {
-	}
 	figcaption {
 		color: white;
 		font-family: 'Raleway', sans-serif;
 		font-size: 0.8em;
-		line-height: 1em;
+		line-height: 1.4em;
 		text-align: center;
 	}
 	@media screen and (max-width: 768px) {
