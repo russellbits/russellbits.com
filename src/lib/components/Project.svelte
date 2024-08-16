@@ -11,8 +11,10 @@
 </script>
 
 <div>
-	<Figure imgUrl={projectImage} altname={title} caption="none" figClass="project" />
-	<h2>{title}</h2>
+	<a href={link}
+		><Figure imgUrl={projectImage} altname={title} caption="none" figClass="project" /></a
+	>
+	<h2><a href={link}>{title}</a></h2>
 	<p>{summary}</p>
 	<p class="date">Published: {publicationDate}</p>
 	<Button url={link} label="see more" style="small" />

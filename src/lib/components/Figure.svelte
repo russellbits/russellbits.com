@@ -94,7 +94,7 @@ Creates a liquid image with a caption
 	figure.title {
 		width: 90%;
 		max-width: none;
-		margin: 0;
+		margin: 1.6em 0 0 0;
 		padding: 0;
 	}
 	figure.title img {
