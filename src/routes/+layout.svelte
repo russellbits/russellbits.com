@@ -43,7 +43,8 @@
 	}
 	main.home {
 		grid-template-columns: 40vw 40vw;
-		gap: 1em;
+		column-gap: 1em;
+		row-gap: 4em;
 	}
 	main.projects {
 		grid-template-columns: 50% 50%;

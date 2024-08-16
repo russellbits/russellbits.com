@@ -1,4 +1,6 @@
 <script>
+	// @ts-nocheck
+
 	import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import Figure from '$lib/components/Figure.svelte';
@@ -24,8 +26,14 @@
 	/>
 </div>
 
-<div class="wide-col-right">
-	<Title title="Project: Seqseco" color="blue" />
+<div class="wide-col-right projectSecseqo">
+	<Title
+		title="Project: Seqseco"
+		color="blue"
+		align="left"
+		link="/projects/seqseco"
+		topMargin="noTopMargin"
+	/>
 
 	<h2><a href="/projects/seqseco">A Product Design Story</a></h2>
 	<p>
@@ -51,6 +59,8 @@
 	.wide-col-right {
 		grid-column-start: 2;
 		grid-column-end: 3;
+		align-self: top;
+		justify-self: start;
 	}
 	h2 > a:link,
 	h2 > a:visited {

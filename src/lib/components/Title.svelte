@@ -2,9 +2,11 @@
 	export let title = 'title';
 	export let color = 'mauve';
 	export let align = 'left';
+	export let link = 'false';
+	export let topMargin = '';
 </script>
 
-<div class="title {align}">
+<div class="title {align} {topMargin}">
 	{#if color === 'mauve'}
 		<div>
 			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Large Mauve Cube" />
@@ -14,7 +16,11 @@
 			<img src="/images/cube-blue-large.png" width="65" height="65" alt="Large Blue Cube" />
 		</div>
 	{/if}
-	<div><h1>{title}</h1></div>
+	{#if link !== 'false'}
+		<div><h1><a href={link}>{title}</a></h1></div>
+	{:else}
+		<div><h1>{title}</h1></div>
+	{/if}
 </div>
 
 <!--
@@ -24,35 +30,44 @@ Creates a section title with cube graphic
 
 @example
 ```svelte
-<Figure
-			imgUrl="/images/projects/seqseco-project-display.png"
-			altname="iphone displaying the seqseco web app."
-			caption="Seqseco is a sequenced timer web app."
-			figClass="normal"
-		/>
+<Title
+	title="Project: Seqseco"
+	color="blue"
+	align="left"
+	link="/projects/seqseco" />
 ```
-
 ### Slot props
 - `title` - The url for the location of the project image
 - `color` - alt attribute for the <img> tag
 - `align` - A text description of the image.
+- `link` - an optional prop that by default is set to false. Creates link around title.
 
 -->
 
 <style>
 	.title {
+		text-transform: capitalize;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		align-items: center;
 		gap: 0.8em;
-		width: 80vw;
+		width: 100%;
 		padding: 0;
 		margin: 5em auto 0 auto;
 	}
 
-	.title h1 {
-		text-transform: capitalize;
+	.title.noTopMargin {
+		margin: 0 auto;
+	}
+
+	.title h1 a {
+		font-family: 'Raleway', sans-serif;
+		font-size: 1em;
+		font-weight: 600;
+		color: white;
+		padding: 0;
+		margin: 0;
 	}
 
 	.title.left {
@@ -61,6 +76,10 @@ Creates a section title with cube graphic
 
 	.title.right {
 		justify-content: right;
+	}
+
+	.title.right h1 {
+		padding: 0 2em 0 0;
 	}
 
 	.title.home {
