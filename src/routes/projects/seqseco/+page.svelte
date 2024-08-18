@@ -11,8 +11,8 @@
 	<div class="cover-image">
 		<Figure
 			imgUrl="/images/projects/seqseco-project-display.png"
-			altname="Designing the UI on paper"
-			caption="Sketching on paper allows for the rapid iteration of ideas."
+			altname="Seqseco as it appears on an iphone"
+			caption="none"
 			figClass="inline"
 		/>
 	</div>
