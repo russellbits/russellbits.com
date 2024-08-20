@@ -19,7 +19,7 @@
 
 <div class="wide-col-left">
 	<Figure
-		imgUrl="images/projects/seqseco-project-display.png"
+		imgUrl="projects/seqseco/project-display.png"
 		altname="iphone displaying the seqseco web app."
 		caption="Seqseco is a sequenced timer web app."
 		figClass="normal"

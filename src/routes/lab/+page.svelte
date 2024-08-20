@@ -1,8 +1,7 @@
 <!-- lab/+page.svelte -->
 <script>
 	export let data;
-	import Experiment from '$lib/components/Experiment.svelte';
-	import Title from '$lib/components/Title.svelte';
+	import ExperimentPreview from '$lib/components/ExperimentPreview.svelte';
 </script>
 
 {#each data.experiments as experiment}
@@ -12,7 +11,7 @@
 	{@const path = experiment.meta.experimentUrl}
 	<div class="experiment">
 		<!-- prettier-ignore -->
-		<Experiment {title} {summary} experimentImage={image} link={path}  />
+		<ExperimentPreview {title} {summary} experimentImage={image} link={path}  />
 	</div>
 {/each}
 

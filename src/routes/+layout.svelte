@@ -5,9 +5,27 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import '$lib/styles/house.scss';
+	import { page } from '$app/stores';
 	export let data;
+
+	$: currentPath = $page.url.pathname;
 	$: layoutClass = data.currentRoute.slice(1) !== '' ? data.currentRoute.slice(1) : 'home';
 </script>
+
+<!-- Logo -->
+{#if currentPath !== '/'}
+	<div class="logo">
+		<a href="/">
+			<img src="/images/russellbits-logo-md.png" width="300" height="300" alt="Russellbits Logo" />
+		</a>
+	</div>
+{:else}
+	<div class="logo lg">
+		<a href="/">
+			<img src="/images/russellbits-logo-lg.png" width="500" height="500" alt="Russellbits Logo" />
+		</a>
+	</div>
+{/if}
 
 <Header />
 
@@ -62,12 +80,37 @@
 		justify-content: space-between;
 		margin: 1em auto 0 auto;
 	}
+	.logo {
+		position: fixed;
+		top: 0px;
+		left: -50px;
+		z-index: 4000;
+	}
+
+	.logo.lg {
+		top: 0px;
+		left: -100px;
+	}
 	@media screen and (max-width: 768px) {
 		main {
 			display: flex;
 			flex-direction: column;
 			max-width: 700px;
 			margin: 1em auto 0 auto;
+		}
+		.logo {
+			position: absolute;
+			top: -30px;
+			left: -80px;
+			z-index: 100;
+			transform: scale(0.8);
+		}
+		.logo.lg {
+			position: absolute;
+			top: -95px;
+			left: -160px;
+			z-index: 100;
+			transform: scale(0.6);
 		}
 	}
 	@media screen and (max-width: 480px) {
@@ -76,6 +119,20 @@
 			flex-direction: column;
 			max-width: 460px;
 			margin: 1em auto 0 auto;
+		}
+		.logo {
+			position: absolute;
+			top: -75px;
+			left: -105px;
+			z-index: 100;
+			transform: scale(0.5);
+		}
+		.logo.lg {
+			position: absolute;
+			top: -175px;
+			left: -205px;
+			z-index: 100;
+			transform: scale(0.3);
 		}
 	}
 </style>

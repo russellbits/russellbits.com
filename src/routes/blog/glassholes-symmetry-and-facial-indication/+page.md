@@ -20,7 +20,7 @@ Google Glass has taken a bit of a beating in the press in the last year since it
 
 I’m ambivalent about predictions of Google Glass’s success or demise. I am all for technology that alleviates my already bad eyes. As a “sight-impaired” individual, I’m less concerned with Google Glass than I am with contacts that will give me “[zoom](http://www.popsci.com/science/article/2013-07/zoomable-contact-lenses-let-you-magnify-stuff-3x)” features! I mean, if contacts that zoom are a possibility on the horizon then the technological silk road appears to be traveling to a place where the Internet is always in front of us, becoming merely part of our visual field. It’s not one product I’m concerned about here, but the design of wearable “facial interface devices”—although “head interface devices” might be more appropriate when you consider bluetooth headsets and headphones. The generic terminology on touchscreens seems settled, so what are screens activated by eyes?— glancescreens? Anyway, the nomenclature of this branch of tech notwithstanding, and to put it colloquially, designers working on _objects_ that go on your _face_ should consider some minor neurological constraints before wrapping up their CAD designs. So far, the designs of facial (head) interface devices has been a mixed bag with regard to what neurology tells us about human facial computation.
 
-<Figure imgUrl="head-device-designs.png" altname="Head device designs" caption="Asymmetrical designs have been historically douchey." figClass="normal"/>
+<Figure imgUrl={`${slug}/head-device-designs.png`} altname="Head device designs" caption="Asymmetrical designs have been historically douchey." figClass="normal"/>
 
 ### Some neurology regarding facial beauty
 

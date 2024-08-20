@@ -50,11 +50,6 @@ Creates a project card for the site
 -->
 
 <style>
-	h2 {
-		font-weight: 700;
-		margin-top: 18px;
-		line-height: 1em;
-	}
 	p.date {
 		font-size: 0.7em;
 	}

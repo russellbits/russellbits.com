@@ -9,7 +9,6 @@
 </script>
 
 <div class="title {align} {topMargin}">
-	<code>{currentPath}</code>
 	{#if color === 'mauve'}
 		<div>
 			<img src="images/cube-mauve-large.png" width="65" height="65" alt="Large Mauve Cube" />

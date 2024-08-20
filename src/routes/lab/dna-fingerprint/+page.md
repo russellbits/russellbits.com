@@ -2,7 +2,7 @@
 title: DNA Fingerprint
 date: '2019-01-22'
 summary: 'A Circos graphic that can serve as a unique image for a particular strain of plant.'
-experimentImage: 'images/lab/dna-fingerprint.png'
+experimentImage: 'lab/dna-fingerprint.png'
 experimentUrl: '/lab/dna-fingerprint'
 ---
 

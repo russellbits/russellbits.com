@@ -2,7 +2,7 @@
 title: Keypress Description
 date: '2023-02-10'
 summary: 'Examining what keypress events produce'
-experimentImage: 'images/lab/keypress-description.png'
+experimentImage: 'lab/keypress-description.png'
 experimentUrl: 'lab/keypress-description'
 ---
 

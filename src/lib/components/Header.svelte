@@ -22,21 +22,6 @@
 	}
 </script>
 
-<!-- Logo -->
-{#if currentPath !== '/'}
-	<div class="logo">
-		<a href="/">
-			<img src="images/russellbits-logo-md.png" width="300" height="300" alt="Russellbits Logo" />
-		</a>
-	</div>
-{:else}
-	<div class="logo lg">
-		<a href="/">
-			<img src="images/russellbits-logo-lg.png" width="500" height="500" alt="Russellbits Logo" />
-		</a>
-	</div>
-{/if}
-
 <!-- Header.svelte -->
 <header>
 	<nav class="menu">

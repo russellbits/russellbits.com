@@ -2,7 +2,7 @@
 title: 3D Card Flip
 date: '2024-05-15'
 summary: 'A card that flips in 3D when you roll over it.'
-experimentImage: 'images/lab/3d-card-flip.png'
+experimentImage: 'lab/3d-card-flip.png'
 experimentUrl: '/lab/3d-card-flip'
 ---
 

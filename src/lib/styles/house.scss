@@ -111,9 +111,23 @@ h1 > img {
 	margin-right: 14px;
 }
 h2 {
-	font-size: 2em;
+	font-size: 1.7em;
 	font-weight: 400;
 	line-height: 1.7em;
+}
+h2 > a:link {
+	color: white;
+	font-size: 2em;
+	font-weight: 400;
+
+	line-height: 1em;
+}
+h2 > a:visited {
+	color: white;
+}
+h2 > a:hover {
+	color: white;
+	text-decoration: underline;
 }
 p {
 	font-family: 'Georgia', serif;
@@ -132,33 +146,7 @@ ul {
 	list-style-type: none;
 }
 
-.logo {
-	position: fixed;
-	top: 0px;
-	left: -50px;
-	z-index: 4000;
-}
-
-.logo.lg {
-	top: 0px;
-	left: -100px;
-}
-
 @media only screen and (max-width: 768px) {
-	.logo {
-		position: absolute;
-		top: -30px;
-		left: -80px;
-		z-index: 100;
-		transform: scale(0.8);
-	}
-	.logo.lg {
-		position: absolute;
-		top: -95px;
-		left: -160px;
-		z-index: 100;
-		transform: scale(0.6);
-	}
 	h1 {
 		font-size: 2.5em;
 		font-weight: 600;
@@ -171,20 +159,6 @@ ul {
 }
 
 @media only screen and (max-width: 480px) {
-	.logo {
-		position: absolute;
-		top: -75px;
-		left: -105px;
-		z-index: 100;
-		transform: scale(0.5);
-	}
-	.logo.lg {
-		position: absolute;
-		top: -175px;
-		left: -205px;
-		z-index: 100;
-		transform: scale(0.3);
-	}
 	h1 {
 		font-size: 2em;
 		font-weight: 600;

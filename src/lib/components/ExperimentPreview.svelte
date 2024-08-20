@@ -8,15 +8,19 @@
 </script>
 
 <div class="experiment-card">
-	<Figure
-		imgUrl={experimentImage}
-		altname={`${title} experiment`}
-		caption="none"
-		figClass="experiment"
-	/>
-	<h3><a href={link}>{title}</a></h3>
-	<p>{summary}</p>
-	<Button url={link} label="Open Experiment" style="medium center" />
+	<div>
+		<a href={link}
+			><Figure
+				imgUrl={experimentImage}
+				altname={`${title} experiment`}
+				caption="none"
+				figClass="experiment"
+			/></a
+		>
+	</div>
+	<div class="title"><h3><a href={link}>{title}</a></h3></div>
+	<div class="summary"><p>{summary}</p></div>
+	<div><Button url={link} label="Open Experiment" style="medium center" /></div>
 </div>
 
 <style lang="scss">
@@ -25,6 +29,15 @@
 		flex-direction: column;
 		height: 100%;
 		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.title {
+		align-self: flex-start;
+	}
+
+	.summary {
+		flex-grow: 1;
 	}
 
 	h3 > a {
@@ -34,6 +47,7 @@
 		font-size: 1.6em;
 		text-align: center;
 		line-height: 1.3em;
+		align-self: flex-start;
 		margin: 0.2em 0 0.2em 0;
 	}
 

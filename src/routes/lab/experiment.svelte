@@ -1,6 +1,5 @@
-<!-- post.svelte -->
+<!-- experiment.svelte -->
 <script>
-	// @ts-nocheck
 	export let title;
 	export let date;
 </script>
@@ -15,8 +14,4 @@
 	<slot />
 </article>
 
-<style lang="scss">
-	article {
-		border: 4px solid aquamarine;
-	}
-</style>
+<style lang="scss"></style>
