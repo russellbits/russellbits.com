@@ -9,7 +9,7 @@ import { page } from '$app/stores';
 $: currentPath = $page.url.pathname;
 </script>
 
-<Figure imgUrl="/images/projects/zgear-project-display.png" altname="Images of a dashboard web site" caption="Z Gear web site layout" figClass="title"/>
+<Figure imgUrl="project-display.png" altname="Images of a dashboard web site" caption="Z Gear web site layout" figClass="title"/>
 
 # Phylos Bioscience Customer Dashboard
 

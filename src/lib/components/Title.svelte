@@ -1,4 +1,6 @@
 <script>
+	import { page } from '$app/stores';
+	$: currentPath = $page.url.pathname;
 	export let title = 'title';
 	export let color = 'mauve';
 	export let align = 'left';
@@ -7,13 +9,14 @@
 </script>
 
 <div class="title {align} {topMargin}">
+	<code>{currentPath}</code>
 	{#if color === 'mauve'}
 		<div>
-			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Large Mauve Cube" />
+			<img src="images/cube-mauve-large.png" width="65" height="65" alt="Large Mauve Cube" />
 		</div>
 	{:else}
 		<div>
-			<img src="/images/cube-blue-large.png" width="65" height="65" alt="Large Blue Cube" />
+			<img src="images/cube-blue-large.png" width="65" height="65" alt="Large Blue Cube" />
 		</div>
 	{/if}
 	{#if link !== 'false'}

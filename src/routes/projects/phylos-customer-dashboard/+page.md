@@ -7,7 +7,7 @@ date: '2018-08-11'
 import Figure from '$lib/components/Figure.svelte'
 </script>
 
-<Figure imgUrl="/images/projects/phylos-project-display.png" altname="Images of a dashboard web site" caption="The customer dashboard for Phylos." figClass="title"/>
+<Figure imgUrl="project-display.png" altname="Images of a dashboard web site" caption="The customer dashboard for Phylos." figClass="title"/>
 
 # Phylos Bioscience Customer Dashboard
 

@@ -4,6 +4,7 @@
 	import Figure from '$lib/components/Figure.svelte';
 
 	export let title = 'Project Title';
+	export let slug = '';
 	export let publicationDate = 'No date available';
 	export let projectImage = 'https://placehold.co/500x250';
 	export let summary;
@@ -12,7 +13,12 @@
 
 <div>
 	<a href={link}
-		><Figure imgUrl={projectImage} altname={title} caption="none" figClass="project" /></a
+		><Figure
+			imgUrl={`projects/${slug}/${projectImage}`}
+			altname={title}
+			caption="none"
+			figClass="project"
+		/></a
 	>
 	<h2><a href={link}>{title}</a></h2>
 	<p>{summary}</p>

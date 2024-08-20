@@ -10,7 +10,7 @@
 
 	<div class="cover-image">
 		<Figure
-			imgUrl="/images/projects/seqseco-project-display.png"
+			imgUrl="project-display.png"
 			altname="Seqseco as it appears on an iphone"
 			caption="none"
 			figClass="inline"
@@ -29,7 +29,7 @@
 		</p>
 
 		<Figure
-			imgUrl="/images/projects/seqseco/seqseco-design-step-1.jpg"
+			imgUrl="design-step-1.jpg"
 			altname="Designing the UI on paper"
 			caption="Sketching on paper allows for the rapid iteration of ideas."
 			figClass="inline"
@@ -38,7 +38,7 @@
 
 	<div class="section design-image">
 		<Figure
-			imgUrl="/images/projects/seqseco/seqseco-design-step-2.jpg"
+			imgUrl="design-step-2.jpg"
 			altname="Paper Mock-ups"
 			caption="With some solid ideas, it can be useful to create a paper mock-up."
 			figClass="inline"
@@ -51,23 +51,23 @@
 		<p>
 			With several conceptual drafts worked out, I can begin to see what components might be useful,
 			what framing devices might be useful, what controls will be needed and what settings as well.
-			For instance, while drafting this particular web app, it occurred to me that a useful modal
-			state would be one in which the timer automatically sets off the next timer, or finishes and
-			waits for the user to press a "next" modal button. It's at this stage that it's useful to move
-			to the computer and begin drafting.
+			For instance, while drafting this particular web app, it occurred to me that two useful states
+			would be one in which the timer automatically sets off the next timer, or finishes and waits
+			for the user to press a "next" button—definitely a setting. It's at this stage that it's
+			useful to move to the computer and begin drafting.
 		</p>
 
 		<Figure
-			imgUrl="/images/projects/seqseco/seqseco-design-step-3.jpg"
+			imgUrl="design-step-3.jpg"
 			altname="Design Drafts"
-			caption="Iterations in the design phase should move toward good UI practices and aim for clarity."
+			caption="Iterations in the design phase should move toward good UI practices and aim for increased clarity."
 			figClass="inline"
 		/>
 	</div>
 
 	<div class="prototype-image">
 		<Figure
-			imgUrl="/images/projects/seqseco/seqseco-design-step-4.jpg"
+			imgUrl="design-step-4.jpg"
 			altname="UI Protoype"
 			caption="There are many ways to prototype, but by laying out any potential screens, this can easily identify repeating elements (components) and translate into a design system."
 			figClass="inline"
@@ -83,9 +83,9 @@
 		</p>
 	</div>
 
-	<div class="section execution">
+	<!-- <div class="section execution">
 		<h2>Execution</h2>
-	</div>
+	</div> -->
 </article>
 
 <style>
@@ -141,9 +141,6 @@
 		grid-column-end: 3;
 		grid-row-start: 5;
 		grid-row-end: 6;
-	}
-	article .normal {
-		margin: 1em 0 0 0;
 	}
 	article p {
 		text-indent: 2em;

@@ -1,16 +1,16 @@
 ---
 title: Notes on Cognitive Liberty
+slug: notes-on-cognitive-liberty
 publicationDate: '2024-01-04'
-blogImage: '/images/blog/cognitive-liberty-cover.jpg'
+blogPreviewImage: 'cognitive-liberty-cover.jpg'
 summary: "You have the right to free speech. Shouldn't you have the right to free and private thought?"
 ---
 
 <script>
-    const path = '/blog/notes-on-cognitive-liberty/';
     import Figure from '$lib/components/Figure.svelte';
 </script>
 
-<Figure imgUrl="/images/blog/cognitive-liberty-cover.jpg" altname="Article cover" caption="We need rights for our thinking." figClass="title"/>
+<Figure imgUrl="cognitive-liberty-cover.jpg" altname="Article cover" caption="We need rights for our thinking." figClass="title"/>
 
 # Notes on Cognitive Liberty
 

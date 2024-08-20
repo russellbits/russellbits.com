@@ -26,13 +26,13 @@
 {#if currentPath !== '/'}
 	<div class="logo">
 		<a href="/">
-			<img src="/images/russellbits-logo-md.png" width="300" height="300" alt="Russellbits Logo" />
+			<img src="images/russellbits-logo-md.png" width="300" height="300" alt="Russellbits Logo" />
 		</a>
 	</div>
 {:else}
 	<div class="logo lg">
 		<a href="/">
-			<img src="/images/russellbits-logo-lg.png" width="500" height="500" alt="Russellbits Logo" />
+			<img src="images/russellbits-logo-lg.png" width="500" height="500" alt="Russellbits Logo" />
 		</a>
 	</div>
 {/if}
@@ -65,7 +65,7 @@
 			</li>
 			<li>
 				<a href="https://codepen.io/russellbits"
-					><img src="/images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
+					><img src="images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
 				>
 			</li>
 			<li>
@@ -106,7 +106,7 @@
 				<a href="http://linkedin.com/in/russellbits"><i class="glyph-linkedin glyph-white" /></a>
 
 				<a href="https://codepen.io/russellbits"
-					><img src="/images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
+					><img src="images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
 				>
 				<a href="http://instagram.com/belovedleader"
 					><i class="icon glyph-instagram glyph-white" /></a

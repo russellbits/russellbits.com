@@ -1,4 +1,6 @@
 <script>
+	import { page } from '$app/stores';
+	$: currentPath = $page.url.pathname;
 	export let imgUrl;
 	export let altname;
 	export let caption = 'none';
@@ -6,7 +8,7 @@
 </script>
 
 <figure class={`figure ${figClass}`}>
-	<img src={imgUrl} alt={altname} />
+	<img src={`/images/${imgUrl}`} alt={altname} />
 	{#if caption !== 'none'}
 		<figcaption>{caption}</figcaption>
 	{/if}
@@ -20,7 +22,7 @@ Creates a liquid image with a caption
 @example
 ```svelte
 <Figure
-			imgUrl="/images/projects/seqseco-project-display.png"
+			imgUrl="images/projects/seqseco-project-display.png"
 			altname="iphone displaying the seqseco web app."
 			caption="Seqseco is a sequenced timer web app."
 			figClass="normal"
@@ -28,7 +30,7 @@ Creates a liquid image with a caption
 ```
 
 ### Slot props
-- `imgUrl` - The url for the location of the project image
+- `imgUrl` - The local images path and name for the location of the project image in the images directoy
 - `altname` - alt attribute for the <img> tag
 - `caption` - A text description of the image.
 - `figClass` - normal | floater | title

@@ -2,7 +2,6 @@
 <script>
 	export let data;
 	import Project from '$lib/components/Project.svelte';
-	import Title from '$lib/components/Title.svelte';
 </script>
 
 {#each data.projects as project, index}

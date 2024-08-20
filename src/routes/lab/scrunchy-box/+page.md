@@ -2,7 +2,7 @@
 title: Scrunchy Box
 date: '2022-11-15'
 summary: 'A box that shows summary on rollover.'
-experimentImage: '/images/lab/scrunchy-box.png'
+experimentImage: 'images/lab/scrunchy-box.png'
 experimentUrl: '/lab/scrunchy-box'
 ---
 

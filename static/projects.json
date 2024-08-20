@@ -4,7 +4,7 @@
 			"title": "Seqseco",
 			"date": "2024-01-01",
 			"summary": "This is a web app.",
-			"projectImage": "/images/projects/seqseco-project-display-2.png"
+			"projectImage": "seqseco/project-ui-3d-map.png"
 		},
 		"path": "/projects/seqseco/"
 	},
@@ -13,7 +13,7 @@
 			"title": "Holiday Inn Express Interactive Map",
 			"date": "2020-09-18",
 			"summary": "This is a map project.",
-			"projectImage": "/images/projects/hiex-project-display.png"
+			"projectImage": "hiex-interactive-map/project-display.png"
 		},
 		"path": "/projects/hiex-interactive-map/"
 	},
@@ -22,7 +22,7 @@
 			"title": "Phylos Customer Dashboard",
 			"date": "2018-08-11",
 			"summary": "This is a dashboard project.",
-			"projectImage": "/images/projects/phylos-project-display.png"
+			"projectImage": "phylos-customer-dashboard/project-display.png"
 		},
 		"path": "/projects/phylos-customer-dashboard/"
 	},
@@ -31,7 +31,7 @@
 			"title": "Z Gear",
 			"date": "2024-01-01",
 			"summary": "This is a web app.",
-			"projectImage": "/images/projects/zgear-project-display.png"
+			"projectImage": "zgear/project-display.png"
 		},
 		"path": "/projects/zgear/"
 	}

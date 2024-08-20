@@ -1,9 +1,10 @@
 <!-- src/routes/blog/+page.svelte -->
 <script>
 	export let data;
-	import BlogPost from '$lib/components/BlogPost.svelte';
+	import BlogPostPreview from '$lib/components/BlogPostPreview.svelte';
+	import { positionToOffset } from 'vitest/dist/utils.js';
 	// import BlogSidebar from '$lib/components/BlogSidebar.svelte';
-	import Title from '$lib/components/Title.svelte';
+	// import Title from '$lib/components/Title.svelte';
 </script>
 
 <!--<div class="column" />-->
@@ -12,10 +13,11 @@
 	</div> -->
 
 {#each data.posts as post}
-	<BlogPost
+	<BlogPostPreview
 		title={post.meta.title}
+		slug={post.meta.slug}
 		summary={post.meta.summary}
-		blogImage={post.meta.blogImage}
+		blogPreviewImage={post.meta.blogPreviewImage}
 		publicationDate={post.meta.publicationDate}
 		link={post.path}
 	/>

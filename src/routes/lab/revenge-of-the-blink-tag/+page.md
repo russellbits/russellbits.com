@@ -2,7 +2,7 @@
 title: Revenge of the Blink Tag
 date: '2023-02-10'
 summary: 'Oh no! Not the blinking again!'
-experimentImage: '/images/lab/revenge-of-the-blink-tag.png'
+experimentImage: 'images/lab/revenge-of-the-blink-tag.png'
 experimentUrl: '/lab/revenge-of-the-blink-tag'
 ---
 

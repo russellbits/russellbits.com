@@ -4,7 +4,8 @@
 	import Figure from '$lib/components/Figure.svelte';
 
 	export let title = 'Untitled';
-	export let blogImage = 'No image available.';
+	export let slug = '';
+	export let blogPreviewImage = 'No image available.';
 	export let summary = 'No summary available.';
 	export let publicationDate;
 	export let link = '#';
@@ -12,7 +13,12 @@
 
 <div class="post">
 	<div class="preview-image">
-		<Figure imgUrl={blogImage} altname={title} caption="none" figClass="preview" />
+		<Figure
+			imgUrl={`blog/${slug}/${blogPreviewImage}`}
+			altname={title}
+			caption="none"
+			figClass="preview"
+		/>
 	</div>
 	<div class="content">
 		<h2><a href={link}>{title}</a></h2>
