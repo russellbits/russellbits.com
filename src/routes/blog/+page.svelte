@@ -2,9 +2,7 @@
 <script>
 	export let data;
 	import BlogPostPreview from '$lib/components/BlogPostPreview.svelte';
-	import { positionToOffset } from 'vitest/dist/utils.js';
 	// import BlogSidebar from '$lib/components/BlogSidebar.svelte';
-	// import Title from '$lib/components/Title.svelte';
 </script>
 
 <!--<div class="column" />-->

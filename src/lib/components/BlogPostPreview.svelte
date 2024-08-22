@@ -1,5 +1,5 @@
 <script>
-	import Tag from '$lib/components/Tag.svelte';
+	// import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import Figure from '$lib/components/Figure.svelte';
 
@@ -51,8 +51,9 @@ Lays out a blog post summary for the blog index page
 
 ### Slot props
 - `title` - Title of the post
+- `slug` - Title of the post in shishkabob format
 - `summary` - Summary of the post
-- `blogImage` - An image that accompanies the post summary
+- `blogPreviewImage` - An image that accompanies the post summary
 - `publicationDate` - date of publication (from frontmatter of blog markdown)
 - `link` - the path to the full blog post
 -->
