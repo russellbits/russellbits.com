@@ -1,12 +1,12 @@
 <!-- projects/+page.svelte -->
 <script>
 	export let data;
-	import Project from '$lib/components/Project.svelte';
+	import ProjectPreview from '$lib/components/ProjectPreview.svelte';
 </script>
 
 {#each data.projects as project, index}
 	<div class={index % 2 === 0 ? 'left' : 'right'}>
-		<Project
+		<ProjectPreview
 			title={project.meta.title}
 			summary={project.meta.summary}
 			publicationDate={project.meta.date}

@@ -14,7 +14,7 @@
 <div class="post">
 	<div class="preview-image">
 		<Figure
-			imgUrl={`blog/${slug}/${blogPreviewImage}`}
+			imgUrl={`/blog/${slug}/${blogPreviewImage}`}
 			altname={title}
 			caption="none"
 			figClass="preview"

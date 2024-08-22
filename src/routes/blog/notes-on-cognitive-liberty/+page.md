@@ -7,10 +7,12 @@ summary: "You have the right to free speech. Shouldn't you have the right to fre
 ---
 
 <script>
+    import { page } from '$app/stores';
+    const slug = $page.url.pathname;
     import Figure from '$lib/components/Figure.svelte';
 </script>
 
-<Figure imgUrl="cognitive-liberty-cover.jpg" altname="Article cover" caption="We need rights for our thinking." figClass="title"/>
+<Figure imgUrl={`${slug}cognitive-liberty-cover.jpg`} altname="Article cover" caption="We need rights for our thinking." figClass="title"/>
 
 # Notes on Cognitive Liberty
 

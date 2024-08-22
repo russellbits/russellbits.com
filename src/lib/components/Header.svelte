@@ -3,6 +3,7 @@
 
 	import '$lib/styles/entypo.css';
 	import { page } from '$app/stores';
+	import iconCodepen from '$lib/assets/icon-codepen.svg';
 
 	$: currentPath = $page.url.pathname;
 	$: isVisible = false;
@@ -50,7 +51,7 @@
 			</li>
 			<li>
 				<a href="https://codepen.io/russellbits"
-					><img src="images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
+					><img src={iconCodepen} width="25" height="25" alt="Codepen logo" /></a
 				>
 			</li>
 			<li>
@@ -91,7 +92,7 @@
 				<a href="http://linkedin.com/in/russellbits"><i class="glyph-linkedin glyph-white" /></a>
 
 				<a href="https://codepen.io/russellbits"
-					><img src="images/icon-codepen.svg" width="25" height="25" alt="Codepen logo" /></a
+					><img src={iconCodepen} width="25" height="25" alt="Codepen logo" /></a
 				>
 				<a href="http://instagram.com/belovedleader"
 					><i class="icon glyph-instagram glyph-white" /></a

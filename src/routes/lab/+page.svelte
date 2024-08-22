@@ -6,12 +6,13 @@
 
 {#each data.experiments as experiment}
 	{@const title = experiment.meta.title}
+	{@const slug = experiment.meta.slug}
 	{@const summary = experiment.meta.summary}
 	{@const image = experiment.meta.experimentImage}
-	{@const path = experiment.meta.experimentUrl}
+	<!-- {@const path = experiment.meta.experimentUrl} -->
 	<div class="experiment">
 		<!-- prettier-ignore -->
-		<ExperimentPreview {title} {summary} experimentImage={image} link={path}  />
+		<ExperimentPreview {title} {slug} {summary} experimentImage={image} />
 	</div>
 {/each}
 

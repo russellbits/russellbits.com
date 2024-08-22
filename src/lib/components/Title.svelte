@@ -11,11 +11,11 @@
 <div class="title {align} {topMargin}">
 	{#if color === 'mauve'}
 		<div>
-			<img src="images/cube-mauve-large.png" width="65" height="65" alt="Large Mauve Cube" />
+			<img src="/images/cube-mauve-large.png" width="65" height="65" alt="Large Mauve Cube" />
 		</div>
 	{:else}
 		<div>
-			<img src="images/cube-blue-large.png" width="65" height="65" alt="Large Blue Cube" />
+			<img src="/images/cube-blue-large.png" width="65" height="65" alt="Large Blue Cube" />
 		</div>
 	{/if}
 	{#if link !== 'false'}

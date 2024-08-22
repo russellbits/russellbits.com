@@ -9,7 +9,7 @@
 
 <figure class={`figure ${figClass}`}>
 	<code></code>
-	<img src={`/images/${imgUrl}`} alt={altname} />
+	<img src={`/images${imgUrl}`} alt={altname} />
 	{#if caption !== 'none'}
 		<figcaption>{caption}</figcaption>
 	{/if}

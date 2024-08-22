@@ -19,9 +19,9 @@
 
 <div class="wide-col-left">
 	<Figure
-		imgUrl="projects/seqseco/project-display.png"
+		imgUrl="/projects/seqseco/project-display.png"
 		altname="iphone displaying the seqseco web app."
-		caption="Seqseco is a sequenced timer web app."
+		caption="Seqseco is a sequenced timer web app created, designed and developed by me."
 		figClass="normal"
 	/>
 </div>

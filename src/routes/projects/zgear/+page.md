@@ -4,12 +4,12 @@ date: '2018-08-11'
 ---
 
 <script>
-import Figure from '$lib/components/Figure.svelte'
-import { page } from '$app/stores';
-$: currentPath = $page.url.pathname;
+    import { page } from '$app/stores';
+    const slug = $page.url.pathname;
+    import Figure from '$lib/components/Figure.svelte'
 </script>
 
-<Figure imgUrl="project-display.png" altname="Images of a dashboard web site" caption="Z Gear web site layout" figClass="title"/>
+<Figure imgUrl={`${slug}project-display.png`} altname="Images of a dashboard web site" caption="Z Gear web site layout" figClass="title"/>
 
 # Phylos Bioscience Customer Dashboard
 

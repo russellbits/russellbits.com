@@ -11,8 +11,12 @@
 	<meta name="date" content={date} />
 </svelte:head>
 
-<article class="markdown">
+<article class="markdown project">
 	<slot />
 </article>
 
-<style lang="scss"></style>
+<style lang="scss">
+	.markdown.project {
+		margin: 4em auto;
+	}
+</style>

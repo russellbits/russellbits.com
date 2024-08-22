@@ -14,7 +14,7 @@
 <div>
 	<a href={link}
 		><Figure
-			imgUrl={`projects/${slug}/${projectImage}`}
+			imgUrl={`/projects${slug}/${projectImage}`}
 			altname={title}
 			caption="none"
 			figClass="project"
@@ -52,6 +52,9 @@ Creates a project card for the site
 <style>
 	p.date {
 		font-size: 0.7em;
+	}
+	h2 > a:link {
+		font-size: 1.5em;
 	}
 	/* .taglist {
 		margin-top: 10px;

@@ -1,4 +1,6 @@
 <script>
+	import { page } from '$app/stores';
+	const slug = $page.url.pathname;
 	import Title from '$lib/components/Title.svelte';
 	import Figure from '$lib/components/Figure.svelte';
 </script>
@@ -10,7 +12,7 @@
 
 	<div class="cover-image">
 		<Figure
-			imgUrl="project-display.png"
+			imgUrl={`${slug}project-display.png`}
 			altname="Seqseco as it appears on an iphone"
 			caption="none"
 			figClass="inline"
@@ -29,7 +31,7 @@
 		</p>
 
 		<Figure
-			imgUrl="design-step-1.jpg"
+			imgUrl={`${slug}design-step-1.jpg`}
 			altname="Designing the UI on paper"
 			caption="Sketching on paper allows for the rapid iteration of ideas."
 			figClass="inline"
@@ -38,7 +40,7 @@
 
 	<div class="section design-image">
 		<Figure
-			imgUrl="design-step-2.jpg"
+			imgUrl={`${slug}design-step-2.jpg`}
 			altname="Paper Mock-ups"
 			caption="With some solid ideas, it can be useful to create a paper mock-up."
 			figClass="inline"
@@ -58,7 +60,7 @@
 		</p>
 
 		<Figure
-			imgUrl="design-step-3.jpg"
+			imgUrl={`${slug}design-step-3.jpg`}
 			altname="Design Drafts"
 			caption="Iterations in the design phase should move toward good UI practices and aim for increased clarity."
 			figClass="inline"
@@ -67,7 +69,7 @@
 
 	<div class="prototype-image">
 		<Figure
-			imgUrl="design-step-4.jpg"
+			imgUrl={`${slug}design-step-4.jpg`}
 			altname="UI Protoype"
 			caption="There are many ways to prototype, but by laying out any potential screens, this can easily identify repeating elements (components) and translate into a design system."
 			figClass="inline"
@@ -136,12 +138,12 @@
 		grid-row-start: 4;
 		grid-row-end: 5;
 	}
-	article .section.execution {
+	/* article .section.execution {
 		grid-column-start: 1;
 		grid-column-end: 3;
 		grid-row-start: 5;
 		grid-row-end: 6;
-	}
+	} */
 	article p {
 		text-indent: 2em;
 	}
