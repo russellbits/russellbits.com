@@ -1,5 +1,5 @@
 <script>
-	import Tag from '$lib/components/Tag.svelte';
+	// import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import Figure from '$lib/components/Figure.svelte';
 
@@ -36,17 +36,21 @@ Creates a project card for the site
 
 @example
 ```svelte
-<Project
-			title="My Project"
-			project_image="images/projects/my-project-sm.png"
-			desc="I designed this project."
-		/>
+<ProjectPreview
+	title={project.meta.title}
+	summary={project.meta.summary}
+	publicationDate={project.meta.date}
+	projectImage={project.meta.projectImage}
+	link={project.path}
+/>
 ```
 
 ### Slot props
-- `title` - A single text element used in sev3eral places in the component tenplate
-- `project_image` - A url for the location of the project image
-- `desc` - A text description of the project.
+- `title` - A single text element used in several places in the component tenplate
+- `summary` - A single sentence descibing the project
+- `publicationDate` - Date that the project portfolio was published
+- `projectImage` - A url for the location of the project image
+- `link` - path to the project page
 -->
 
 <style>

@@ -5,14 +5,13 @@
 </script>
 
 {#each data.projects as project, index}
+	{@const title = project.meta.title}
+	{@const summary = project.meta.summary}
+	{@const publicationDate = project.meta.publicationDate}
+	{@const projectImage = project.meta.projectImage}
+	{@const link = project.meta.link}
 	<div class={index % 2 === 0 ? 'left' : 'right'}>
-		<ProjectPreview
-			title={project.meta.title}
-			summary={project.meta.summary}
-			publicationDate={project.meta.date}
-			projectImage={project.meta.projectImage}
-			link={project.path}
-		/>
+		<ProjectPreview {title} {summary} {publicationDate} {projectImage} {link} />
 	</div>
 {/each}
 

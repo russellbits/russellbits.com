@@ -11,14 +11,13 @@
 	</div> -->
 
 {#each data.posts as post}
-	<BlogPostPreview
-		title={post.meta.title}
-		slug={post.meta.slug}
-		summary={post.meta.summary}
-		blogPreviewImage={post.meta.blogPreviewImage}
-		publicationDate={post.meta.publicationDate}
-		link={post.path}
-	/>
+	{@const title = post.meta.title}
+	{@const slug = post.meta.slug}
+	{@const summary = post.meta.summary}
+	{@const blogPreviewImage = post.meta.blogPreviewImage}
+	{@const publicationDate = post.meta.publicationDate}
+	{@const link = post.path}
+	<BlogPostPreview {title} {slug} {summary} {blogPreviewImage} {publicationDate} {link} />
 {/each}
 
 <style>
