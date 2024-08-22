@@ -3,7 +3,7 @@
 		"meta": {
 			"title": "Seqseco",
 			"date": "2024-01-01",
-			"summary": "This is a web app.",
+			"summary": "I created, designed and developed this web app for individuals who need a sequence of timers. While I created it for a workout of my own, I have found it to be useful for other activities such as cooking, the pomodoro working technique or yoga and meditation.",
 			"projectImage": "seqseco/project-ui-3d-map.png"
 		},
 		"path": "/projects/seqseco/"
@@ -12,7 +12,7 @@
 		"meta": {
 			"title": "Holiday Inn Express Interactive Map",
 			"date": "2020-09-18",
-			"summary": "This is a map project.",
+			"summary": "Utilizing Google Maps API, this interactive map used graphic layers to show international areas of Holday Inn Express regions and hotel locations in those regions for the Holiday Inn Express web site.",
 			"projectImage": "hiex-interactive-map/project-display.png"
 		},
 		"path": "/projects/hiex-interactive-map/"
@@ -21,7 +21,7 @@
 		"meta": {
 			"title": "Phylos Customer Dashboard",
 			"date": "2018-08-11",
-			"summary": "This is a dashboard project.",
+			"summary": "This project created an application for cutomers of Phylos to see the genomic data for their submitted samples.",
 			"projectImage": "phylos-customer-dashboard/project-display.png"
 		},
 		"path": "/projects/phylos-customer-dashboard/"
@@ -30,7 +30,7 @@
 		"meta": {
 			"title": "Z Gear",
 			"date": "2024-01-01",
-			"summary": "This is a web app.",
+			"summary": "A retail site for a purveyor of accessories for the GoPro camera, this site utilized many features including a content Management system (CMS), mapped locations of stores, and 3D rotatable images of their products.",
 			"projectImage": "zgear/project-display.png"
 		},
 		"path": "/projects/zgear/"
