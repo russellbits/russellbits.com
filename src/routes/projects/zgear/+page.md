@@ -11,6 +11,10 @@ date: '2018-08-11'
 
 <Figure imgUrl={`${slug}project-display.png`} altname="Images of a dashboard web site" caption="Z Gear web site layout" figClass="title"/>
 
-# Phylos Bioscience Customer Dashboard
+# Z Gear Retail Web Site
 
-Customers would bla bla bla and could look at their bla bla and see for themselv es that blablaablba.
+## A retail site full of features
+
+A retail site for a purveyor of accessories for the GoPro camera. I Beginning with a logo design, I walked Z Gear through a creative process that yielded merchandise designs and a highly interactive retail site. This site utilized many features including a content Management system (CMS), responsive layouts, mapped locations of stores, and 3D rotatable images of their products.
+
+<Figure imgUrl={`${slug}showcase.jpg`} altname="Images of Z Gear retail web site features" caption="Z Gear web site features" figClass="title"/>

@@ -10,7 +10,7 @@
 	{@const publicationDate = project.meta.publicationDate}
 	{@const projectImage = project.meta.projectImage}
 	{@const link = project.path}
-	<div class={index % 2 === 0 ? 'left' : 'right'}>
+	<div class={index % 2 === 0 ? 'preview left' : 'preview right'}>
 		<ProjectPreview {title} {summary} {publicationDate} {projectImage} {link} />
 	</div>
 {/each}
@@ -18,6 +18,9 @@
 <!-- </div> -->
 
 <style>
+	.preview {
+		max-width: 600px;
+	}
 	.left {
 		grid-column-start: 1;
 		grid-column-end: 2;

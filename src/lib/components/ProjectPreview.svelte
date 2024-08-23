@@ -20,13 +20,17 @@
 			figClass="project"
 		/></a
 	>
-	<h2><a href={link}>{title}</a></h2>
-	<p>{summary}</p>
-	<p class="date">Published: {publicationDate}</p>
-	<Button url={link} label="see more" style="small" />
-	<!-- <div class="taglist">
+	<div class="content">
+		<h2><a href={link}>{title}</a></h2>
+		<p class="summary">{summary}</p>
+		<!-- <p class="date">Published: {publicationDate}</p> -->
+		<div class="readMoreBtn">
+			<Button url={link} label="see more" style="small" />
+		</div>
+		<!-- <div class="taglist">
 		<Tag name="temporary" />
 	</div> -->
+	</div>
 </div>
 
 <!--
@@ -54,13 +58,31 @@ Creates a project card for the site
 -->
 
 <style>
-	p.date {
+	/* p.date {
 		font-size: 0.7em;
-	}
+	} */
 	h2 > a:link {
 		font-size: 1.5em;
 	}
 	/* .taglist {
 		margin-top: 10px;
 	} */
+
+	.readMoreBtn {
+		align-self: center;
+		justify-self: center;
+	}
+	@media only screen and (max-width: 768px) {
+	}
+	@media screen and (max-width: 480px) {
+		h2 {
+			margin: 0.6em 0;
+		}
+		h2 > a:link {
+			font-size: 1.3em;
+		}
+		.summary {
+			display: none;
+		}
+	}
 </style>
