@@ -2,7 +2,7 @@
 title: Revenge of the Blink Tag
 slug: revenge-of-the-blink-tag
 date: '2023-02-10'
-summary: 'Oh no! Not the blinking again!'
+summary: 'Oh no! Not the blinking again! Children, back in the early days of the web (1994) Netscape introduced a feature that caused HTML elements to blink. This JS revives it! 😈'
 experimentImage: '/lab/revenge-of-the-blink-tag.png'
 ---
 

@@ -2,7 +2,7 @@
 title: Keypress Description
 slug: keypress-description
 date: '2023-02-10'
-summary: 'Examining what keypress events produce'
+summary: 'A basic UI need is the ability to detect keypress events. This is a simple demonstration of how to do that with Javascript.'
 experimentImage: '/lab/keypress-description.png'
 ---
 

@@ -2,7 +2,7 @@
 title: DNA Fingerprint
 slug: dna-fingerprint
 date: '2019-01-22'
-summary: 'A Circos graphic that can serve as a unique image for a particular strain of plant.'
+summary: 'A (D3) circos graphic that can serve as a unique fingerprint for a particular strain of plant based on its genetic alleles.'
 experimentImage: '/lab/dna-fingerprint.png'
 ---
 
