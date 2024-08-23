@@ -34,7 +34,7 @@ Creates a liquid image with a caption
 - `imgUrl` - The local images path and name for the location of the project image in the images directoy
 - `altname` - alt attribute for the <img> tag
 - `caption` - A text description of the image.
-- `figClass` - normal | floater | title
+- `figClass` - normal | inline | title
 -->
 
 <style>
