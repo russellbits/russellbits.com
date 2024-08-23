@@ -1,7 +1,7 @@
 <!-- +layout.svelte -->
 <script>
 	import { fade } from 'svelte/transition';
-	import Header from '$lib/components/Header.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import '$lib/styles/house.scss';
@@ -27,7 +27,7 @@
 	</div>
 {/if}
 
-<Header />
+<Navigation />
 
 {#if layoutClass === 'lab' || layoutClass === 'blog' || layoutClass === 'projects'}
 	<Title title={layoutClass} color="mauve" align="right" />
