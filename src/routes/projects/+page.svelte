@@ -9,7 +9,7 @@
 	{@const summary = project.meta.summary}
 	{@const publicationDate = project.meta.publicationDate}
 	{@const projectImage = project.meta.projectImage}
-	{@const link = project.meta.link}
+	{@const link = project.path}
 	<div class={index % 2 === 0 ? 'left' : 'right'}>
 		<ProjectPreview {title} {summary} {publicationDate} {projectImage} {link} />
 	</div>
