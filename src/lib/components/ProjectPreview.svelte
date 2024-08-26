@@ -5,7 +5,7 @@
 
 	export let title = 'Project Title';
 	export let slug = '';
-	export let publicationDate = 'No date available';
+	// export let publicationDate = 'No date available';
 	export let projectImage = 'https://placehold.co/500x250';
 	export let summary;
 	export let link = '#';
