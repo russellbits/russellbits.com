@@ -9,7 +9,8 @@
 	export let data;
 
 	$: currentPath = $page.url.pathname;
-	$: layoutClass = data.currentRoute.slice(1) !== '' ? data.currentRoute.slice(1) : 'home';
+	$: layoutClass =
+		data.currentRoute.slice(1) !== '' ? data.currentRoute.slice(1).replace(/\/$/, '') : 'home';
 </script>
 
 <!-- Logo -->
@@ -29,7 +30,8 @@
 
 <Navigation />
 
-{#if layoutClass === 'lab' || layoutClass === 'blog' || layoutClass === 'projects'}
+<!-- why does lab sometimes contain a '/'? -->
+{#if layoutClass === 'lab' || layoutClass === 'lab/' || layoutClass === 'blog' || layoutClass === 'projects'}
 	<Title title={layoutClass} color="mauve" align="right" />
 {/if}
 
@@ -78,7 +80,8 @@
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		align-items: space-between;
 		justify-content: space-between;
-		margin: 1em auto 0 auto;
+		gap: 20px;
+		margin: 1em auto;
 	}
 	.logo {
 		position: fixed;

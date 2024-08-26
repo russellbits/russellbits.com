@@ -1,10 +1,20 @@
 <script>
+	import { onMount } from 'svelte';
+	import Button from '$lib/components/Button.svelte';
+	import Figure from '$lib/components/Figure.svelte';
+
 	export let title = 'Untitled';
 	export let experimentImage = 'https://placehold.co/250x250';
 	export let summary = 'No summary available.';
 	export let slug = 'https://codepen.io/russellbits';
-	import Button from '$lib/components/Button.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	export let codepenUrl = 'https://codepen.io/russellbits';
+
+	onMount(() => {
+		let windowWidth = window.innerWidth;
+		if (windowWidth < 768) {
+			slug = codepenUrl;
+		}
+	});
 </script>
 
 <div class="experiment-card">

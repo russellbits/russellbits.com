@@ -4,6 +4,7 @@ slug: scrunchy-box
 date: '2022-11-15'
 summary: 'A box that shows summary on rollover. It is handy if you want each content card height to be equal but with varying summary text length.'
 experimentImage: '/lab/scrunchy-box.png'
+codepenUrl: 'https://codepen.io/russellbits/pen/PoKEbdp'
 ---
 
 ## Experiment: Scrunchy Box

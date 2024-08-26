@@ -4,6 +4,7 @@ slug: 3d-card-flip
 date: '2024-05-15'
 summary: 'A useful UI element for a game or for preview images with information on the other side; a card that flips over in 3D.'
 experimentImage: '/lab/3d-card-flip.png'
+codepenUrl: 'https://codepen.io/russellbits/pen/vYJRLQa'
 ---
 
 ## Experiment: 3D Card Flip

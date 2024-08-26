@@ -4,6 +4,7 @@ slug: dna-fingerprint
 date: '2019-01-22'
 summary: 'A (D3) circos graphic that can serve as a unique fingerprint for a particular strain of plant based on its genetic alleles.'
 experimentImage: '/lab/dna-fingerprint.png'
+codepenUrl: 'https://observablehq.com/@russellbits/phylos-cannabis-genetic-fingerprint'
 ---
 
 ## Cannabis Genetic Fingerprint
