@@ -1,25 +1,25 @@
 <script>
 	// @ts-nocheck
 
-	import '$lib/styles/entypo.css';
-	import { page } from '$app/stores';
-	import iconCodepen from '$lib/assets/icon-codepen.svg';
+	import '$lib/styles/entypo.css'
+	import { page } from '$app/stores'
+	import iconCodepen from '$lib/assets/icon-codepen.svg'
 
-	$: currentPath = $page.url.pathname;
-	$: isVisible = false;
-	$: isHamburgerOpen = true;
+	$: currentPath = $page.url.pathname
+	$: isVisible = false
+	$: isHamburgerOpen = true
 
 	// List of navigation items
 	const navItems = [
-		{ label: 'Blog', href: '/blog' },
 		{ label: 'Projects', href: '/projects' },
+		{ label: 'Blog', href: '/blog' },
 		{ label: 'Lab', href: '/lab' }
-	];
+	]
 
 	function toggleMobileMenu() {
-		console.log('Menu toggle activated.');
-		isVisible = !isVisible;
-		isHamburgerOpen = !isHamburgerOpen;
+		console.log('Menu toggle activated.')
+		isVisible = !isVisible
+		isHamburgerOpen = !isHamburgerOpen
 	}
 </script>
 
