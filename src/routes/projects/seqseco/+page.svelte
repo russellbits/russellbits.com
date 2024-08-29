@@ -1,8 +1,8 @@
 <script>
-	import { page } from '$app/stores';
-	const slug = $page.url.pathname;
-	import Title from '$lib/components/Title.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	import { page } from '$app/stores'
+	const slug = $page.url.pathname
+	import Title from '$lib/components/Title.svelte'
+	import Figure from '$lib/components/Figure.svelte'
 </script>
 
 <article>
