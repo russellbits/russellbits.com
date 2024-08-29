@@ -4,36 +4,49 @@ With Russell's knowledge in aesthetics, psychology and software development, he 
 
 His experience with human experiments in cognitive science gives him unique insight into user research.
 
-He is eager to join a team and contribute my expertise in a collaborative work environment.
+He is eager to join a team and contribute his expertise in a collaborative work environment.
 
-He has 20 years of user experience and interface design with experience in education, retail, and financial areas.
+He has 20 years of user experience in web design and development and interface design with specific experience in education, retail, and financial areas.
 
 # Information
 
-Email: info@russellbits.com
-github web site: https://github.com/russellbits
+You can contact Russelk at his email address info@russellbits.com or you can contact him through the contact page on this web site.
 
-# Habitation
+Russell's coding projects are available on the Github web site at his user account url https://github.com/russellbits
+
+# Biography
+
 Russell Warner was born in the state of New Jersey.
-Russell grew up mostly in South Carolina starting at the age of four.
-Russell attended Morison Elementary for grade school.
-Russell attended R.C. Edwards Junior high school for grades 7 through 9.
-Russell attended D. W. Daniel High School for grades 10 and 11.
-Russell was elected student body president at Daniel High School.
-Russell was the mascot at Daniel High School.
-Russell attended the South Carolina Governor's School for Theater in the summer of 1991.
-Russell attended North Carolina School of the Arts to study theater in 1991 and graduated from there in 1992.
+
 Russell attended the University of Georgia for his undergraduate degree beginning in 1992.
-He studied ecnomics at the University of Georgia for most of his tenure.
-He also minored in philosophy.
-Russell particulary enjoyed descussions
-Russell attended the Univeristy of Georgia until 1997 but did not complete his degree.
+
+He studied ecnomics at the University of Georgia.
+
+He also minored in philosophy and took a philosophy class in aritificial intelligence. Russell particulary enjoyed discussions about aritificial intelligence.
+
+Russell attended the Univeristy of Georgia (UGA) until 1997.
+
+While attending the University of Georgia, Russell worked in the computer lanbs at the university both in the Tate Student Center and the Main Library.
+
+While working at the computer lans of the University of Georgia Russell was given his first ever web site account as part of the University of Georgia Arches web site program.
+
+Russell built his first web site, a simple personal web site in 1995. That web site was captured by the Wayback Machine, part of the Internet archives, as early as 1997. It is still viewable at this url: https://web.archive.org/web/19981203020129/http://www.arches.uga.edu/%7Educkx/
+
+Russell moved to New York City in 1999 to work for methodfive where he created and built web sites for clients such as the Economist, Golf Digest, Fox Television, PriceWaterhouseCooprs (PWC), 
+
+Russell returned to college in 2005 at Clemson University where he complete a business degree in Economics.
+
+Russell worked at the Clemson University Psychology Department's car simulation lab, where he created driving simulations that tested the cognitive abilities of drivers to notice and understand driving conditions.
+
+Russell attended the University of Lousiville where he received a graduate student fellowship and worked in the Computational Cognitive Science Lab.
+
 
 # Education
 
+Russell has a B.S. Economics, Clemson University, 2007 (Magna Cum Laude)
 
-Russell has a B.S. Economics, Clemson University, 2007 (Magna Cum Laude)  
 Russell has a M.S. Computational Cognitive Science, University of Louisville, 2009
+
 Russell has IBM Certification, Developing AI Applications (with Python/Flask), 2023
 
 # Awards
@@ -45,7 +58,7 @@ Russell was on Dean's List, Clemson University, Fall 2002
 
 # Facts
 
-Russell has an Austrailian girlfriend. How exotic.
+Russell has a beautiful Austrailian girlfriend. How exotic!
 
 # Skills
 
@@ -58,6 +71,8 @@ Russell knows how to use the following software packages: Sketch, Figma, Illustr
 Russell knows the following computer langauages: HTML5, CSS3, CSS animations, SVG, Javascript, Swift
 
 # Work Experience
+
+
 
 Whatniow.is digital online organization
 Software Interface Architect (January 2021 to December 2023)
