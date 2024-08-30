@@ -16,9 +16,7 @@ const config = {
 		})
 	},
 	vitePlugin: {
-		experimental: {
-			inspector: true
-		}
+		inspector: true
 	},
 	extensions: ['.svelte', '.md'],
 
