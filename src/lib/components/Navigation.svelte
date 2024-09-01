@@ -39,10 +39,9 @@
 					>
 				</li>
 			{/each}
-			<!-- Uncomment contact icon when contact page is functional -->
-			<!-- <li>
-					<a href="/contact"><i class="icon glyph-mail glyph-white" /></a>
-				</li> -->
+			<li>
+				<a href="/contact"><i class="icon glyph-mail glyph-white" /></a>
+			</li>
 			<li>
 				<a href="http://github.com/russellbits"><i class="glyph-github glyph-white" /></a>
 			</li>

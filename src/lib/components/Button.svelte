@@ -1,10 +1,25 @@
 <script>
-	export let label;
-	export let url;
-	export let style;
+	export let label
+	export let url
+	export let style
 </script>
 
 <span class="button {style}"><a href={url}>{label}</a></span>
+
+<!--
+@component
+## Button
+Creates a button
+
+@example
+```svelte
+```
+
+### Slot props
+- `label` - The text of the button.
+- `url` - the link for the button when clicked.
+- `style` - There are three button styles: fill | medium | small
+-->
 
 <style>
 	span.button {
