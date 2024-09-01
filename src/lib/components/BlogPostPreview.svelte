@@ -1,14 +1,14 @@
 <script>
 	// import Tag from '$lib/components/Tag.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	import Button from '$lib/components/Button.svelte'
+	import Figure from '$lib/components/Figure.svelte'
 
-	export let title = 'Untitled';
-	export let slug = '';
-	export let blogPreviewImage = 'No image available.';
-	export let summary = 'No summary available.';
-	export let publicationDate;
-	export let link = '#';
+	export let title = 'Untitled'
+	export let slug = ''
+	export let blogPreviewImage = 'No image available.'
+	export let summary = 'No summary available.'
+	export let publicationDate
+	export let link = '#'
 </script>
 
 <div class="post">
@@ -41,12 +41,12 @@ Lays out a blog post summary for the blog index page
 @example
 ```svelte
 <BlogPost
-				title={post.meta.title}
-				summary={post.meta.summary}
-				blogImage={post.meta.blogImage}
-				publicationDate={post.meta.publicationDate}
-				link={post.path}
-			/>
+	title={post.meta.title}
+	summary={post.meta.summary}
+	blogImage={post.meta.blogImage}
+	publicationDate={post.meta.publicationDate}
+	link={post.path}
+/>
 ```
 
 ### Slot props

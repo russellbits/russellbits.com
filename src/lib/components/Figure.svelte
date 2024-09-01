@@ -1,10 +1,10 @@
 <script>
-	import { page } from '$app/stores';
-	$: currentPath = $page.url.pathname;
-	export let imgUrl;
-	export let altname;
-	export let caption = 'none';
-	export let figClass;
+	import { page } from '$app/stores'
+	$: currentPath = $page.url.pathname
+	export let imgUrl
+	export let altname
+	export let caption = 'none'
+	export let figClass
 </script>
 
 <figure class={`figure ${figClass}`}>
@@ -23,18 +23,18 @@ Creates a liquid image with a caption
 @example
 ```svelte
 <Figure
-			imgUrl="images/projects/seqseco-project-display.png"
-			altname="iphone displaying the seqseco web app."
-			caption="Seqseco is a sequenced timer web app."
-			figClass="normal"
-		/>
+	imgUrl="section/image-name.png"
+	altname="A literal description."
+	caption="Something more pithy than a literal description."
+	figClass="normal"
+/>
 ```
 
 ### Slot props
 - `imgUrl` - The local images path and name for the location of the project image in the images directoy
 - `altname` - alt attribute for the <img> tag
 - `caption` - A text description of the image.
-- `figClass` - normal | inline | title
+- `figClass` - normal | inline | preview | experiment | title
 -->
 
 <style>
@@ -70,6 +70,7 @@ Creates a liquid image with a caption
 
 	figure.preview img {
 		object-fit: cover;
+		border-radius: 8px;
 	}
 
 	figure.project {

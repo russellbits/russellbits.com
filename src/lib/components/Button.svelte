@@ -29,7 +29,7 @@ Creates a button
 		text-transform: uppercase;
 		background: rgba(28, 42, 113, 1);
 		width: auto;
-		padding: 10px;
+		padding: 6px;
 		margin: 1em 0 1em 0;
 		border: 1px solid rgba(30, 44, 115, 1);
 		border-radius: 30px;
