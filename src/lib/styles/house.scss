@@ -36,10 +36,6 @@
 	font-style: normal;
 }
 
-/* MDSVEX VARIABLE */
-// :root {
-// }
-
 * {
 	font-size: 18px;
 }
@@ -51,7 +47,7 @@ body {
 	background-color: rgba(89, 113, 226, 1);
 	color: #333;
 	font-family: sans-serif;
-	min-height: 100vh;
+	min-height: 2000vh;
 }
 
 /* tablet */
@@ -78,6 +74,7 @@ body {
 	}
 	body {
 		width: 90vw;
+		height: 2000px;
 	}
 	::-webkit-scrollbar {
 		width: 0; /* Remove scrollbar space */
