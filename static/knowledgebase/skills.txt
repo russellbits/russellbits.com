@@ -1,0 +1,9 @@
+# Skills
+
+Russell is learning French.
+
+Russell has the following skills: animation, data visualization, usability and human-machine interaction research, diagramming, wire-framing, information architecture, regular expression construction, Bayesian statistics, bezier curve mathematics, illustration, design systems, storyboarding, technical and scientific writing (published)
+
+Russell knows how to use the following software packages: Sketch, Figma, Illustrate, Photoshop, Storybook, Acorn, D3, Three.js, Anime.js, Snap.svg, React, Vue, Svelte, Node/NPM, Git, UI libraries and Design Systems (Material, IBM Carbon, Apple Human Guidelines)
+
+Russell knows the following computer langauages: HTML5, CSS3, CSS animations, SVG, Javascript, Swift

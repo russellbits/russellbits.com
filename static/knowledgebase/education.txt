@@ -1,0 +1,7 @@
+# Education
+
+Russell has a B.S. Economics, Clemson University, 2007 (Magna Cum Laude)
+
+Russell has a M.S. Computational Cognitive Science, University of Louisville, 2009
+
+Russell has IBM Certification, Developing AI Applications (with Python/Flask), 2023

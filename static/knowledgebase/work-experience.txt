@@ -1,0 +1,21 @@
+# Work Experience
+
+Whatniow.is digital online organization
+Software Interface Architect (January 2021 to December 2023)
+Developed a proof-of-concept auction software interface using Sketch.
+Prototyped auction software with Storybook, Vue and Supabase
+Enhanced ChatGPT for a medical organization by using state machine charts and created closed path diagrams.
+Created a design system for a music sharing software utilizing Storybook and Vue.
+
+Phylos Bioscience, Inc. 959 SE Division St, Suite 420, Portland, OR 97214 phylos.bio
+Interface Architect (June 2016 to August 2019)
+Developed and implemented visually engaging genetic seal visualization for cannabis strains.
+Revamped dashboard UI for cannabis sex test product results using Vue, enhancing user experience.
+Redesigned customer genotype report with a focus on mobile accessibility and ease of download.
+Upgraded static website implementation from Wordpress to node/express framework, incorporating new design system using Storybook.
+
+Themechanism, LLC 440 9th Avenue, 8th floor, New York, NY 10001 www.themechanism.com
+UI/UX Designer/Developer (October 2003 to January 2007)
+Co-founded and successfully managed an interactive design firm from 2001 to 2003.
+Designed and developed online music stores and customized websites for various music groups.
+Created an engaging and dynamic events site for Rock Start Energy Drink's Uproar Battle of the Bands competition.
