@@ -2,27 +2,34 @@
 	// import Tag from '$lib/components/Tag.svelte';
 	import Button from '$lib/components/Button.svelte'
 	import Figure from '$lib/components/Figure.svelte'
+	import BlogPostDateButton from './BlogPostDateButton.svelte'
 
 	export let title = 'Untitled'
 	export let slug = ''
 	export let blogPreviewImage = 'No image available.'
 	export let summary = 'No summary available.'
-	export let publicationDate
+	export let publicationDay
+	export let publicationMonth
 	export let link = '#'
 </script>
 
 <div class="post">
 	<div class="preview-image">
-		<Figure
-			imgUrl={`/blog/${slug}/${blogPreviewImage}`}
-			altname={title}
-			caption="none"
-			figClass="preview"
-		/>
+		<div class="preview-image-date">
+			<BlogPostDateButton day={publicationDay} month={publicationMonth} />
+		</div>
+		<div class="preview-image-figure">
+			<Figure
+				imgUrl={`/blog/${slug}/${blogPreviewImage}`}
+				altname={title}
+				caption="none"
+				figClass="preview"
+			/>
+		</div>
 	</div>
 	<div class="content">
 		<h2><a href={link}>{title}</a></h2>
-		<p class="publicationDate">{publicationDate}</p>
+		<!-- <p class="publicationDate">{publicationDate}</p> -->
 		<p>{summary}</p>
 		<Button label="read more" url={link} style="small" />
 		<!-- <div class="taglist">
@@ -60,7 +67,7 @@ Lays out a blog post summary for the blog index page
 
 <style>
 	.post {
-		margin: 0 0 2em 0;
+		margin: 2em 0 2em 0;
 		padding: 0;
 		display: flex;
 		flex-direction: row;
@@ -70,8 +77,18 @@ Lays out a blog post summary for the blog index page
 		flex-shrink: 2;
 	}
 	.preview-image {
+		position: relative;
 		width: 250px;
-		margin: 0 0.8em 0 0;
+		margin: -3.5em 1.2em 0 0;
+	}
+	.preview-image-date {
+		position: relative;
+		top: 35px;
+		left: -30px;
+		z-index: 10;
+	}
+	.preview-image-figure {
+		z-index: 5;
 	}
 	.post h2 {
 		line-height: 1em;

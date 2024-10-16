@@ -66,11 +66,11 @@ Creates a liquid image with a caption
 		height: 250px;
 		max-height: 250px;
 		margin: 0 1em 0 0;
+		clip-path: polygon(87% 0, 100% 13%, 100% 100%, 14% 100%, 0 86%, 0 0);
 	}
 
 	figure.preview img {
 		object-fit: cover;
-		border-radius: 8px;
 	}
 
 	figure.project {
