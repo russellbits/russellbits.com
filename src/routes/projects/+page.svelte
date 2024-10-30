@@ -1,7 +1,7 @@
 <!-- projects/+page.svelte -->
 <script>
-	export let data;
-	import ProjectPreview from '$lib/components/ProjectPreview.svelte';
+	export let data
+	import ProjectPreview from '$lib/components/ProjectPreview.svelte'
 </script>
 
 {#each data.projects as project, index}
@@ -11,7 +11,7 @@
 	{@const projectImage = project.meta.projectImage}
 	{@const link = project.path}
 	<div class={index % 2 === 0 ? 'preview left' : 'preview right'}>
-		<ProjectPreview {title} {summary} {publicationDate} {projectImage} {link} />
+		<ProjectPreview {title} {summary} {projectImage} {link} />
 	</div>
 {/each}
 
