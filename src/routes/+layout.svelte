@@ -1,16 +1,17 @@
 <!-- +layout.svelte -->
 <script>
-	import { fade } from 'svelte/transition';
-	import Navigation from '$lib/components/Navigation.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import Title from '$lib/components/Title.svelte';
-	import '$lib/styles/house.scss';
-	import { page } from '$app/stores';
-	export let data;
+	import { fade } from 'svelte/transition'
+	import Navigation from '$lib/components/Navigation.svelte'
+	import ParallaxLayer from '$lib/components/ParallaxLayer.svelte'
+	import Footer from '$lib/components/Footer.svelte'
+	import Title from '$lib/components/Title.svelte'
+	import '$lib/styles/house.scss'
+	import { page } from '$app/stores'
+	export let data
 
-	$: currentPath = $page.url.pathname;
+	$: currentPath = $page.url.pathname
 	$: layoutClass =
-		data.currentRoute.slice(1) !== '' ? data.currentRoute.slice(1).replace(/\/$/, '') : 'home';
+		data.currentRoute.slice(1) !== '' ? data.currentRoute.slice(1).replace(/\/$/, '') : 'home'
 </script>
 
 <!-- Logo -->
@@ -37,10 +38,12 @@
 
 {#key data.currentRoute}
 	<!-- <div class="test">{layoutClass}</div> -->
-	<main class={layoutClass} in:fade={{ duration: 200, delay: 150 }} out:fade={{ duration: 150 }}>
+	<main class={layoutClass} in:fade={{ duration: 400, delay: 150 }} out:fade={{ duration: 250 }}>
 		<slot />
 	</main>
 {/key}
+
+<ParallaxLayer />
 
 <Footer />
 
@@ -60,6 +63,7 @@
 		width: 80vw;
 		max-width: 80vw;
 		margin: 2em auto 0 auto;
+		z-index: 1000;
 	}
 	main.home {
 		grid-template-columns: 40vw 40vw;
@@ -105,14 +109,14 @@
 			position: absolute;
 			top: -30px;
 			left: -80px;
-			z-index: 100;
+			z-index: 1000;
 			transform: scale(0.8);
 		}
 		.logo.lg {
 			position: absolute;
 			top: -95px;
 			left: -160px;
-			z-index: 100;
+			z-index: 1000;
 			transform: scale(0.6);
 		}
 	}
@@ -122,6 +126,7 @@
 			flex-direction: column;
 			max-width: 460px;
 			margin: 1em auto 0 auto;
+			z-index: 500;
 		}
 		.logo {
 			position: absolute;

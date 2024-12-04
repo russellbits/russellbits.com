@@ -106,6 +106,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
+		z-index: 200;
 		width: 100vw;
 		padding: 0;
 		margin: 0;
