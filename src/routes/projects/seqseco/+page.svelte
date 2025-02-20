@@ -81,9 +81,10 @@
 
 		<p>
 			Once a general design aesthetic has been settled on, it's time to carry that look to every
-			potential screen in the app. I utilize <a href="https://www.sketch.com">Sketch</a> on the Mac to
-			create these screen designs. Sketch has a modular system for graphics built into it, so it is relatively
-			easy to move from component images to component code.
+			potential screen in the app, working screens into a logical flow. I utilize <a
+				href="https://www.sketch.com">Sketch</a
+			> on the Mac to create these screen designs. Sketch has a modular system for graphics built into
+			it, so it is relatively easy to move from component images to component code.
 		</p>
 		<p>
 			Moving from graphics to code can involve an intermediate step which is creating a <a
