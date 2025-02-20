@@ -10,6 +10,15 @@
 	},
 	{
 		"meta": {
+			"title": "Telepathy",
+			"date": "2025-02-20",
+			"summary": "I created, designed and developed this web game for pairs of people to play the classic party game Telepathy. Individuals enter a concept and then try to gues the same concept, or the concept between their intial choices!",
+			"projectImage": "telepathy/telepathy-screen-sequence-trans.png"
+		},
+		"path": "/projects/telepathy/"
+	},
+	{
+		"meta": {
 			"title": "Holiday Inn Express Interactive Map",
 			"date": "2020-09-18",
 			"summary": "Utilizing Google Maps API, this interactive map used graphic layers to show international areas of Holday Inn Express regions and hotel locations in those regions for the Holiday Inn Express web site.",

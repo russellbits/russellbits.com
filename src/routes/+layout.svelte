@@ -43,8 +43,6 @@
 	</main>
 {/key}
 
-<ParallaxLayer />
-
 <Footer />
 
 <style lang="scss">
