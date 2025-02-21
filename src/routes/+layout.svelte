@@ -7,7 +7,10 @@
 	import Title from '$lib/components/Title.svelte'
 	import '$lib/styles/house.scss'
 	import { page } from '$app/stores'
+	import Saos from 'saos'
+
 	export let data
+	let logo
 
 	$: currentPath = $page.url.pathname
 	$: layoutClass =
@@ -16,13 +19,13 @@
 
 <!-- Logo -->
 {#if currentPath !== '/'}
-	<div class="logo">
+	<div class="logo" bind:this={logo}>
 		<a href="/">
 			<img src="/images/russellbits-logo-md.png" width="300" height="300" alt="Russellbits Logo" />
 		</a>
 	</div>
 {:else}
-	<div class="logo lg">
+	<div class="logo lg" bind:this={logo}>
 		<a href="/">
 			<img src="/images/russellbits-logo-lg.png" width="500" height="500" alt="Russellbits Logo" />
 		</a>
@@ -56,6 +59,7 @@
 		width: 60px;
 		height: 20px;
 	}
+
 	main {
 		display: grid;
 		width: 80vw;
@@ -89,13 +93,15 @@
 		position: fixed;
 		top: 0px;
 		left: -50px;
-		z-index: 4000;
+		z-index: 1000;
 	}
 
 	.logo.lg {
 		top: 0px;
 		left: -100px;
+		z-index: 1000;
 	}
+
 	@media screen and (max-width: 768px) {
 		main {
 			display: flex;
@@ -118,6 +124,7 @@
 			transform: scale(0.6);
 		}
 	}
+
 	@media screen and (max-width: 480px) {
 		main {
 			display: flex;
