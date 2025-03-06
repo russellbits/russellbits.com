@@ -1,10 +1,10 @@
 <script>
 	// @ts-nocheck
 
-	import Tag from '$lib/components/Tag.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import Figure from '$lib/components/Figure.svelte';
-	import Title from '$lib/components/Title.svelte';
+	import Tag from '$lib/components/Tag.svelte'
+	import Button from '$lib/components/Button.svelte'
+	import Figure from '$lib/components/Figure.svelte'
+	import Title from '$lib/components/Title.svelte'
 </script>
 
 <div class="wide-col-right">
@@ -19,7 +19,7 @@
 
 <div class="wide-col-left">
 	<Figure
-		imgUrl="/projects/seqseco/project-display.png"
+		imgUrl="/projects/seqseco/project-display.gif"
 		altname="iphone displaying the seqseco web app."
 		caption="Seqseco is a sequenced timer web app created, designed and developed by me."
 		figClass="normal"
