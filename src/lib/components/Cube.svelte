@@ -1,9 +1,11 @@
 <script>
-	// @ts-nocheck
 	export let color = 'blue'
-	export let size = 'large'
-	let width
-	let height
+	export let width
+	export let height
+	export let top = 300
+	export let left = 300
+	export let distance = -10
+
 	let cubeColors
 
 	if (color == 'purple') {
@@ -11,18 +13,6 @@
 	} else {
 		// it's blue
 		cubeColors = ['#E1E1E1', '#4354AB', '#5970E2']
-	}
-
-	if (size === 'large') {
-		width = 125
-		height = 123
-	} else if (size === 'medium') {
-		width = 93.75
-		height = 92.25
-	} else {
-		// it's small
-		width = 62.5
-		height = 61.5
 	}
 </script>
 
@@ -35,9 +25,10 @@ Creates a decorative element
 ```svelte
 ```
 
-### Slot props
+### Props
 - `color` - blue | purple
-- `size` - small | medium | large
+- `width` - 62.5 | 93.75 | 125
+- `height` - 61.5 | 92.25 | 123
 -->
 
 <svg
@@ -45,6 +36,7 @@ Creates a decorative element
 	height="{height}px"
 	viewBox="0 0 125 123"
 	class="cube"
+	style="top: {top}px; left: {left}px; transform: translateZ({distance}px);"
 	version="1.1"
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -68,11 +60,8 @@ Creates a decorative element
 
 <style>
 	.cube {
-		position: relative;
-		top: var(--top);
-		right: var(--right);
-		width: 125px;
-		height: 123px;
-		transform: translateZ(var(--distance));
+		display: block;
+		position: absolute;
+		z-index: 10;
 	}
 </style>

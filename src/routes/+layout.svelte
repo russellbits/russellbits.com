@@ -7,7 +7,7 @@
 	import Title from '$lib/components/Title.svelte'
 	import '$lib/styles/house.scss'
 	import { page } from '$app/stores'
-	import Saos from 'saos'
+	// import Saos from 'saos'
 
 	export let data
 	let logo
@@ -45,6 +45,8 @@
 		<slot />
 	</main>
 {/key}
+
+<ParallaxLayer />
 
 <Footer />
 
@@ -108,6 +110,7 @@
 			flex-direction: column;
 			max-width: 700px;
 			margin: 1em auto 0 auto;
+			z-index: 1000;
 		}
 		.logo {
 			position: absolute;
@@ -131,7 +134,7 @@
 			flex-direction: column;
 			max-width: 460px;
 			margin: 1em auto 0 auto;
-			z-index: 500;
+			z-index: 1000;
 		}
 		.logo {
 			position: absolute;
