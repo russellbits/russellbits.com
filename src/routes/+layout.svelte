@@ -1,6 +1,7 @@
 <!-- +layout.svelte -->
 <script>
 	import { fade } from 'svelte/transition'
+	import { onMount } from 'svelte'
 	import Navigation from '$lib/components/Navigation.svelte'
 	import ParallaxLayer from '$lib/components/ParallaxLayer.svelte'
 	import Footer from '$lib/components/Footer.svelte'
@@ -11,6 +12,16 @@
 
 	export let data
 	let logo
+	let pageWidth = 0
+	let pageHeight = 0
+
+	onMount(() => {
+		pageWidth = window.innerWidth
+		pageHeight = document.documentElement.scrollHeight
+		console.log(
+			`PageWidth in +layout.svelte is ${pageWidth} & PageHeight in +layout.svelte is ${pageHeight}`
+		)
+	})
 
 	$: currentPath = $page.url.pathname
 	$: layoutClass =
@@ -46,7 +57,7 @@
 	</main>
 {/key}
 
-<ParallaxLayer />
+<!-- <ParallaxLayer {pageHeight} {pageWidth} /> -->
 
 <Footer />
 

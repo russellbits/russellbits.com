@@ -1,33 +1,55 @@
 <!-- contact/+page.svelte -->
 <script>
-	// export let data
+	// @ts-nocheck
+	// Import dependencies
 	import { onMount } from 'svelte'
 	import { supabase } from '$lib/supabaseClient'
 	import Title from '$lib/components/Title.svelte'
 	import Button from '$lib/components/Button.svelte'
 
+	// Reactive variable for success message
+	let successMessage = ''
+
 	onMount(() => {
 		const form = document.querySelector('#contact-form')
 		form?.addEventListener('submit', async (event) => {
 			event.preventDefault()
-			const formInputs = form.querySelectorAll('input:not([type="submit"]), #message')
+
+			// Collect form inputs
+			const formInputs = form.querySelectorAll('input:not([type="submit"]), textarea')
 			let submission = {}
 
 			formInputs.forEach((element) => {
-				// @ts-ignore
 				const { value, name } = element
 				if (value) {
-					// @ts-ignore
 					submission[name] = value
 				}
 			})
-			console.log(submission)
-			const { error, data } = await supabase
-				.from('russellbits_messages')
-				.insert(submission)
-				.select()
 
-			console.log({ error, data })
+			// Add timestamp dynamically
+			submission.sent = new Date().toISOString()
+
+			// Split the name into first and last
+			const nameParts = submission.sender_name?.split(' ') || []
+			submission.first_name = nameParts[0] || null
+			submission.last_name = nameParts.slice(1).join(' ') || null
+			delete submission.sender_name // Remove the original name field
+
+			console.log(submission)
+
+			// Insert into the database
+			const { error, data } = await supabase.from('russellbits_messages').insert([submission])
+
+			if (error) {
+				console.error(error)
+				successMessage = 'Something went wrong. Please try again.'
+			} else {
+				// Show success message
+				successMessage = `Your message was submitted to Russellbits.com`
+
+				// Clear form fields
+				form.reset()
+			}
 		})
 	})
 </script>
@@ -42,12 +64,15 @@
 		<Title title="Contact" color="blue" align="right" />
 	</div>
 
-	<!-- <p>Reach out and say Hi.</p> -->
+	<!-- Success message display -->
+	{#if successMessage}
+		<p class="message">{successMessage}</p>
+	{/if}
 
 	<div class="contact-form">
 		<form id="contact-form">
-			<label for="email"
-				><h2>Your Name</h2>
+			<label for="name">
+				<h2>Your Name</h2>
 				<input
 					type="text"
 					id="name"
@@ -57,21 +82,24 @@
 					required
 				/>
 			</label>
-			<label for="name"
-				><h2>Your email</h2>
-				<input type="email" id="email" name="email" placeholder="Email address" />
+			<label for="email">
+				<h2>Your email</h2>
+				<input type="email" id="email" name="email" placeholder="email@address.tld" />
 			</label>
 			<p>
-				<small
-					>I only need your email if you would like a response. I will never share your email and
-					you are not signing up for anything.</small
-				>
+				<small>
+					I only need your email if you would like a response. I will never share your email and you
+					are not signing up for anything.
+				</small>
 			</p>
-			<label for="message"
-				><h2>Your message</h2>
-				<textarea id="message" name="message" placeholder="Enter your text here" required />
+			<label for="message">
+				<h2>Your message</h2>
+				<textarea id="message" name="message" placeholder="Enter your text here" required
+				></textarea>
 			</label>
-			<input type="hidden" name="sent" value="2024-08-09T12:04:38Z" />
+
+			<input type="hidden" name="message_category" value="general" />
+			<input type="hidden" name="site" value="russellbits.com" />
 
 			<input type="submit" value="Submit" />
 		</form>
@@ -79,9 +107,6 @@
 </section>
 
 <style lang="scss">
-	.title {
-		margin: 7em auto 0 auto;
-	}
 	.header {
 		margin: 0 0 2em 0;
 	}
@@ -140,5 +165,14 @@
 		margin: 1em 0 1em 0;
 		border: 1px solid rgba(255, 255, 255, 1);
 		border-radius: 30px;
+	}
+	.message {
+		// color: rgb(121, 255, 121);
+		color: white;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-bottom: 15px;
+		padding: 8px;
 	}
 </style>
