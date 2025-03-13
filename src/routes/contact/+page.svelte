@@ -37,16 +37,90 @@
 
 			console.log(submission)
 
-			// Insert into the database
-			const { error, data } = await supabase.from('russellbits_messages').insert([submission])
+			// Lookup user_id based on the email and if it doesn't exist, insert the new email
+			let userData
+
+			// Try to find existing user
+			const { data: existingUser, error: findUserError } = await supabase
+				.from('users')
+				.select('id')
+				.eq('email', submission.email)
+				.single()
+				.headers({ Prefer: 'return=minimal' })
+
+			if (!existingUser) {
+				// Create new user if they don't exist
+				const { data: newUser, error: createUserError } = await supabase
+					.from('users')
+					.insert([
+						{
+							email: submission.email,
+							first_name: submission.first_name,
+							last_name: submission.last_name
+						}
+					])
+					.select('id')
+					.single()
+
+				if (createUserError) {
+					console.error('Error creating user:', createUserError)
+					successMessage = 'Something went wrong. Please try again.'
+					return
+				}
+				userData = newUser
+			} else {
+				userData = existingUser
+			}
+
+			// Lookup site_id based on the site domain (russellbits.com from hidden field) and if it doesn't exist, default to `russellbits.com`
+			const { data: siteData, error: siteError } = await supabase
+				.from('sites')
+				.select('id')
+				.eq('domain', submission.site)
+				.single()
+				.headers({ Prefer: 'return=minimal' })
+
+			if (siteError || !siteData) {
+				console.error('Site not found:', siteError)
+				successMessage = 'Configuration error: Site not found. Please contact the administrator.'
+				return
+			}
+
+			// Lookup category_id based on the message_category (general from hidden field) and if it doesn't exist, default to `general`
+			const { data: categoryData, error: categoryError } = await supabase
+				.from('message_categories')
+				.select('id')
+				.eq('name', submission.message_category)
+				.single()
+				.headers({ Prefer: 'return=minimal' })
+
+			if (categoryError || !categoryData) {
+				console.error('Category not found:', categoryError)
+				successMessage =
+					'Configuration error: Message category not found. Please contact the administrator.'
+				return
+			}
+
+			// Insert the message into the messages table
+			const { error, data } = await supabase
+				.from('messages')
+				.insert([
+					{
+						user_id: userData.id,
+						site_id: siteData.id,
+						category_id: categoryData.id,
+						message_text: submission.message,
+						sent_at: new Date().toISOString() // Timestamp for when the message was sent
+					}
+				])
+				.select()
 
 			if (error) {
-				console.error(error)
-				successMessage = 'Something went wrong. Please try again.'
+				console.error('Error saving message:', error)
+				successMessage = 'Unable to save your message. Please try again later.'
 			} else {
 				// Show success message
 				successMessage = `Your message was submitted to Russellbits.com`
-
 				// Clear form fields
 				form.reset()
 			}
@@ -84,7 +158,7 @@
 			</label>
 			<label for="email">
 				<h2>Your email</h2>
-				<input type="email" id="email" name="email" placeholder="email@address.tld" />
+				<input type="email" id="email" name="email" placeholder="email@address.tld" required />
 			</label>
 			<p>
 				<small>
