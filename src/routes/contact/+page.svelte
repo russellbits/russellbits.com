@@ -45,8 +45,7 @@
 				.from('users')
 				.select('id')
 				.eq('email', submission.email)
-				.single()
-				.headers({ Prefer: 'return=minimal' })
+				.maybeSingle()
 
 			if (!existingUser) {
 				// Create new user if they don't exist
@@ -60,11 +59,12 @@
 						}
 					])
 					.select('id')
-					.single()
+					.maybeSingle()
 
 				if (createUserError) {
 					console.error('Error creating user:', createUserError)
 					successMessage = 'Something went wrong. Please try again.'
+					window.scrollTo({ top: 0, behavior: 'smooth' })
 					return
 				}
 				userData = newUser
@@ -77,12 +77,12 @@
 				.from('sites')
 				.select('id')
 				.eq('domain', submission.site)
-				.single()
-				.headers({ Prefer: 'return=minimal' })
+				.maybeSingle()
 
 			if (siteError || !siteData) {
 				console.error('Site not found:', siteError)
 				successMessage = 'Configuration error: Site not found. Please contact the administrator.'
+				window.scrollTo({ top: 0, behavior: 'smooth' })
 				return
 			}
 
@@ -91,13 +91,13 @@
 				.from('message_categories')
 				.select('id')
 				.eq('name', submission.message_category)
-				.single()
-				.headers({ Prefer: 'return=minimal' })
+				.maybeSingle()
 
 			if (categoryError || !categoryData) {
 				console.error('Category not found:', categoryError)
 				successMessage =
 					'Configuration error: Message category not found. Please contact the administrator.'
+				window.scrollTo({ top: 0, behavior: 'smooth' })
 				return
 			}
 
@@ -118,11 +118,13 @@
 			if (error) {
 				console.error('Error saving message:', error)
 				successMessage = 'Unable to save your message. Please try again later.'
+				window.scrollTo({ top: 0, behavior: 'smooth' })
 			} else {
 				// Show success message
-				successMessage = `Your message was submitted to Russellbits.com`
+				successMessage = `Thanks, ${submission.first_name}! Your message was submitted to Russellbits.com`
 				// Clear form fields
 				form.reset()
+				window.scrollTo({ top: 0, behavior: 'smooth' })
 			}
 		})
 	})
