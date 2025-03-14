@@ -1,10 +1,19 @@
 <script>
 	export let label
-	export let url
-	export let style
+	export let url = undefined
+	export let style = ''
+	export let type = undefined
 </script>
 
-<span class="button {style}"><a href={url}>{label}</a></span>
+<span class="button {style}">
+	{#if url}
+		<a href={url}>{label}</a>
+	{:else if type === 'submit'}
+		<input type="submit" value={label} />
+	{:else}
+		<button {type}>{label}</button>
+	{/if}
+</span>
 
 <!--
 @component
@@ -29,10 +38,15 @@ Creates a button
 		text-transform: uppercase;
 		background: rgba(28, 42, 113, 1);
 		width: auto;
-		padding: 6px;
-		margin: 1em 0 1em 0;
-		border: 1px solid rgba(30, 44, 115, 1);
+		padding: 8px 22px;
+		margin: 1em auto;
+		border: 1px solid white;
 		border-radius: 30px;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+	span.button:hover {
+		background: rgb(167, 31, 208);
 	}
 
 	span.button.fill {
@@ -53,15 +67,27 @@ Creates a button
 
 	a:link,
 	a:visited,
-	a:active {
+	a:active,
+	input[type='submit'],
+	button {
+		appearance: none;
 		display: inline;
 		font:
 			15px 'Raleway',
 			sans-serif;
 		font-weight: 700;
 		color: white;
+		border: none; /* Removes border that may be causing bevel */
+		box-shadow: none; /* Removes any default shadows */
+		outline: none; /* Removes focus outline */
+		background: none; /* Ensures background is inherited */
+		padding: 0;
+		margin: 2px auto;
 	}
-	a:hover {
+	a:hover,
+	input[type='submit']:hover,
+	button:hover {
+		cursor: pointer;
 		text-decoration: none;
 	}
 	/* span.readmore:first-child {

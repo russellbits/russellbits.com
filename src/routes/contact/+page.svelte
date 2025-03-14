@@ -144,41 +144,42 @@
 	{#if successMessage}
 		<p class="message">{successMessage}</p>
 	{/if}
+	<div class="contact-form-outline">
+		<div class="contact-form">
+			<form id="contact-form">
+				<label for="name">
+					<h2>Your Name</h2>
+					<input
+						type="text"
+						id="name"
+						name="sender_name"
+						placeholder="Your name"
+						class="textfield"
+						required
+					/>
+				</label>
+				<label for="email">
+					<h2>Your email</h2>
+					<input type="email" id="email" name="email" placeholder="email@address.tld" required />
+				</label>
+				<p>
+					<small>
+						I only need your email if you would like a response. I will never share your email and
+						you are not signing up for anything.
+					</small>
+				</p>
+				<label for="message">
+					<h2>Your message</h2>
+					<textarea id="message" name="message" placeholder="Enter your text here" required
+					></textarea>
+				</label>
 
-	<div class="contact-form">
-		<form id="contact-form">
-			<label for="name">
-				<h2>Your Name</h2>
-				<input
-					type="text"
-					id="name"
-					name="sender_name"
-					placeholder="Your name"
-					class="textfield"
-					required
-				/>
-			</label>
-			<label for="email">
-				<h2>Your email</h2>
-				<input type="email" id="email" name="email" placeholder="email@address.tld" required />
-			</label>
-			<p>
-				<small>
-					I only need your email if you would like a response. I will never share your email and you
-					are not signing up for anything.
-				</small>
-			</p>
-			<label for="message">
-				<h2>Your message</h2>
-				<textarea id="message" name="message" placeholder="Enter your text here" required
-				></textarea>
-			</label>
+				<input type="hidden" name="message_category" value="general" />
+				<input type="hidden" name="site" value="russellbits.com" />
 
-			<input type="hidden" name="message_category" value="general" />
-			<input type="hidden" name="site" value="russellbits.com" />
-
-			<input type="submit" value="Submit" />
-		</form>
+				<Button label="SEND MESSAGE" type="submit" />
+			</form>
+		</div>
 	</div>
 </section>
 
@@ -190,11 +191,16 @@
 		width: 50vw;
 		margin: 0 auto;
 	}
+	/* TODO: there should be a hard white border around this, but right now it's being cropped by the clip-path. How am I doing it on the date hexagons on the blog page? */
+	.contact-form-outline {
+		padding: 0;
+		clip-path: polygon(95% 0, 100% 4%, 100% 100%, 5% 100%, 0 96%, 0 0);
+		outline: -1px solid white;
+	}
 	.contact-form {
 		padding: 2em;
-		background-color: rgba(255, 255, 255, 0.25);
-		border: 1px solid white;
-		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 0.2);
+		clip-path: polygon(95% 0, 100% 4%, 100% 100%, 5% 100%, 0 96%, 0 0);
 	}
 	form {
 		color: white;
@@ -227,21 +233,7 @@
 		resize: none;
 		overflow-y: auto;
 	}
-	input[type='submit'] {
-		font-family: 'Raleway', sans-serif;
-		font-weight: 700;
-		display: block;
-		position: relative;
-		text-align: center;
-		text-transform: uppercase;
-		color: white;
-		width: 140px;
-		background-color: rgba(179, 57, 249, 1);
-		padding: 0.5em;
-		margin: 1em 0 1em 0;
-		border: 1px solid rgba(255, 255, 255, 1);
-		border-radius: 30px;
-	}
+
 	.message {
 		// color: rgb(121, 255, 121);
 		color: white;
@@ -249,6 +241,20 @@
 		font-size: 1.2em;
 		font-weight: bold;
 		margin-bottom: 15px;
-		padding: 8px;
+		padding: 20px;
+		background: #9f31df;
+		border: 1px solid #ffffff;
+		border-radius: 20px;
+		opacity: 0; /* Initially hidden */
+		animation: fadeIn 0.5s ease-in-out forwards;
+		animation-delay: 0.5s; /* Wait 2 seconds before appearing */
+	}
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 </style>
