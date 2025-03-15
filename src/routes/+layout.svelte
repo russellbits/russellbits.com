@@ -1,7 +1,7 @@
 <!-- +layout.svelte -->
 <script>
 	import { fade } from 'svelte/transition'
-	import { onMount } from 'svelte'
+	import { onMount, onDestroy } from 'svelte'
 	import Navigation from '$lib/components/Navigation.svelte'
 	import ParallaxLayer from '$lib/components/ParallaxLayer.svelte'
 	import Footer from '$lib/components/Footer.svelte'
@@ -11,17 +11,35 @@
 	// import Saos from 'saos'
 
 	export let data
-	let logo
+
+	let scaleFactor = 1 // Default scale (500x500)
+	let translateXFactor = 0 // Default position (no translation)
 	let pageWidth = 0
 	let pageHeight = 0
+
+	const handleScroll = () => {
+		let scrollY = window.scrollY
+		const maxScroll = 200 // Maximum scroll value to reach the smallest size
+
+		// Clamp scrollY between 0 and maxScroll to prevent excessive shrinking
+		scrollY = Math.min(scrollY, maxScroll)
+
+		// Calculate scale based on scrollY (linear interpolation)
+		// Scales between 1 (100%) and 0.6 (60%)
+		scaleFactor = 1 - (scrollY / maxScroll) * 0.4
+		// Translate left by up to -60px
+		translateXFactor = (scrollY / maxScroll) * 60
+	}
 
 	onMount(() => {
 		pageWidth = window.innerWidth
 		pageHeight = document.documentElement.scrollHeight
-		console.log(
-			`PageWidth in +layout.svelte is ${pageWidth} & PageHeight in +layout.svelte is ${pageHeight}`
-		)
+		window.addEventListener('scroll', handleScroll)
 	})
+
+	// onDestroy(() => {
+	// 	window.removeEventListener('scroll', handleScroll)
+	// })
 
 	$: currentPath = $page.url.pathname
 	$: layoutClass =
@@ -30,15 +48,15 @@
 
 <!-- Logo -->
 {#if currentPath !== '/'}
-	<div class="logo" bind:this={logo}>
+	<div class="logo small">
 		<a href="/">
-			<img src="/images/russellbits-logo-md.png" width="300" height="300" alt="Russellbits Logo" />
+			<img src="/images/russellbits-logo-lg.png" alt="Russellbits Logo" />
 		</a>
 	</div>
 {:else}
-	<div class="logo lg" bind:this={logo}>
+	<div class="logo" style="transform: scale({scaleFactor}) translateX({translateXFactor}px);">
 		<a href="/">
-			<img src="/images/russellbits-logo-lg.png" width="500" height="500" alt="Russellbits Logo" />
+			<img src="/images/russellbits-logo-lg.png" alt="Russellbits Logo" />
 		</a>
 	</div>
 {/if}
@@ -105,15 +123,26 @@
 	.logo {
 		position: fixed;
 		top: 0px;
-		left: -50px;
-		z-index: 1000;
-	}
-
-	.logo.lg {
-		top: 0px;
 		left: -100px;
 		z-index: 1000;
+		transform-origin: top left; /* Ensures smooth scaling */
+		transition: transform 0.1s linear; /* Smooth scaling */
 	}
+
+	// .logo.large {
+	// 	transform: scale(1); /* Default size (500px) */
+	// }
+
+	/* Default size for non-home pages */
+	.logo.small {
+		transform: scale(0.6) translateX(60px); /* 300px / 500px = 0.6 scale factor */
+	}
+
+	// .logo.large {
+	// 	top: 0px;
+	// 	left: -100px;
+	// 	z-index: 1000;
+	// }
 
 	@media screen and (max-width: 768px) {
 		main {
@@ -123,20 +152,20 @@
 			margin: 1em auto 0 auto;
 			z-index: 1000;
 		}
-		.logo {
-			position: absolute;
-			top: -30px;
-			left: -80px;
-			z-index: 1000;
-			transform: scale(0.8);
-		}
-		.logo.lg {
-			position: absolute;
-			top: -95px;
-			left: -160px;
-			z-index: 1000;
-			transform: scale(0.6);
-		}
+		// .logo {
+		// 	position: absolute;
+		// 	top: -30px;
+		// 	left: -80px;
+		// 	z-index: 1000;
+		// 	transform: scale(0.8);
+		// }
+		// .logo.lg {
+		// 	position: absolute;
+		// 	top: -95px;
+		// 	left: -160px;
+		// 	z-index: 1000;
+		// 	transform: scale(0.6);
+		// }
 	}
 
 	@media screen and (max-width: 480px) {
@@ -159,7 +188,16 @@
 			top: -175px;
 			left: -205px;
 			z-index: 100;
-			transform: scale(0.3);
+		}
+	}
+	@keyframes -global-shrink {
+		0% {
+			transform: scale(0.5);
+			opacity: 1;
+		}
+		100% {
+			transform: rotateX(0deg) translateX(0) skewX(0deg);
+			opacity: 1;
 		}
 	}
 </style>
