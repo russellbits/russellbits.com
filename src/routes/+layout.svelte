@@ -1,40 +1,54 @@
 <!-- +layout.svelte -->
-<script>
+<script lang="ts">
 	import { fade } from 'svelte/transition'
 	import { onMount, onDestroy } from 'svelte'
+	// import Logo from '$lib/components/SiteLogo.svelte'
 	import Navigation from '$lib/components/Navigation.svelte'
 	import ParallaxLayer from '$lib/components/ParallaxLayer.svelte'
 	import Footer from '$lib/components/Footer.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import '$lib/styles/house.scss'
 	import { page } from '$app/stores'
-	// import Saos from 'saos'
+	import SiteLogo from '$lib/components/SiteLogo.svelte'
 
 	export let data
-
+	let logo: HTMLElement | null = null
 	let scaleFactor = 1 // Default scale (500x500)
-	let translateXFactor = 0 // Default position (no translation)
 	let pageWidth = 0
 	let pageHeight = 0
 
 	const handleScroll = () => {
 		let scrollY = window.scrollY
+		let moveLeft = 0
 		const maxScroll = 200 // Maximum scroll value to reach the smallest size
+		const isMobile = window.innerWidth <= 768
 
-		// Clamp scrollY between 0 and maxScroll to prevent excessive shrinking
-		scrollY = Math.min(scrollY, maxScroll)
+		if (!isMobile) {
+			// Clamp scrollY between 0 and maxScroll to prevent excessive shrinking
+			scrollY = Math.min(scrollY, maxScroll)
 
-		// Calculate scale based on scrollY (linear interpolation)
-		// Scales between 1 (100%) and 0.6 (60%)
-		scaleFactor = 1 - (scrollY / maxScroll) * 0.4
-		// Translate left by up to -60px
-		translateXFactor = (scrollY / maxScroll) * 60
+			// Calculate scale based on scrollY (linear interpolation)
+			scaleFactor = 1 - (scrollY / maxScroll) * 0.4 // Scales between 1 (100%) and 0.6 (60%)
+			moveLeft = Math.max((scrollY / maxScroll) * 60, 0)
+
+			console.log(`scale(${scaleFactor}) translateX(${moveLeft}px)`)
+			logo.style.transform = `scale(${scaleFactor}) translateX(${moveLeft}px)`
+		} else if (logo) {
+			console.log('Mobile screen detected.')
+			// Reset to default when on mobile
+			scaleFactor = 0.3
+			logo.style.transform = 'scale(0.3) translateX(0)'
+		}
 	}
 
 	onMount(() => {
 		pageWidth = window.innerWidth
 		pageHeight = document.documentElement.scrollHeight
-		window.addEventListener('scroll', handleScroll)
+		logo = document.querySelector('.logo')
+		if (logo) {
+			window.addEventListener('scroll', handleScroll)
+			handleScroll() // Apply the transformation immediately
+		}
 	})
 
 	// onDestroy(() => {
@@ -47,6 +61,7 @@
 </script>
 
 <!-- Logo -->
+<!-- <SiteLogo /> -->
 {#if currentPath !== '/'}
 	<div class="logo small">
 		<a href="/">
@@ -54,7 +69,7 @@
 		</a>
 	</div>
 {:else}
-	<div class="logo" style="transform: scale({scaleFactor}) translateX({translateXFactor}px);">
+	<div class="logo">
 		<a href="/">
 			<img src="/images/russellbits-logo-lg.png" alt="Russellbits Logo" />
 		</a>
@@ -152,20 +167,13 @@
 			margin: 1em auto 0 auto;
 			z-index: 1000;
 		}
-		// .logo {
-		// 	position: absolute;
-		// 	top: -30px;
-		// 	left: -80px;
-		// 	z-index: 1000;
-		// 	transform: scale(0.8);
-		// }
-		// .logo.lg {
-		// 	position: absolute;
-		// 	top: -95px;
-		// 	left: -160px;
-		// 	z-index: 1000;
-		// 	transform: scale(0.6);
-		// }
+		.logo {
+			position: absolute;
+			top: -30px;
+			left: -80px;
+			z-index: 1000;
+			transform: scale(0.5);
+		}
 	}
 
 	@media screen and (max-width: 480px) {
@@ -178,26 +186,10 @@
 		}
 		.logo {
 			position: absolute;
-			top: -75px;
-			left: -105px;
-			z-index: 100;
-			transform: scale(0.5);
-		}
-		.logo.lg {
-			position: absolute;
-			top: -175px;
-			left: -205px;
-			z-index: 100;
-		}
-	}
-	@keyframes -global-shrink {
-		0% {
-			transform: scale(0.5);
-			opacity: 1;
-		}
-		100% {
-			transform: rotateX(0deg) translateX(0) skewX(0deg);
-			opacity: 1;
+			top: -30px;
+			left: -80px;
+			z-index: 1000;
+			transform: scale(0.3);
 		}
 	}
 </style>
