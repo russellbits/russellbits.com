@@ -23,7 +23,7 @@
 		const maxScroll = 200 // Maximum scroll value to reach the smallest size
 		const isMobile = window.innerWidth <= 768
 
-		if (!isMobile) {
+		if (!isMobile && logo) {
 			// Clamp scrollY between 0 and maxScroll to prevent excessive shrinking
 			scrollY = Math.min(scrollY, maxScroll)
 
@@ -51,9 +51,11 @@
 		}
 	})
 
-	// onDestroy(() => {
-	// 	window.removeEventListener('scroll', handleScroll)
-	// })
+	onDestroy(() => {
+		if (logo) {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	})
 
 	$: currentPath = $page.url.pathname
 	$: layoutClass =
