@@ -112,6 +112,7 @@
 		display: grid;
 		width: 80vw;
 		max-width: 80vw;
+		min-height: 100vh;
 		margin: 2em auto 0 auto;
 		z-index: 1000;
 	}

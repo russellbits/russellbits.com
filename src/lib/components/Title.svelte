@@ -1,11 +1,11 @@
 <script>
-	import { page } from '$app/stores';
-	$: currentPath = $page.url.pathname;
-	export let title = 'title';
-	export let color = 'mauve';
-	export let align = 'left';
-	export let link = 'false';
-	export let topMargin = '';
+	import { page } from '$app/stores'
+	$: currentPath = $page.url.pathname
+	export let title = 'title'
+	export let color = 'mauve'
+	export let align = 'left'
+	export let link = 'false'
+	export let topMargin = ''
 </script>
 
 <div class="title {align} {topMargin}">
@@ -82,6 +82,10 @@ Creates a section title with cube graphic
 
 	.title.right h1 {
 		padding: 0 2em 0 0;
+	}
+
+	.title.center {
+		justify-content: center;
 	}
 
 	.title.home {
