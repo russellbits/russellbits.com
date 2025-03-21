@@ -1,10 +1,11 @@
 <script>
+	// Make the cubes all the same width and height and then just change their translate3d z values!
 	export let color = 'blue'
 	export let width
 	export let height
 	export let top = 300
 	export let left = 300
-	export let distance = -10
+	export let distance = -50
 
 	let cubeColors
 
@@ -34,6 +35,7 @@ Creates a decorative element
 <svg
 	width="{width}px"
 	height="{height}px"
+	opacity="0.5"
 	viewBox="0 0 125 123"
 	class="cube"
 	style="top: {top}px; left: {left}px; transform: translateZ({distance}px);"
