@@ -1,0 +1,12 @@
+query PostBySlug($slug: ID!) {
+	post(id: $slug, idType: SLUG) {
+		title
+		excerpt
+		uri
+		tags {
+			nodes {
+				name
+			}
+		}
+	}
+}

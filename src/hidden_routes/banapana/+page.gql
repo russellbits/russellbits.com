@@ -1,0 +1,15 @@
+query GetLatestPosts {
+	posts(first: 6, where: { orderby: { field: DATE, order: DESC } }) {
+		nodes {
+			title
+			slug
+			uri
+			excerpt
+			tags {
+				nodes {
+					name
+				}
+			}
+		}
+	}
+}
