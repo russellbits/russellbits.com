@@ -4,12 +4,12 @@
 	import { onMount, onDestroy } from 'svelte'
 	// import Logo from '$lib/components/SiteLogo.svelte'
 	import Navigation from '$lib/components/Navigation.svelte'
-	import ParallaxLayer from '$lib/components/ParallaxLayer.svelte'
+	// import ParallaxLayer from '$lib/components/ParallaxLayer.svelte'
 	import Footer from '$lib/components/Footer.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import '$lib/styles/house.scss'
 	import { page } from '$app/stores'
-	import SiteLogo from '$lib/components/SiteLogo.svelte'
+	// import SiteLogo from '$lib/components/SiteLogo.svelte'
 
 	export let data
 	let logo: HTMLElement | null = null
@@ -31,10 +31,10 @@
 			scaleFactor = 1 - (scrollY / maxScroll) * 0.4 // Scales between 1 (100%) and 0.6 (60%)
 			moveLeft = Math.max((scrollY / maxScroll) * 60, 0)
 
-			console.log(`scale(${scaleFactor}) translateX(${moveLeft}px)`)
+			// console.log(`scale(${scaleFactor}) translateX(${moveLeft}px)`)
 			logo.style.transform = `scale(${scaleFactor}) translateX(${moveLeft}px)`
 		} else if (logo) {
-			console.log('Mobile screen detected.')
+			// console.log('Mobile screen detected.')
 			// Reset to default when on mobile
 			scaleFactor = 0.3
 			logo.style.transform = 'scale(0.3) translateX(0)'
@@ -82,7 +82,7 @@
 
 <!-- why does lab sometimes contain a '/'? -->
 {#if layoutClass === 'lab' || layoutClass === 'lab/' || layoutClass === 'blog' || layoutClass === 'projects'}
-	<Title title={layoutClass} color="mauve" align="right" />
+	<Title title={layoutClass} color="mauve" align="center" />
 {/if}
 
 {#key data.currentRoute}

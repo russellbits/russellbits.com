@@ -7,7 +7,7 @@
 
 <article>
 	<div class="header">
-		<Title title="Seqseco: A Product Design Story" color="blue" align="right" />
+		<Title title="Seqseco: A Product Design Story" color="blue" align="center" />
 	</div>
 
 	<div class="cover-image">
@@ -105,6 +105,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.6em;
+		margin: 4em 0 0 0;
 	}
 	article .header {
 		grid-column-start: 1;

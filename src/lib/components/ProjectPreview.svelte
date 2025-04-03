@@ -1,14 +1,17 @@
 <script>
+	// @ts-nocheck
 	// import Tag from '$lib/components/Tag.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	import Button from '$lib/components/Button.svelte'
+	import Figure from '$lib/components/Figure.svelte'
+	import Tag from '$lib/components/Tag.svelte'
 
-	export let title = 'Project Title';
-	export let slug = '';
+	export let title = 'Project Title'
+	export let slug = ''
 	// export let publicationDate = 'No date available';
-	export let projectImage = 'https://placehold.co/500x250';
-	export let summary;
-	export let link = '#';
+	export let projectImage = 'https://placehold.co/582x379'
+	export let caption = 'No caption available.'
+	export let tags = []
+	export let link = '#'
 </script>
 
 <div>
@@ -22,14 +25,16 @@
 	>
 	<div class="content">
 		<h2><a href={link}>{title}</a></h2>
-		<p class="summary">{summary}</p>
+		<p class="caption">{caption}</p>
 		<!-- <p class="date">Published: {publicationDate}</p> -->
+		<div class="taglist">
+			{#each tags as tag}
+				<Tag name={tag} />
+			{/each}
+		</div>
 		<div class="readMoreBtn">
 			<Button url={link} label="see more" style="small" />
 		</div>
-		<!-- <div class="taglist">
-		<Tag name="temporary" />
-	</div> -->
 	</div>
 </div>
 
@@ -46,6 +51,7 @@ Creates a project card for the site
 	publicationDate={project.meta.date}
 	projectImage={project.meta.projectImage}
 	link={project.path}
+	tags={project.meta.tags}
 />
 ```
 
@@ -61,16 +67,31 @@ Creates a project card for the site
 	/* p.date {
 		font-size: 0.7em;
 	} */
-	h2 > a:link {
-		font-size: 1.5em;
+	h2 {
+		font-family: 'Raleway', sans-serif;
+		font-style: bold;
+		font-weight: 700;
+		line-height: 1.2em;
+		margin-top: -1em;
+		margin-bottom: 0.6em;
 	}
-	/* .taglist {
+	h2 > a:link {
+		font-size: 1.3em;
+	}
+	p.caption {
+		line-height: 1.2em;
+		margin-bottom: 0.6em;
+	}
+	.taglist {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		margin-top: 10px;
-	} */
+	}
 
 	.readMoreBtn {
-		align-self: center;
-		justify-self: center;
+		align-self: left;
+		justify-self: left;
 	}
 	@media only screen and (max-width: 768px) {
 	}
@@ -81,7 +102,7 @@ Creates a project card for the site
 		h2 > a:link {
 			font-size: 1.3em;
 		}
-		.summary {
+		.caption {
 			display: none;
 		}
 	}

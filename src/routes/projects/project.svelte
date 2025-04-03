@@ -1,8 +1,8 @@
 <!-- post.svelte -->
 <script>
 	// @ts-nocheck
-	export let title;
-	export let date;
+	export let title
+	export let date
 </script>
 
 <svelte:head>
@@ -17,6 +17,7 @@
 
 <style lang="scss">
 	.markdown.project {
-		margin: 4em auto;
+		width: 778px;
+		margin: 1em auto;
 	}
 </style>

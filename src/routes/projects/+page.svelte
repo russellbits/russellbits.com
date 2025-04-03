@@ -4,22 +4,30 @@
 	import ProjectPreview from '$lib/components/ProjectPreview.svelte'
 </script>
 
-{#each data.projects as project, index}
-	{@const title = project.meta.title}
-	{@const summary = project.meta.summary}
-	{@const publicationDate = project.meta.publicationDate}
-	{@const projectImage = project.meta.projectImage}
-	{@const link = project.path}
-	<div class={index % 2 === 0 ? 'preview left' : 'preview right'}>
-		<ProjectPreview {title} {summary} {projectImage} {link} />
-	</div>
-{/each}
-
-<!-- </div> -->
+<div class="grid">
+	{#each data.projects as project, index}
+		{@const title = project.meta.title}
+		{@const caption = project.meta.caption}
+		{@const projectImage = project.meta.projectImage}
+		{@const link = project.path}
+		{@const tags = project.meta.tags}
+		<div class={index % 2 === 0 ? 'preview left' : 'preview right'}>
+			<ProjectPreview {title} {caption} {projectImage} {link} {tags} />
+		</div>
+	{/each}
+</div>
 
 <style>
+	.grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 75vw;
+		margin-left: 10vw;
+	}
 	.preview {
-		max-width: 600px;
+		width: 380px;
+		margin: 1em;
 	}
 	.left {
 		grid-column-start: 1;

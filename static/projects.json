@@ -3,24 +3,19 @@
 		"meta": {
 			"title": "Seqseco",
 			"date": "2024-01-01",
+			"caption": "A web-based sequenced timer app.",
+			"tags": ["Svelte", "HTML5", "CSS3", "Vercel", "Supabase"],
 			"summary": "I created, designed and developed this web app for individuals who need a sequence of timers. While I created it for a workout of my own, I have found it to be useful for other activities such as cooking, the pomodoro working technique or yoga and meditation.",
-			"projectImage": "seqseco/project-display-sm.gif"
+			"projectImage": "seqseco/project-display-sm.png"
 		},
 		"path": "/projects/seqseco/"
 	},
 	{
 		"meta": {
-			"title": "Telepathy",
-			"date": "2025-02-20",
-			"summary": "I created, designed and developed this web game for pairs of people to play the classic party game Telepathy. Individuals enter a concept and then try to gues the same concept, or the concept between their intial choices!",
-			"projectImage": "telepathy/project-display-sm.png"
-		},
-		"path": "/projects/telepathy/"
-	},
-	{
-		"meta": {
 			"title": "Holiday Inn Express Interactive Map",
 			"date": "2020-09-18",
+			"caption": "An interactive map of Holiday Inn Express locations.",
+			"tags": ["Google Maps API", "HTML5", "CSS3", "Vercel"],
 			"summary": "Utilizing Google Maps API, this interactive map used graphic layers to show international areas of Holday Inn Express regions and hotel locations in those regions for the Holiday Inn Express web site.",
 			"projectImage": "hiex-interactive-map/project-display.png"
 		},
@@ -30,6 +25,8 @@
 		"meta": {
 			"title": "Phylos Customer Dashboard",
 			"date": "2018-08-11",
+			"caption": "Customer dashboard for Phylos.",
+			"tags": ["Vue", "D3", "Circos", "HTML5", "CSS3", "Laravel", "PHP"],
 			"summary": "This project created an application for cutomers of Phylos to see the genomic data for their submitted samples.",
 			"projectImage": "phylos-customer-dashboard/project-display.png"
 		},
@@ -37,8 +34,21 @@
 	},
 	{
 		"meta": {
+			"title": "Telepathy",
+			"date": "2025-02-20",
+			"caption": "A web game based on the classic party game.",
+			"tags": ["HTML5", "CSS3", "Svelte", "Vercel", "Supabase"],
+			"summary": "I created, designed and developed this web game for pairs of people to play the classic party game Telepathy. Individuals enter a concept and then try to gues the same concept, or the concept between their intial choices!",
+			"projectImage": "telepathy/project-display-sm.png"
+		},
+		"path": "/projects/telepathy/"
+	},
+	{
+		"meta": {
 			"title": "Z Gear",
 			"date": "2024-01-01",
+			"caption": "A retail site with interactive features.",
+			"tags": ["HTML5", "CSS3", "Wordpress"],
 			"summary": "A retail site for a purveyor of accessories for the GoPro camera, this site utilized many features including a content Management system (CMS), mapped locations of stores, and 3D rotatable images of their products.",
 			"projectImage": "zgear/project-display.png"
 		},

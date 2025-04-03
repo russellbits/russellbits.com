@@ -39,7 +39,7 @@ Creates a button
 		background: rgba(28, 42, 113, 1);
 		width: auto;
 		padding: 8px 22px;
-		margin: 1em auto;
+		margin: 1em 0;
 		border: 1px solid white;
 		border-radius: 30px;
 		cursor: pointer;

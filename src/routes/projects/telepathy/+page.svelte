@@ -7,12 +7,13 @@
 
 <article>
 	<div class="header">
-		<Title title="Telepathy: A Product Design Story" color="blue" align="right" />
+		<Title title="Telepathy" color="blue" align="center" />
+		<h2>A Party Game Online</h2>
 	</div>
 
 	<div class="cover-image">
 		<Figure
-			imgUrl={`${slug}project-display.png`}
+			imgUrl={`${slug}project-display-no-bkgd.png`}
 			altname="Telepathy as it appears on an iphone"
 			caption="none"
 			figClass="inline"
@@ -76,12 +77,17 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.6em;
+		margin: 4em 0 0 0;
 	}
 	article .header {
 		grid-column-start: 1;
 		grid-column-end: 3;
 		grid-row-start: 1;
 		grid-row-end: 2;
+	}
+	article .header h2 {
+		text-align: center;
+		margin: 1em 0 0 0;
 	}
 	article .cover-image {
 		grid-column-start: 1;
@@ -95,7 +101,7 @@
 		grid-row-start: 2;
 		grid-row-end: 3;
 	}
-	article .section.design {
+	/* article .section.design {
 		grid-column-start: 2;
 		grid-column-end: 3;
 		grid-row-start: 3;
@@ -106,7 +112,7 @@
 		grid-column-end: 2;
 		grid-row-start: 3;
 		grid-row-end: 4;
-	}
+	} */
 	article .prototype-image {
 		grid-column-start: 1;
 		grid-column-end: 2;
