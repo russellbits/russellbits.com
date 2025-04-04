@@ -1,4 +1,5 @@
 ---
+id: 1
 title: DNA Fingerprint
 slug: dna-fingerprint
 date: '2019-01-22'

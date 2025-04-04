@@ -50,7 +50,8 @@ export const fetchMarkdownExperiments = async () => {
 			const experimentPath = path.slice(11, -8)
 
 			return {
-				meta: metadata
+				meta: metadata,
+				path: experimentPath
 			}
 		})
 	)
