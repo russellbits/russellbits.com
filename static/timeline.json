@@ -1,0 +1,24 @@
+[
+	{
+		"meta": {
+			"title": "Xceed, inc.",
+			"date": "2001-08-04",
+			"caption": "An interactive agency.",
+			"tags": ["HTML", "frames", "CSS", "LAMP"],
+			"summary": "We were really in love with a pre-responsive design in which the entire site was padded with frames so we could create a pixel-perfect design for multiple screen sizes.",
+			"projectImage": "xceed-vision.jpg"
+		},
+		"wayback_url": "https://web.archive.org/web/20010804024800/http://www.xceed.com/index.html"
+	},
+	{
+		"meta": {
+			"title": "Self-promotion Online",
+			"date": "2002-01-02",
+			"caption": "A marketing site for the author Ilise Benun.",
+			"tags": ["HTML4", "frames", "CSS"],
+			"summary": "With my business partner, Dave Fletcher, I built out this web site.",
+			"projectImage": "ilise-benun-self-promotion-online.jpg"
+		},
+		"wayback_url": "https://web.archive.org/web/20020122202646/http://www.selfpromotiononline.com/"
+	}
+]
