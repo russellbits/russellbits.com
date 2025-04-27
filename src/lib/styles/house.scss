@@ -36,6 +36,14 @@
 	font-style: normal;
 }
 
+/* Not clear why this isn't working
+@property --site-background-color {
+	syntax: '<color>';
+	inherit: false;
+	initial-value: rgba(89, 113, 226, 1);
+}
+*/
+
 * {
 	font-size: 18px;
 }
@@ -43,8 +51,8 @@
 body {
 	margin: 0;
 	padding: 0;
-	// background: linear-gradient(161deg, rgba(46, 51, 75, 1) 0%, rgba(89, 113, 226, 1) 66%);
 	background-color: rgba(89, 113, 226, 1);
+	background: linear-gradient(161deg, rgba(46, 51, 75, 1) 0%, rgba(89, 113, 226, 1) 16%);
 	color: #333;
 	font-family: sans-serif;
 	/* min-height: 2000vh; */
