@@ -73,6 +73,19 @@ Creates a liquid image with a caption
 		object-fit: cover;
 	}
 
+	figure.timelineWebsite {
+		padding: 0;
+		margin: 0;
+	}
+
+	figure.timelineWebsite img {
+		/* transform: scale(0.5); */
+		width: 300px;
+		height: 220px;
+		object-fit: cover;
+		margin: 0;
+	}
+
 	figure.project {
 		height: 250px;
 		max-height: 250px;

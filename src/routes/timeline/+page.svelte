@@ -20,8 +20,8 @@
 <style>
 	.grid {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		flex-direction: column;
+		flex-wrap: nowrap;
 		width: 75vw;
 		margin-left: 10vw;
 	}

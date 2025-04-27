@@ -1,6 +1,17 @@
 [
 	{
 		"meta": {
+			"title": "DuckX",
+			"date": "1999-02-24",
+			"caption": "My First Web Site.",
+			"tags": ["HTML", "image map"],
+			"summary": "This was the first website I ever created. It was basically a big image map that allowed you to poke through my wallet—ah, my naive days of not caring about privacy on the web.",
+			"projectImage": "my-first-website.jpg"
+		},
+		"wayback_url": "https://web.archive.org/web/19990224063142/http://www.arches.uga.edu/~duckx/openwallet.html"
+	},
+	{
+		"meta": {
 			"title": "Xceed, inc.",
 			"date": "2001-08-04",
 			"caption": "An interactive agency.",

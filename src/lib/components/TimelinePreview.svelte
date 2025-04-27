@@ -1,49 +1,47 @@
 <script>
 	// @ts-nocheck
-	// import Tag from '$lib/components/Tag.svelte';
-	import Button from '$lib/components/Button.svelte'
 	import Figure from '$lib/components/Figure.svelte'
 	import Tag from '$lib/components/Tag.svelte'
 
-	export let title = 'Project Title'
+	export let title = 'Timeline Item Title'
 	export let projectImage = 'https://placehold.co/582x379'
 	export let caption = 'No caption available.'
 	export let tags = []
 	export let link = '#'
+	export let date = '0000-00-00'
 </script>
 
-<div>
-	<a href={link}
-		><Figure
-			imgUrl={`/timeline/${projectImage}`}
-			altname={title}
-			caption="none"
-			figClass="project"
-		/></a
-	>
-	<div class="content">
-		<h2><a href={link}>{title}</a></h2>
+<div class="timelineItem">
+	<div>
+		<a href={link}
+			><Figure
+				imgUrl={`/timeline/${projectImage}`}
+				altname={title}
+				caption="none"
+				figClass="timelineWebsite"
+			/></a
+		>
+	</div>
+	<div>
+		<h2>{title}</h2>
 		<p class="caption">{caption}</p>
-		<!-- <p class="date">Published: {publicationDate}</p> -->
+		<p class="date">{date}</p>
 		<div class="taglist">
 			{#each tags as tag}
 				<Tag name={tag} />
 			{/each}
-		</div>
-		<div class="readMoreBtn">
-			<Button url={link} label="see more" style="small" />
 		</div>
 	</div>
 </div>
 
 <!--
 @component
-## Project
-Creates a project card for the site
+## Timeline
+Creates a timeline card for the site
 
 @example
 ```svelte
-<ProjectPreview
+<TimelinePreview
 	title={project.meta.title}
 	summary={project.meta.summary}
 	publicationDate={project.meta.date}
@@ -65,16 +63,25 @@ Creates a project card for the site
 	/* p.date {
 		font-size: 0.7em;
 	} */
+	.timelineItem {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		width: 40vw;
+		margin-left: 10vw;
+	}
+	.timelineItem > div {
+		border: 1px solid greenyellow;
+	}
 	h2 {
 		font-family: 'Raleway', sans-serif;
+		font-size: 1em;
 		font-style: bold;
 		font-weight: 700;
 		line-height: 1.2em;
-		margin-top: -1em;
 		margin-bottom: 0.6em;
-	}
-	h2 > a:link {
-		font-size: 1.3em;
 	}
 	p.caption {
 		line-height: 1.2em;
@@ -87,18 +94,12 @@ Creates a project card for the site
 		margin-top: 10px;
 	}
 
-	.readMoreBtn {
-		align-self: left;
-		justify-self: left;
-	}
 	@media only screen and (max-width: 768px) {
 	}
+
 	@media screen and (max-width: 480px) {
 		h2 {
 			margin: 0.6em 0;
-		}
-		h2 > a:link {
-			font-size: 1.3em;
 		}
 		.caption {
 			display: none;
