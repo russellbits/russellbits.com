@@ -1,0 +1,51 @@
+> This is a Quix Command File
+>
+> For the syntax of this file, please refer to http://quixapp.com/syntax/
+>
+
+#kill-defaults
+
+go 			http://www.%s.com/														 Call up a web site by its domain name
+bitly		http://bit.ly/?v=3&u=%re&s=%s%20%te					   Shorten with <a href="http://bit.ly/">bit.ly</a>
+find		javascript:s='%s';if(s==''){void(s=prompt('Find%20text:',''));}s='('+s+')';x=new%20RegExp(s,'gi');rn=Math.floor(Math.random()*100);rid='z'%20+%20rn;b%20=%20document.body.innerHTML;b=b.replace(x,'<span%20name='%20+%20rid%20+%20'%20id='%20+%20rid%20+%20'%20style=\'color:#000;background-color:yellow;%20font-weight:bold;\'>$1</span>');void(document.body.innerHTML=b);alert('Found%20'%20+%20document.getElementsByName(rid).length%20+%20'%20matches.');window.scrollTo(0,document.getElementsByName(rid)[0].offsetTop); 	Find in current pagem, usage: 'find test' will highlight all occurrences of 'test' and will take you to the first occurrence. Just 'find' will open a prompt.
+hulu    https://hulu.com
+reg     https://regexr.com
+az       	http://www.amazon.com/s/?field-keywords=%s							Amazon Search
+> Put wordnik here
+e      		mailto:?subject=%t&body=%s%0A%0A%09%r%0A%0A							Email link
+imdb    	http://www.imdb.com/find?s=all&q=%s									IMDB Search
+img     	http://www.google.com/images?q=%s									Google Image Search
+home		http://www.russellbits.com											My Home Page!
+map     	http://www.google.com/maps?q=%s										Google Maps
+read 		javascript:(%0A%28function%28%29%7Bwindow.baseUrl%3D%27//www.readability.com%27%3Bwindow.readabilityToken%3D%27dQH8Bqapev4yWVs2t29x2sQDQDtLQjMUqePvmyCQ%27%3Bvar%20s%3Ddocument.createElement%28%27script%27%29%3Bs.setAttribute%28%27type%27%2C%27text/javascript%27%29%3Bs.setAttribute%28%27charset%27%2C%27UTF-8%27%29%3Bs.setAttribute%28%27src%27%2CbaseUrl%2B%27/bookmarklet/read.js%27%29%3Bdocument.documentElement.appendChild%28s%29%3B%7D%29%28%29)            Readability Now
+save		javascript:(%0A%28function%28%29%7Bwindow.baseUrl%3D%27//www.readability.com%27%3Bwindow.readabilityToken%3D%27dQH8Bqapev4yWVs2t29x2sQDQDtLQjMUqePvmyCQ%27%3Bvar%20s%3Ddocument.createElement%28%27script%27%29%3Bs.setAttribute%28%27type%27%2C%27text/javascript%27%29%3Bs.setAttribute%28%27charset%27%2C%27UTF-8%27%29%3Bs.setAttribute%28%27src%27%2CbaseUrl%2B%27/bookmarklet/save.js%27%29%3Bdocument.documentElement.appendChild%28s%29%3B%7D%29%28%29)	        Readability Later
+wa		http://www.wolframalpha.com/input/?i=%s								    Wolfram Alpha Search
+tn	    http://twitter.com/home?status=%s%20%t%20%r									Tweet the current page
+yt      http://www.youtube.com/results.php?search_query=%s							YouTube Search
+qyt		javascript:void(location.href='http://quietube.com/v.php/'+location.href)	QuietTube
+> Insert pingdom
+
+@Quix
+@In a meta sort of way, Quix provides some commands that should help you to debug Quix.
+debug		http://quixapp.com/debug/?r=%r&s=%s&t=%t&d=%d&v=%v    							Debug Quix
+help		http://quixapp.com/help/#%s                           							Help file
+quix		http://quixapp.com/%s/															Takes you to the specified Quix page
+yoast   	http://www.google.com/search?q=%s%20site:yoast.com&btnI=I%27m+Feeling+Lucky 	Lucky search on Yoast
+resize		http://quixapp.com/resize/?s=%s													Resize image / video while maintaining aspect ratio
+
+@Analytics
+@Some simple scripts to detect which web analytics program a site is running and to debug 	Google Analytics
+da          script:http://quixapp.com/js/detect-analytics.js 								Detect the current sites analytics
+ga          script:http://quixapp.com/js/ga-analyzer.js 									Analyze Google Analytics settings on the current page
+gaexport	script:http://quixapp.com/js/ga-export.js 										Make the export function in Google Analytics export way more lines (credits: <a href="http://arjansnaterse.nl/download-limit-google-analytics-export-part-2">Arjan Snaterse</a>)
+bitlyside	script:http://bit.ly/bookmarklet/load.js										<a href="http://bit.ly/pages/tools/sidebar/">Bit.ly Sidebar</a>
+
+@Mac Integration commands
+@A lot of Mac programs allow easy integration with browsers by allowing for URL's like <code>tweetie:</code> to open them. These commands take full advantage of that.
+cssedit			cssedit:previewandextract?%r							Preview and extract current page in <a href="http://macrabbit.com/cssedit/">CSSEdit</a>
+mars			marsedit:title=%t&url=%r&text=%s						Start a blogpost in <a href="http://www.red-sweater.com/marsedit/">Marsedit</a> about the current URL
+pukka			pukka:url=%re&title=%t&extended=%s						Bookmark the current page using <a href="http://codesorcery.net/pukka">Pukka</a>
+tt				tweetie:%su%20%t%20%r									Tweet the current page with <a href="http://www.atebits.com/">Tweetie</a>
+snap			littlesnapper://snap/%r									Snap the current page in <a href="http://www.realmacsoftware.com/littlesnapper/">LittleSnapper</a>
+delibar			Delibar://bpost&!p!&%r&!p!&%t&!p!&%s					Bookmark the current page using <a href="http://www.delibarapp.com/">Delibar</a>
+shove			shovebox://url?url=%r&title=%t							Catch current page in <a href="http://www.wonderwarp.com/shovebox/">Shovebox</a>
