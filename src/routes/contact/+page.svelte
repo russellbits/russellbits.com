@@ -35,8 +35,6 @@
 			submission.last_name = nameParts.slice(1).join(' ') || null
 			delete submission.sender_name // Remove the original name field
 
-			console.log(submission)
-
 			// Lookup user_id based on the email and if it doesn't exist, insert the new email
 			let userData
 
