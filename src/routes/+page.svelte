@@ -5,6 +5,14 @@
 	import Button from '$lib/components/Button.svelte'
 	import Figure from '$lib/components/Figure.svelte'
 	import Title from '$lib/components/Title.svelte'
+
+	// A useful alternate way to pass props with a literal object
+	const fig = {
+		imgUrl: '/projects/seqseco/project-display.gif',
+		altname: 'iphone displaying the seqseco web app.',
+		caption: 'Seqseco is a sequenced timer web app created, designed and developed by me.',
+		figClass: 'normal'
+	}
 </script>
 
 <div class="wide-col-right">
@@ -18,12 +26,7 @@
 </div>
 
 <div class="wide-col-left">
-	<Figure
-		imgUrl="/projects/seqseco/project-display.gif"
-		altname="iphone displaying the seqseco web app."
-		caption="Seqseco is a sequenced timer web app created, designed and developed by me."
-		figClass="normal"
-	/>
+	<Figure {...fig} />
 </div>
 
 <div class="wide-col-right projectSecseqo">
