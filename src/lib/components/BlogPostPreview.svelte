@@ -4,13 +4,15 @@
 	import Figure from '$lib/components/Figure.svelte'
 	import BlogPostDateButton from './BlogPostDateButton.svelte'
 
-	export let title = 'Untitled'
-	export let slug = ''
-	export let blogPreviewImage = 'No image available.'
-	export let summary = 'No summary available.'
-	export let publicationDay
-	export let publicationMonth
-	export let link = '#'
+	let {
+		title = 'Untitled',
+		slug = '',
+		blogPreviewImage = 'No image available.',
+		summary = 'No summary available.',
+		publicationDay,
+		publicationMonth,
+		link = '#'
+	} = $props()
 </script>
 
 <div class="post">
@@ -101,10 +103,10 @@ Lays out a blog post summary for the blog index page
 	.post p {
 		margin: 0;
 	}
-	.post p.publicationDate {
+	/*.post p.publicationDate {
 		text-transform: none;
 	}
-	/* .taglist {
+	 .taglist {
 		margin-top: 10px;
 	} */
 	@media only screen and (max-width: 768px) {

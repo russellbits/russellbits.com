@@ -3,12 +3,14 @@
 	import Figure from '$lib/components/Figure.svelte'
 	import Tag from '$lib/components/Tag.svelte'
 
-	export let title = 'Timeline Item Title'
-	export let projectImage = 'https://placehold.co/582x379'
-	export let caption = 'No caption available.'
-	export let tags = []
-	export let link = '#'
-	export let date = '0000-00-00'
+	let {
+		title = 'Timeline Item Title',
+		projectImage = 'https://placehold.co/582x379',
+		caption = 'No caption available.',
+		tags = [],
+		link = '#',
+		date = '0000-00-00'
+	} = $props()
 </script>
 
 <div class="timelineItem">

@@ -1,6 +1,6 @@
 <!-- projects/+page.svelte -->
 <script>
-	export let data
+	let { data } = $props()
 	import ProjectPreview from '$lib/components/ProjectPreview.svelte'
 </script>
 

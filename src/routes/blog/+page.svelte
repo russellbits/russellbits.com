@@ -1,6 +1,6 @@
 <!-- src/routes/blog/+page.svelte -->
 <script>
-	export let data
+	let { data } = $props()
 	let index = 0
 	import BlogPostPreview from '$lib/components/BlogPostPreview.svelte'
 	// import BlogSidebar from '$lib/components/BlogSidebar.svelte';

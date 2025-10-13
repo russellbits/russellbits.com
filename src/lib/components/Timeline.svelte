@@ -1,32 +1,37 @@
 <script>
 	// @ts-nocheck
-	import { onMount } from 'svelte'
 
-	export let data = []
-	let filter
-	let year
-	let reversed = false
-	let darkmode = false
+	let { data = [] } = $props()
+	let filter = $state(undefined)
+	let year = $state(undefined)
+	let reversed = $state(false)
+	let darkmode = $state(false)
 
-	$: sortedData = reversed
-		? data.sort((a, b) => b.created_at - a.created_at)
-		: data.sort((a, b) => a.created_at - b.created_at)
+	const sortedData = $derived(
+		reversed
+			? data.sort((a, b) => b.created_at - a.created_at)
+			: data.sort((a, b) => a.created_at - b.created_at)
+	)
 
-	$: filteredData = sortedData.filter((item) => {
-		if (filter === 'all') {
-			return true
-		} else {
-			return filter ? item.tags.includes(filter) : true
-		}
-	})
+	const filteredData = $derived(
+		sortedData.filter((item) => {
+			if (filter === 'all') {
+				return true
+			} else {
+				return filter ? item.tags.includes(filter) : true
+			}
+		})
+	)
 
-	$: timelineData = filteredData.filter((item) => {
-		if (year === 'all') {
-			return true
-		} else {
-			return year ? item.created_at.getFullYear() === year : true
-		}
-	})
+	const timelineData = $derived(
+		filteredData.filter((item) => {
+			if (year === 'all') {
+				return true
+			} else {
+				return year ? item.created_at.getFullYear() === year : true
+			}
+		})
+	)
 
 	const months = [
 		'January',
@@ -55,7 +60,7 @@
 		document.body.classList.toggle('dark')
 	}
 
-	onMount(() => {
+	$effect(() => {
 		if (
 			localStorage.cssTimeLineTheme === 'dark' ||
 			(!('cssTimeLineTheme' in localStorage) &&
@@ -95,7 +100,7 @@
 	</div>
 	<div>
 		<label>
-			<input type="checkbox" bind:checked={darkmode} on:change={toggleDarkMode} />
+			<input type="checkbox" bind:checked={darkmode} onchange={toggleDarkMode} />
 			Dark Mode
 		</label>
 	</div>

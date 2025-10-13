@@ -1,12 +1,11 @@
 <script>
 	// @ts-nocheck
-	import { onMount } from 'svelte'
 	import Cube from '$lib/components/Cube.svelte'
 
-	export let pageWidth, pageHeight
-	let positionsArray = Array.from({ length: 6 }, () => [0, 0])
+	let { pageWidth, pageHeight } = $props()
+	let positionsArray = $state(Array.from({ length: 6 }, () => [0, 0]))
 
-	onMount(() => {
+	$effect(() => {
 		positionsArray = generateRandomPositions(6)
 		console.log(
 			`PageWidth in ParallaxLayer is ${pageWidth} and PageWidthHeight in ParallaxLayer is ${pageHeight}`

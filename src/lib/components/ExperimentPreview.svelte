@@ -1,25 +1,30 @@
 <script>
-	import { onMount } from 'svelte';
-	import Button from '$lib/components/Button.svelte';
-	import Figure from '$lib/components/Figure.svelte';
+	import Button from '$lib/components/Button.svelte'
+	import Figure from '$lib/components/Figure.svelte'
 
-	export let title = 'Untitled';
-	export let experimentImage = 'https://placehold.co/250x250';
-	export let summary = 'No summary available.';
-	export let slug = 'https://codepen.io/russellbits';
-	export let codepenUrl = 'https://codepen.io/russellbits';
+	let {
+		title = 'Untitled',
+		experimentImage = 'https://placehold.co/250x250',
+		summary = 'No summary available.',
+		slug = 'https://codepen.io/russellbits',
+		codepenUrl = 'https://codepen.io/russellbits'
+	} = $props()
 
-	onMount(() => {
-		let windowWidth = window.innerWidth;
+	let finalSlug = $state(slug)
+
+	$effect(() => {
+		let windowWidth = window.innerWidth
 		if (windowWidth < 768) {
-			slug = codepenUrl;
+			finalSlug = codepenUrl
+		} else {
+			finalSlug = slug
 		}
-	});
+	})
 </script>
 
 <div class="experiment-card">
 	<div>
-		<a href={`${slug}`}
+		<a href={`${finalSlug}`}
 			><Figure
 				imgUrl={experimentImage}
 				altname={`${title} experiment`}
@@ -28,9 +33,9 @@
 			/></a
 		>
 	</div>
-	<div class="title"><h3><a href={`${slug}`}>{title}</a></h3></div>
+	<div class="title"><h3><a href={`${finalSlug}`}>{title}</a></h3></div>
 	<div class="summary"><p>{summary}</p></div>
-	<div><Button url={`${slug}`} label="Open Experiment" style="medium center" /></div>
+	<div><Button url={`${finalSlug}`} label="Open Experiment" style="medium center" /></div>
 </div>
 
 <style lang="scss">

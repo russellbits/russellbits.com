@@ -1,8 +1,5 @@
 <script>
-	export let label
-	export let url = undefined
-	export let style = ''
-	export let type = undefined
+	let { label, url = undefined, style = '', type = undefined } = $props()
 </script>
 
 <span class="button {style}">

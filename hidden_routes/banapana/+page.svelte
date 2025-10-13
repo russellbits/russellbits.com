@@ -2,10 +2,10 @@
 <script lang="ts">
 	// import type { GetLatestPosts } from '$houdini'
 
-	export let data
+	let { data } = $props()
 	// @ts-ignore
-	$: ({ GetLatestPosts } = data)
-	$: posts = $GetLatestPosts?.data?.posts
+	const GetLatestPosts = $derived(data.GetLatestPosts)
+	const posts = $derived(GetLatestPosts?.data?.posts)
 </script>
 
 <div class="column" />

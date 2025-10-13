@@ -1,10 +1,7 @@
 <script>
-	import { page } from '$app/stores'
-	$: currentPath = $page.url.pathname
-	export let imgUrl
-	export let altname
-	export let caption = 'none'
-	export let figClass
+	import { page } from '$app/state'
+	const currentPath = $derived(page.url.pathname)
+	let { imgUrl, altname, caption = 'none', figClass } = $props()
 </script>
 
 <figure class={`figure ${figClass}`}>

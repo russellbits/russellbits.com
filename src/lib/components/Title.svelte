@@ -1,11 +1,13 @@
 <script>
-	import { page } from '$app/stores'
-	$: currentPath = $page.url.pathname
-	export let title = 'title'
-	export let color = 'mauve'
-	export let align = 'left'
-	export let link = 'false'
-	export let topMargin = ''
+	import { page } from '$app/state'
+	const currentPath = $derived(page.url.pathname)
+	let {
+		title = 'title',
+		color = 'mauve',
+		align = 'left',
+		link = 'false',
+		topMargin = ''
+	} = $props()
 </script>
 
 <div class="title {align} {topMargin}">

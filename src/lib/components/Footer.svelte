@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 
 	// List of navigation items
 	const navItems = [
@@ -8,7 +8,7 @@
 		{ label: 'Lab', href: '/lab' }
 	]
 
-	$: currentPath = $page.url.pathname
+	const currentPath = $derived(page.url.pathname)
 </script>
 
 <footer>

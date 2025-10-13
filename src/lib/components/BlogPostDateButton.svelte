@@ -1,6 +1,5 @@
 <script>
-	export let day = '22'
-	export let month = 'SEP'
+	let { day = '22', month = 'SEP' } = $props()
 </script>
 
 <div class="date-button-container">

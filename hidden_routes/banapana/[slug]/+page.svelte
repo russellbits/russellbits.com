@@ -3,11 +3,11 @@
 	// @ts-nocheck
 	import Button from '$lib/components/Button.svelte'
 
-	export let data
+	let { data } = $props()
 
-	const { PostBySlug } = data
+	const PostBySlug = $derived(data.PostBySlug)
 
-	$: post = $PostBySlug?.data?.post
+	const post = $derived(PostBySlug?.data?.post)
 </script>
 
 <div class="column" />

@@ -1,7 +1,6 @@
 <!-- experiment.svelte -->
 <script>
-	export let title;
-	export let date;
+	let { title, date, children } = $props()
 </script>
 
 <svelte:head>
@@ -11,7 +10,7 @@
 </svelte:head>
 
 <article class="markdown lab" style="width:100vw;">
-	<slot />
+	{@render children()}
 </article>
 
 <style lang="scss">

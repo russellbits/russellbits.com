@@ -1,8 +1,8 @@
 import adapter from '@sveltejs/adapter-static'
 import sveltePreprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
-// import houdini from 'houdini/vite'
-// import { plugin } from 'houdini'
+import houdini from 'houdini/vite'
+import { plugin } from 'houdini'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,13 +11,17 @@ const config = {
 		prerender: {
 			entries: ['*']
 		},
-		alias: { $lib: './src/lib' }
+		alias: { $lib: './src/lib', $houdini: '.houdini/' }
 	},
-	vitePlugin: { inspector: true },
+
+	// file extensions to treat as Svelte components
 	extensions: ['.svelte', '.md'],
-	// vite: {
-	// 	plugins: [houdini(), plugin()]
-	// },
+
+	// Vite-specific config (houdini plugin is Vite-based)
+	vite: {
+		plugins: [houdini(), plugin()]
+	},
+
 	preprocess: [
 		sveltePreprocess(),
 		mdsvex({

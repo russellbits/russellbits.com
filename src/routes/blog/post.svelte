@@ -1,8 +1,7 @@
 <!-- post.svelte -->
 <script>
 	// @ts-nocheck
-	export let title;
-	export let date;
+	let { title, date, children } = $props()
 </script>
 
 <svelte:head>
@@ -12,7 +11,7 @@
 </svelte:head>
 
 <article class="markdown">
-	<slot />
+	{@render children()}
 </article>
 
 <style>

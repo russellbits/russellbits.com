@@ -1,5 +1,5 @@
 <script>
-	export let name;
+	let { name } = $props()
 </script>
 
 <span class="tag">{name}</span>
@@ -8,7 +8,9 @@
 	span.tag {
 		color: white;
 		text-align: center;
-		font: 15px 'Raleway', sans-serif;
+		font:
+			15px 'Raleway',
+			sans-serif;
 		text-transform: uppercase;
 		font-weight: bold;
 		background: #b339f9;

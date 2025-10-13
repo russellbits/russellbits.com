@@ -5,13 +5,15 @@
 	import Figure from '$lib/components/Figure.svelte'
 	import Tag from '$lib/components/Tag.svelte'
 
-	export let title = 'Project Title'
-	export let slug = ''
-	// export let publicationDate = 'No date available';
-	export let projectImage = 'https://placehold.co/582x379'
-	export let caption = 'No caption available.'
-	export let tags = []
-	export let link = '#'
+	let {
+		title = 'Project Title',
+		slug = '',
+		// export let publicationDate = 'No date available';
+		projectImage = 'https://placehold.co/582x379',
+		caption = 'No caption available.',
+		tags = [],
+		link = '#'
+	} = $props()
 </script>
 
 <div>

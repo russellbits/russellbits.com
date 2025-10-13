@@ -1,6 +1,6 @@
 <!-- projects/+page.svelte -->
 <script>
-	export let data
+	let { data } = $props()
 	import TimelinePreview from '$lib/components/TimelinePreview.svelte'
 </script>
 

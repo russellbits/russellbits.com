@@ -2,15 +2,14 @@
 <script>
 	// @ts-nocheck
 	// Import dependencies
-	import { onMount } from 'svelte'
 	import { supabase } from '$lib/supabaseClient'
 	import Title from '$lib/components/Title.svelte'
 	import Button from '$lib/components/Button.svelte'
 
 	// Reactive variable for success message
-	let successMessage = ''
+	let successMessage = $state('')
 
-	onMount(() => {
+	$effect(() => {
 		const form = document.querySelector('#contact-form')
 		form?.addEventListener('submit', async (event) => {
 			event.preventDefault()
@@ -125,6 +124,10 @@
 				window.scrollTo({ top: 0, behavior: 'smooth' })
 			}
 		})
+
+		return () => {
+			form?.removeEventListener('submit', () => {})
+		}
 	})
 </script>
 

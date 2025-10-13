@@ -1,20 +1,10 @@
 <script>
 	// Make the cubes all the same width and height and then just change their translate3d z values!
-	export let color = 'blue'
-	export let width
-	export let height
-	export let top = 300
-	export let left = 300
-	export let distance = -50
+	let { color = 'blue', width, height, top = 300, left = 300, distance = -50 } = $props()
 
-	let cubeColors
-
-	if (color == 'purple') {
-		cubeColors = ['#E1E1E1', '#641890', '#B339F9']
-	} else {
-		// it's blue
-		cubeColors = ['#E1E1E1', '#4354AB', '#5970E2']
-	}
+	const cubeColors = $derived(
+		color == 'purple' ? ['#E1E1E1', '#641890', '#B339F9'] : ['#E1E1E1', '#4354AB', '#5970E2']
+	)
 </script>
 
 <!--

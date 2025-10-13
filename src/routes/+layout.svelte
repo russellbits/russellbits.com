@@ -1,21 +1,20 @@
 <!-- +layout.svelte -->
 <script lang="ts">
 	import { fade } from 'svelte/transition'
-	import { onMount, onDestroy } from 'svelte'
 	// import Logo from '$lib/components/SiteLogo.svelte'
 	import Navigation from '$lib/components/Navigation.svelte'
 	// import ParallaxLayer from '$lib/components/ParallaxLayer.svelte'
 	import Footer from '$lib/components/Footer.svelte'
 	import Title from '$lib/components/Title.svelte'
 	import '$lib/styles/house.scss'
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 	// import SiteLogo from '$lib/components/SiteLogo.svelte'
 
-	export let data
-	let logo: HTMLElement | null = null
-	let scaleFactor = 1 // Default scale (500x500)
-	let pageWidth = 0
-	let pageHeight = 0
+	let { data, children } = $props()
+	let logo = $state<HTMLElement | null>(null)
+	let scaleFactor = $state(1) // Default scale (500x500)
+	let pageWidth = $state(0)
+	let pageHeight = $state(0)
 
 	const handleScroll = () => {
 		let scrollY = window.scrollY
@@ -41,7 +40,7 @@
 		}
 	}
 
-	onMount(() => {
+	$effect(() => {
 		pageWidth = window.innerWidth
 		pageHeight = document.documentElement.scrollHeight
 		logo = document.querySelector('.logo')
@@ -49,17 +48,18 @@
 			window.addEventListener('scroll', handleScroll)
 			handleScroll() // Apply the transformation immediately
 		}
-	})
 
-	onDestroy(() => {
-		if (logo) {
-			window.removeEventListener('scroll', handleScroll)
+		return () => {
+			if (logo) {
+				window.removeEventListener('scroll', handleScroll)
+			}
 		}
 	})
 
-	$: currentPath = $page.url.pathname
-	$: layoutClass =
+	const currentPath = $derived(page.url.pathname)
+	const layoutClass = $derived(
 		data.currentRoute.slice(1) !== '' ? data.currentRoute.slice(1).replace(/\/$/, '') : 'home'
+	)
 </script>
 
 <!-- Logo -->
@@ -88,7 +88,7 @@
 {#key data.currentRoute}
 	<!-- <div class="test">{layoutClass}</div> -->
 	<main class={layoutClass} in:fade={{ duration: 400, delay: 150 }} out:fade={{ duration: 250 }}>
-		<slot />
+		{@render children()}
 	</main>
 {/key}
 

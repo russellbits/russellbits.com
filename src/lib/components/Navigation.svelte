@@ -2,12 +2,12 @@
 	// @ts-nocheck
 
 	import '$lib/styles/entypo.css'
-	import { page } from '$app/stores'
+	import { page } from '$app/state'
 	import iconCodepen from '$lib/assets/icon-codepen.svg'
 
-	$: currentPath = $page.url.pathname
-	$: isVisible = false
-	$: isHamburgerOpen = true
+	const currentPath = $derived(page.url.pathname)
+	let isVisible = $state(false)
+	let isHamburgerOpen = $state(true)
 
 	// List of navigation items
 	const navItems = [
@@ -74,7 +74,7 @@
 	<!-- Begin mobile menu -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div id="mobile-menu-control" on:click={toggleMobileMenu}>
+	<div id="mobile-menu-control" onclick={toggleMobileMenu}>
 		<div class:open={!isHamburgerOpen} class="bar1"></div>
 		<div class:open={!isHamburgerOpen} class="bar2"></div>
 		<div class:open={!isHamburgerOpen} class="bar3"></div>
